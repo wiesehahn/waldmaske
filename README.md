@@ -22,6 +22,9 @@ Ausarbeitung einer Definition was als Wald klassifiziert werden soll und vor all
 #### Testgebiete
 Bestimmung von Testgebieten zur Anwendung und Validierung der Methodik. Gebiete sollten objektiv und nachvollziehbar ausgewählt werden, basierend auf Kriterien wie Validierungsoptionen, Vorhandensein von Daten, Waldgesellschaften, etc.
 
+#### Software
+Welche Umgebung soll für den Prozess genutzt werden. Abhängig von Datenverfügbarkeit, Kosten, Nutzungseinschränkungen etc.
+
 #### Fernerkundungsdaten
 Auswahl der Daten, welche in der Prozessierung zur Wald/Nichtwald Klassifizierung genutzt werden sollen
 
@@ -34,5 +37,16 @@ Erarbeitung eines Validierungskonzepts zur Bestimmung der Genauigkeit der Waldma
 
 ### Verfahrensanwendung
 Anwendung des erarbeiteten Konzepts. Prozessierung der Fernerkundungsdaten zur Erstellung einer Waldmaske für die ausgewählten Testgebiete und Validierung von deren Richtigkeit.
+
+## Dokumentation
+
+### Verfahren
+Eine Dokumentation der Planung und Durchführung des Projekts
+
+### Bericht
+Ein Bericht über die Ergebnisse (Genauigkeiten, Karten, Statistiken)
+
+### Lessons Learned
+Was ist gut gelaufen und was kann in ähnlichen Projekten besser gemacht werden
 
 
