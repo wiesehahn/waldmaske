@@ -3,8 +3,15 @@ Projekt zur Erstellung einer optimierten Waldmaske aus Fernerkundungsdaten
 
 
 ## Ziel
-Erstellung einer Waldmaske aus frei verfügbaren Fernerkundungsdaten 
+- Erstellung einer Waldmaske aus frei verfügbaren Fernerkundungsdaten 
 (zunächst für ein Testgebiet, später hochskaliert auf Deutschland)
+
+### Anfordeungen 
+- Kartierung soll aktuell sein (2019 ?) 
+- Kartierung muss richtig sein (> 95% Genauigkeit ?)
+- Waldmaske soll aus frei verfügbaren Satellitenbilddaten erzeugt werden
+- Reproduzierbarkeit muss gewährleistet sein
+- Karte soll in digitaler, georeferenzierter Form vorliegen
 
 
 ## Schritte
