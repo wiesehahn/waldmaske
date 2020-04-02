@@ -4,7 +4,7 @@
   * Mindestkartierfläche jedoch einen Hektar und die Mindestkartierbreite 15 Meter
   * bisher wurden hauptsächlich RapidEye-Satellitenbilder genutzt, "zukünftig" Copernicus 
  
-[BMEL](Programm des BMEL zur FernerkundungChancen für Land-, Forst- und Fischereiwirtschaft, für Politik und Verwaltung)
+[BMEL](https://www.bmel.de/SharedDocs/Downloads/Broschueren/Fernerkundung.html)
 * Potenzial von zukünftigen Anwendungsoptionen der Fernerkundung laut TI-WO u.a.
   * Erfassung der Waldfläche und Waldflächenänderungen
   * Erfassung von Bäumen außerhalb des Waldes
@@ -14,10 +14,17 @@
 
 ### LIDAR
 
+Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinition des Schweizerischen Landesforstinventares 
+
 ### Satellitenbilder
-[JRC Forest Type Map]()
-* 2006
+
+[JRC Forest Map](https://earthzine.org/pan-european-forest-maps-derived-from-optical-satellite-imagery)
+* 2000, 2006
 * 25m Auflösung
+* aus IRS-LISS-3 und SPOT4/5 Bildern
+* CORINE Land Cover als Trainingsdaten
+* LUCAS und eForest (Daten der NFIs) Daten zur Validierung
+* 84% Genauigkeit für 2006
 
 
 [Copernicus HRL](https://land.copernicus.eu/pan-european/high-resolution-layers)
@@ -34,3 +41,8 @@
 
 ## Referenzdaten
 
+[LUCAS](https://ec.europa.eu/eurostat/de/web/lucas/data/primary-data/2018)
+* 2018
+* Walddefinition vorhanden
+* georeferenzierte frei verfügbare Referenzdaten
+* genaue Soll- und Ist-Koordinaten sind vorhanden
