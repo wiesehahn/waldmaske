@@ -79,5 +79,6 @@ Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinitio
 
 [Recent Advances in Forest Observation with Visual Interpretation of Very High-Resolution Imagery](https://link.springer.com/article/10.1007/s10712-019-09533-z)
 * Tools und Methoden zur Nutzung von VHR Bildern als Referenz
+(Geo-Wiki, LACO-Wiki, Collect Earth)
 
 
