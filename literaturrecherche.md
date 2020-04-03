@@ -26,7 +26,6 @@ Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinitio
 * LUCAS und eForest (Daten der NFIs) Daten zur Validierung
 * 84% Genauigkeit für 2006
 
-
 [Copernicus HRL](https://land.copernicus.eu/pan-european/high-resolution-layers)
 * für 2012, 2015 (alle 3 Jahre)
 * aus Sentinel-1, Sentinel-2 (sowie Landsat-8 und VHR)
@@ -44,6 +43,15 @@ Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinitio
 * 2012, 2015, 2018
 * Mindestkartierfläche 1 ha
 * Rapideye und Sentinel Daten zur Aktualisierung
+
+[Öhmichen](https://ediss.sub.uni-hamburg.de/volltexte/2007/3172/pdf/070111_oehmichen_dissertation.pdf)
+* für Testgebiete
+* nach BWI-Definitoion
+* aus Quickbird und Landsat (7)
+* zusätzlich mit ATKIS Daten korrigiert
+* referenziert mit BWI-Daten
+* 93-97% Genauigkeit 
+
 
 ## Referenzdaten
 
