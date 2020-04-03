@@ -1,0 +1,9 @@
+
+* was sind die Anforderungen an die Wald/Nichtwald Kartierung?
+(Genauigkeit, Aktualität, Auflösung)
+
+* was soll gegenüber anderen Waldmasken verbessert werden?
+
+* nach welcher Definition soll Wald/Nichtwald unterschieden werden? 
+(FAO vs BWI, Waldmaske vs Gehölzmaske)
+
