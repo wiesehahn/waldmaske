@@ -52,6 +52,12 @@ Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinitio
 * referenziert mit BWI-Daten
 * 93-97% Genauigkeit
 
+[Tree cover mapping based on Sentinel-2 images demonstrate high thematic accuracy in Europe](https://www.sciencedirect.com/science/article/pii/S0303243419306087)
+* für Testgebiete
+* k-means Klassifikation von einzelnen Sentinel-2 Szenen
+* Genauigkeit bis 90%
+
+
 #### Waldmaske als Nebenprodukt
 
 [Forest Stand Species Mapping Using the Sentinel-2Time Series](https://www.mdpi.com/2072-4292/11/10/1197/pdf)
@@ -70,3 +76,8 @@ Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinitio
 * Walddefinition vorhanden
 * georeferenzierte frei verfügbare Referenzdaten
 * genaue Soll- und Ist-Koordinaten sind vorhanden
+
+[Recent Advances in Forest Observation with Visual Interpretation of Very High-Resolution Imagery](https://link.springer.com/article/10.1007/s10712-019-09533-z)
+* Tools und Methoden zur Nutzung von VHR Bildern als Referenz
+
+
