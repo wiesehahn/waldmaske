@@ -39,6 +39,12 @@ Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinitio
 * FADSL nutzt CORINE Land Cover und HRL imperviousness um Stadt und Agrarbäume auszuweisen
 * Small Woody Features wurden aus VHR Bildern extrahiert und beinhalten Hecken, Alleen Baumgruppen (TOF)
 
+[LBM-DE](https://www.bkg.bund.de/DE/Ueber-das-BKG/Geoinformation/Fernerkundung/Landbedeckungsmodell/Herstellung/herstellung.html)
+* Aufbauend auf Basis-DLM
+* 2012, 2015, 2018
+* Mindestkartierfläche 1 ha
+* Rapideye und Sentinel Daten zur Aktualisierung
+
 ## Referenzdaten
 
 [LUCAS](https://ec.europa.eu/eurostat/de/web/lucas/data/primary-data/2018)
