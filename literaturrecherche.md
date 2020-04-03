@@ -50,8 +50,18 @@ Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinitio
 * aus Quickbird und Landsat (7)
 * zusätzlich mit ATKIS Daten korrigiert
 * referenziert mit BWI-Daten
-* 93-97% Genauigkeit 
+* 93-97% Genauigkeit
 
+#### Waldmaske als Nebenprodukt
+
+[Forest Stand Species Mapping Using the Sentinel-2Time Series](https://www.mdpi.com/2072-4292/11/10/1197/pdf)
+* eine Sentinel-2 Szene mit Random Forest in Wald/Nichtwald klassifiziert
+
+[Forest Type Identification with Random Forest UsingSentinel-1A, Sentinel-2A, Multi-Temporal Landsat-8and DEM Data](https://www.mdpi.com/2072-4292/10/6/946/pdf)
+* zunächste Segmentierung mit Landsat-8, Sentinel-2 und Sentinel-1 Bildern
+* dann Ableitung von Vegetation durch NDVI-Grenzwert für Segmente
+* dann Wald/Nichtwald Unterscheidung der Vegetation durch Random Forest Klassifizierung von DEM und S-2 Metriken der Segmente
+* Genauigkeit 99%
 
 ## Referenzdaten
 
