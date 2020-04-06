@@ -16,7 +16,15 @@
 
 Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinition des Schweizerischen Landesforstinventares 
 
-### Satellitenbilder
+### Stereobilder
+
+[Wall-to-Wall Forest Mapping Based on DigitalSurface Models from Image-Based Point Clouds anda NFI Forest Definition](https://www.researchgate.net/publication/286453059_Wall-to-Wall_Forest_Mapping_Based_on_Digital_Surface_Models_from_Image-Based_Point_Clouds_and_a_NFI_Forest_Definition)
+* aus Stereo Orthophotos (zusammen mit DTM und DLM)
+* Auflösung 1m
+* 97% Overall Accuracy
+
+
+### Satellitenbilder (passiv)
 
 [JRC Forest Map](https://earthzine.org/pan-european-forest-maps-derived-from-optical-satellite-imagery)
 * 2000, 2006
@@ -58,7 +66,23 @@ Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinitio
 * Genauigkeit bis 90%
 
 
-#### Waldmaske als Nebenprodukt
+### Satellitenbilder (aktiv)
+
+[Forest area derivation from Sentinel-1 data](https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/III-7/227/2016/isprs-annals-III-7-227-2016.pdf)
+* Waldmaske für Testgebiet in Österreich
+* Sentinel-1A
+* Otsu  thresholding  and  K-means  clustering
+* 10m Auflösung und 500m² MMU
+* 92% Overall Accuracy
+* kann verbeesert werden wenn Stadtgebiete ausgeschlossen werden
+
+[Annual seasonality in Sentinel-1 signal for forest mapping and forest type classification](https://www.tandfonline.com/doi/abs/10.1080/01431161.2018.1479788)
+* für Testgenbiete
+* aus Sentinel-1 Zeitreihen
+* 86-91% Genauigkeit
+* Copernicus HRL als Referenz
+
+## Waldmaske als Nebenprodukt
 
 [Forest Stand Species Mapping Using the Sentinel-2Time Series](https://www.mdpi.com/2072-4292/11/10/1197/pdf)
 * eine Sentinel-2 Szene mit Random Forest in Wald/Nichtwald klassifiziert
