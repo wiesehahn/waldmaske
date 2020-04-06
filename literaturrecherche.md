@@ -82,6 +82,12 @@ Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinitio
 * 86-91% Genauigkeit
 * Copernicus HRL als Referenz
 
+[High Resolution Forest Maps from Interferometric TanDEM-X and Multitemporal Sentinel-1 SAR Data](https://link.springer.com/article/10.1007/s41064-017-0040-1)
+* für Testgebiete in Deutschland und Kanada
+* Sentinel-1 und TanDEM-X
+* ca 85 - 95% Genauigkeit
+
+
 ## Waldmaske als Nebenprodukt
 
 [Forest Stand Species Mapping Using the Sentinel-2Time Series](https://www.mdpi.com/2072-4292/11/10/1197/pdf)
