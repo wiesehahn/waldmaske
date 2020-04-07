@@ -44,7 +44,13 @@ Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinitio
 * DLT aus multitenmporalen Bildern mit Support Vector Mashine
 * FTY erstellt nach FAO Walddefinition (20m-Version beinhaltet Stadt- und Agrarbäume, 100m-Version nicht)
 * FADSL nutzt CORINE Land Cover und HRL imperviousness um Stadt und Agrarbäume auszuweisen
+* 2018 mit 10m Auflösung generiert über DIAS (Mundi Web Services) (Start: 22.01.2019)
+[Methode Small Woody Features](https://eur02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fland.copernicus.eu%2Fpan-european%2Fhigh-resolution-layers%2Fsmall-woody-features&data=02%7C01%7CKeri.Bloomfield%40eea.europa.eu%7Cace94925eabf406bface08d7c04fb831%7Cbe2e7beab4934de5bbc58b4a6a235600%7C1%7C0%7C637189320934401467&sdata=MYO61PoeavDbkYGaMFtQYS%2Bzs29GE1%2BE0Giuew%2BXxgw%3D&reserved=0)
 * Small Woody Features wurden aus VHR Bildern extrahiert und beinhalten Hecken, Alleen Baumgruppen (TOF)
+* Small Woody Features für 2015 seit März 2020, als 5m Raster oder Vector, bzw aggregierte Version als 100m Raster
+* Genauigkeit noch nicht validiert, 80% anvisiert
+* High Resolution Vegetation Phenology and Productivity Layer seit Februar 2020 in Produktion
+
 
 [LBM-DE](https://www.bkg.bund.de/DE/Ueber-das-BKG/Geoinformation/Fernerkundung/Landbedeckungsmodell/Herstellung/herstellung.html)
 * Aufbauend auf Basis-DLM
@@ -86,6 +92,12 @@ Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinitio
 * für Testgebiete in Deutschland und Kanada
 * Sentinel-1 und TanDEM-X
 * ca 85 - 95% Genauigkeit
+
+[Project Forest/Non-Forest Map](https://www.dlr.de/hr/desktopdefault.aspx/tabid-12538/21873_read-50027/)
+* globale Waldmaske
+* 50m Auflösung
+* aus TanDEM-X Bildern 
+* Genauigkeit => 90%
 
 
 ## Waldmaske als Nebenprodukt
