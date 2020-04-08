@@ -9,6 +9,8 @@
   * Erfassung der Waldfläche und Waldflächenänderungen
   * Erfassung von Bäumen außerhalb des Waldes
 
+[Towards automated Forest Mapping](https://link.springer.com/chapter/10.1007/978-1-4939-7331-6_7)
+* Übersicht zu Methoden und Studien
 
 ## Waldmasken aus Fernerkundungsdaten in anderen Studien
 
