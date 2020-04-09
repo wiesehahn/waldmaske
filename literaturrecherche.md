@@ -130,3 +130,56 @@ Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinitio
 * über Copernicus (mit Anmeldung evtl.)
 
 
+### Basisdaten Zusammenfassung
+
+ALK (Automatisierte Liegenschaftskarte)
+* digitaler Nachfolger der analogen Liegenschaftskarte/Flurkarte
+* quasi Geodaten der Flurstücke
+* bildet zusammen mit ALB das Liegenschaftskataster
+
+ALB (Amtliches Liegenschaftsbuch)
+* digitaler Nachfolger des Katasterbuchwerks
+* quasi Attributdaten der Flurstücke
+* bildet zusammen mit ALK das Liegenschaftskataster
+
+ALKIS (Amtliches  Liegenschaftskatasterinformationssystem)
+* Geobasisdaten zur Beschreibung der Liegenschaften (Flurstücke, Gebäude, Eigentumsangaben, etc.)
+* Zusammenführung von ALK  und ALB
+* ALKIS und ABK beruhen auf gemeinsamem Datenbestand
+
+DGK (Deutsche Grundkarte)
+* gewöhnlich 1:5000 (DGK5)
+* Bindeglied zwischen Kataster und DTK25
+* früher eigenständig gepflegtes Rasterdatenprodukt
+* aus ALK
+* DGK5 in ABK überführt
+* Nachfolger aus ALKIS Daten
+
+ABK (Amtliche Basiskarte)
+* soll z.B. in NRW die DGK ablösen (weiterentwicklung der DGK)
+* Schnittstelle zwischen der eigentumsorientierten Liegenschaftskarte und den topographischen Landeskartenwerken
+* aus ALKIS Daten
+
+DLM (Digitales Landschaftsmodell)
+* Basis für ATKIS
+* Basis-DLM (früher DLM25) 1 : 10.000-25.000
+* Daten für ATKIS-DLM überwiegend aus analogen amtlichen Topographischen Karten
+* Aktualisierung je nach Objektart mindestens alle 5 Jahre
+
+ATKIS (Amtliches Topographisch Kartographisches Informationssystem)
+* Geobasisdaten zur Beschreibung der Topographie der Eroberfläche (Straßen- und Schienennetz, Gewässer, Nutzungsflächen, kommunale Gebietseinheiten, Relief u. a.)
+* objektbasiert als DLM (ATKIS-Bestandsdaten)
+* kartographisch und generalisiert als DTK
+* enthält auch DGMs und DOPs
+
+AFIS (Amtliches Festpunktinformationssystem)
+* enthält Geobasisdaten für den geodätischen Raumbezug (Lagefestpunkte, Höhenfestpunkte und Schwerefestpunkte)
+
+AAA-Modell (AFIS-ALKIS-ATKIS-Modell)
+* einheitliches Datenmodell zur Verknüpfung der Daten
+
+
+
+
+
+
