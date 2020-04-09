@@ -125,4 +125,8 @@ Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinitio
 * Tools und Methoden zur Nutzung von VHR Bildern als Referenz
 (Geo-Wiki, LACO-Wiki, Collect Earth)
 
+[VHR_Image_2018](https://spacedata.copernicus.eu/web/cscda/data-offer/core-datasets/-/asset_publisher/SMEFUkzOylMw/content/optical-vhr-multispectral-and-panchromatic-coverage-over-europe-vhr_image_2018-?_101_INSTANCE_SMEFUkzOylMw_redirect=%2Fweb%2Fcscda%2Fdata-offer%2Fcore-datasets)
+* 2-4m Auflösung
+* über Copernicus (mit Anmeldung evtl.)
+
 
