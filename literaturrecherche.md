@@ -42,7 +42,10 @@ Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinitio
 * 20m Auflösung (100m für Change Products)
 * Definition für Tree Cover Mask vorhanden
 * Produkte: Tree Cover Density, Forest Type, Forest Additional Support Layer, Dominant Leaf Type, Tree Cover Density Change, Dominante Leaf Type Change
-* TCD aus HR Bildern mit VHR Bildern und Orthophotos als Referenz in einer linearen Funktion
+* TCD 
+  * aus HR Bildern mit VHR Bildern und Orthophotos als Referenz in einer linearen Funktion
+  * 1 Pixel MMU (20/10m)
+  * 90% Accuracy [link](http://www.gofcgold.wur.nl/documents/CopernicusREDD/12_CopernicusHRlayers.pdf)
 * DLT aus multitenmporalen Bildern mit Support Vector Mashine
 * FTY erstellt nach FAO Walddefinition (20m-Version beinhaltet Stadt- und Agrarbäume, 100m-Version nicht)  
   20m Version besteht aus zwei Produkten  
