@@ -52,11 +52,11 @@ Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinitio
 * DLT aus multitenmporalen Bildern mit Support Vector Mashine
 
 * FTY erstellt nach FAO Walddefinition (20m-Version beinhaltet Stadt- und Agrarbäume, 100m-Version nicht)  
-  * 20m Version besteht aus zwei Produkten:  
+  20m Version besteht aus zwei Produkten:  
     1. DLT mit 0.5ha MMU und 10% TCD Grenzwert
     2. Support Layer (FADSL)
+      * keine MMU
       * FADSL nutzt CORINE Land Cover und HRL imperviousness um Stadt und Agrarbäume auszuweisen
-
 
 * Small Woody Features
   * wurden aus VHR Bildern extrahiert und beinhalten Hecken, Alleen Baumgruppen (TOF) [Methode](https://eur02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fland.copernicus.eu%2Fpan-european%2Fhigh-resolution-layers%2Fsmall-woody-features&data=02%7C01%7CKeri.Bloomfield%40eea.europa.eu%7Cace94925eabf406bface08d7c04fb831%7Cbe2e7beab4934de5bbc58b4a6a235600%7C1%7C0%7C637189320934401467&sdata=MYO61PoeavDbkYGaMFtQYS%2Bzs29GE1%2BE0Giuew%2BXxgw%3D&reserved=0)
