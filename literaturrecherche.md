@@ -40,23 +40,29 @@ Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinitio
 * für 2012, 2015 (alle 3 Jahre)
 * aus Sentinel-1, Sentinel-2 (sowie Landsat-8 und VHR)
 * 20m Auflösung (100m für Change Products)
+* 2018 mit 10m Auflösung generiert über DIAS (Mundi Web Services) (Start: 22.01.2019, online ab ca Mitte Mai 2020)  
 * Definition für Tree Cover Mask vorhanden
 * Produkte: Tree Cover Density, Forest Type, Forest Additional Support Layer, Dominant Leaf Type, Tree Cover Density Change, Dominante Leaf Type Change
+
 * TCD 
   * aus HR Bildern mit VHR Bildern und Orthophotos als Referenz in einer linearen Funktion
   * 1 Pixel MMU (20/10m)
   * 90% Accuracy [link](http://www.gofcgold.wur.nl/documents/CopernicusREDD/12_CopernicusHRlayers.pdf)
+  
 * DLT aus multitenmporalen Bildern mit Support Vector Mashine
+
 * FTY erstellt nach FAO Walddefinition (20m-Version beinhaltet Stadt- und Agrarbäume, 100m-Version nicht)  
-  20m Version besteht aus zwei Produkten  
-  1. DLT mit 0.5ha MMU und 10% TCD Grenzwert
-  2. Support Layer (FADSL)
-* FADSL nutzt CORINE Land Cover und HRL imperviousness um Stadt und Agrarbäume auszuweisen
-* 2018 mit 10m Auflösung generiert über DIAS (Mundi Web Services) (Start: 22.01.2019, online ab ca Mitte Mai 2020)  
-[Methode Small Woody Features](https://eur02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fland.copernicus.eu%2Fpan-european%2Fhigh-resolution-layers%2Fsmall-woody-features&data=02%7C01%7CKeri.Bloomfield%40eea.europa.eu%7Cace94925eabf406bface08d7c04fb831%7Cbe2e7beab4934de5bbc58b4a6a235600%7C1%7C0%7C637189320934401467&sdata=MYO61PoeavDbkYGaMFtQYS%2Bzs29GE1%2BE0Giuew%2BXxgw%3D&reserved=0)
-* Small Woody Features wurden aus VHR Bildern extrahiert und beinhalten Hecken, Alleen Baumgruppen (TOF)
-* Small Woody Features für 2015 seit März 2020, als 5m Raster oder Vector, bzw aggregierte Version als 100m Raster
-* Genauigkeit noch nicht validiert, 80% anvisiert
+  * 20m Version besteht aus zwei Produkten:  
+    1. DLT mit 0.5ha MMU und 10% TCD Grenzwert
+    2. Support Layer (FADSL)
+      * FADSL nutzt CORINE Land Cover und HRL imperviousness um Stadt und Agrarbäume auszuweisen
+
+
+* Small Woody Features
+  * wurden aus VHR Bildern extrahiert und beinhalten Hecken, Alleen Baumgruppen (TOF) [Methode](https://eur02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fland.copernicus.eu%2Fpan-european%2Fhigh-resolution-layers%2Fsmall-woody-features&data=02%7C01%7CKeri.Bloomfield%40eea.europa.eu%7Cace94925eabf406bface08d7c04fb831%7Cbe2e7beab4934de5bbc58b4a6a235600%7C1%7C0%7C637189320934401467&sdata=MYO61PoeavDbkYGaMFtQYS%2Bzs29GE1%2BE0Giuew%2BXxgw%3D&reserved=0)
+  * für 2015 seit März 2020, als 5m Raster oder Vector und aggregierte Version als 100m Raster
+  * Genauigkeit noch nicht validiert, 80% anvisiert (Stand: April 2020)
+
 * High Resolution Vegetation Phenology and Productivity Layer seit Februar 2020 in Produktion
 
 
