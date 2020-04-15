@@ -190,6 +190,12 @@ AFIS (Amtliches Festpunktinformationssystem)
 AAA-Modell (AFIS-ALKIS-ATKIS-Modell)
 * einheitliches Datenmodell zur Verknüpfung der Daten
 
+CORINE LAND COVER
+* 44 Klassen (37 in Deutschland)
+* 1990, 2000, 2006, 2012, 2018
+* Europaweit ist MMU 25ha 
+* seit CLC2012 mit MMU 1ha aus LBM-DE abgeleitet
+* mit MMU 5ha (seit 2020), 10ha und 25ha frei verfügbar
 
 
 
