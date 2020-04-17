@@ -9,3 +9,4 @@ Hansen Tree Cover
 * geringe Auflösung (30m)
 * vor allem in urbanen Bereichen fehlerhaft
 
+![](https://github.com/wiesehahn/waldmaske/blob/master/output_data/img/urbaner-wald_basis-dlm.PNG)
