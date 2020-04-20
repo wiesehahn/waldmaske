@@ -61,6 +61,7 @@ Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinitio
 * Small Woody Features
   * wurden aus VHR Bildern extrahiert und beinhalten Hecken, Alleen Baumgruppen (TOF) [Methode](https://eur02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fland.copernicus.eu%2Fpan-european%2Fhigh-resolution-layers%2Fsmall-woody-features&data=02%7C01%7CKeri.Bloomfield%40eea.europa.eu%7Cace94925eabf406bface08d7c04fb831%7Cbe2e7beab4934de5bbc58b4a6a235600%7C1%7C0%7C637189320934401467&sdata=MYO61PoeavDbkYGaMFtQYS%2Bzs29GE1%2BE0Giuew%2BXxgw%3D&reserved=0)
   * für 2015 seit März 2020, als 5m Raster oder Vector und aggregierte Version als 100m Raster
+  * mit TCD Waldmaske (>30% und morphologische Filter) maskiert, trotzdem manche Features doppelt und andere gar nicht kartiert.
   * Genauigkeit noch nicht validiert, 80% anvisiert (Stand: April 2020)
 
 * High Resolution Vegetation Phenology and Productivity Layer seit Februar 2020 in Produktion
