@@ -1,3 +1,6 @@
-![](https://earthengine.googleapis.com/v1alpha/projects/earthengine-legacy/videoThumbnails/7ce5ee3553cb51a2adbfa4ab60de9079-88832e24d04714635f5f09c678b0bf32:getPixels)
+Monatlicher Sentinel-2 RGB-Median nach Anwendung der QA-band Maskierung
+![](waldmaske/blob/master/output_data/img/s2-2019_qa60-msk.gif)
 
-[GIF](https://earthengine.googleapis.com/v1alpha/projects/earthengine-legacy/videoThumbnails/7ce5ee3553cb51a2adbfa4ab60de9079-88832e24d04714635f5f09c678b0bf32:getPixels)
+Monatlicher Sentinel-2 RGB-Median nach Anwendung der CLD-PRB Maskierung
+![](waldmaske/blob/master/output_data/img/s2-2019_cldprb-msk.gif)
+
