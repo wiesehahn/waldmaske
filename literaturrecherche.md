@@ -133,6 +133,7 @@ Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinitio
 * Walddefinition vorhanden
 * georeferenzierte frei verfügbare Referenzdaten
 * genaue Soll- und Ist-Koordinaten sind vorhanden
+* [Beispielstudie](https://www.sciencedirect.com/science/article/pii/S0303243419307317)
 
 [Recent Advances in Forest Observation with Visual Interpretation of Very High-Resolution Imagery](https://link.springer.com/article/10.1007/s10712-019-09533-z)
 * Tools und Methoden zur Nutzung von VHR Bildern als Referenz
