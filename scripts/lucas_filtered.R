@@ -20,21 +20,33 @@ lucas_filtered <- lucas %>%
     OBS_DIRECT == 1) %>% 
   # merge classes 
   mutate(
-    class = as.factor(case_when(
-      startsWith(as.character(LC1), "C3")            ~ "M",
+    class = as.numeric(case_when(
+      startsWith(as.character(LC1), "C3")            ~ 0,
+      startsWith(as.character(LC1), "A")             ~ 1,
+      LC1 %in% c("F10", "F20", "F30")                ~ 2,
+      LC1 %in% c("C10", "B71", "B72", "B73", "B74")  ~ 3,
+      LC1 %in% c("C21", "C22", "C23")                ~ 4,
+      LC1 %in% c("B84", "D20", "E20", "H11", "H12")  ~ 5,
+      startsWith(as.character(LC1), "B")             ~ 6,
+      startsWith(as.character(LC1), "G")             ~ 7,
+      TRUE                                           ~ 99
+    )),
+    label = as.factor(case_when(
+      startsWith(as.character(LC1), "C3")            ~ "T3",
       startsWith(as.character(LC1), "A")             ~ "A",
       LC1 %in% c("F10", "F20", "F30")                ~ "S",
       LC1 %in% c("C10", "B71", "B72", "B73", "B74")  ~ "T1",
       LC1 %in% c("C21", "C22", "C23")                ~ "T2",
-      LC1 %in% c("B84", "D20", "E20", "H11", "H12")  ~ "V2",
-      startsWith(as.character(LC1), "B")             ~ "V1",
+      LC1 %in% c("B84", "D20", "E20", "H11", "H12")  ~ "V1",
+      startsWith(as.character(LC1), "B")             ~ "V2",
       startsWith(as.character(LC1), "G")             ~ "W",
       TRUE                                           ~ "other"
-    ))
-    )
+    )))
+    
 
 
 # save filtered data 
 lucas_filtered %>% 
-  select(POINT_ID, latitude = TH_LAT, longitude = TH_LONG, LC1, class) %>%
-  write.csv(.,file = "lucas_filtered.csv", row.names = FALSE)
+  select(POINT_ID, latitude = TH_LAT, longitude = TH_LONG, class, label) %>%
+  write.csv(.,file = "../lucas_filtered.csv", row.names = FALSE)
+
