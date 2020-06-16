@@ -1,40 +1,6 @@
+# Übersicht zu Wald/Nichtwald Kartierungen
 
-[BKG](https://www.bkg.bund.de/DE/Ueber-das-BKG/Geoinformation/Fernerkundung/fernerkundung.html)
-* Das BKG aktualisiert mit Hilfe von Fernerkundungsdaten alle drei Jahre das Digitale Landbedeckungsmodell für Deutschland (LBM-DE)
-  * Mindestkartierfläche jedoch einen Hektar und die Mindestkartierbreite 15 Meter
-  * bisher wurden hauptsächlich RapidEye-Satellitenbilder genutzt, "zukünftig" Copernicus 
- 
-[BMEL](https://www.bmel.de/SharedDocs/Downloads/DE/Broschueren/Fernerkundung.html)
-* Potenzial von zukünftigen Anwendungsoptionen der Fernerkundung laut TI-WO u.a.
-  * Erfassung der Waldfläche und Waldflächenänderungen
-  * Erfassung von Bäumen außerhalb des Waldes
-
-[Towards automated Forest Mapping](https://link.springer.com/chapter/10.1007/978-1-4939-7331-6_7)
-* Übersicht zu Methoden und Studien
-
-## Waldmasken aus Fernerkundungsdaten in anderen Studien
-
-### LIDAR
-
-Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinition des Schweizerischen Landesforstinventares 
-
-### Stereobilder
-
-[Wall-to-Wall Forest Mapping Based on DigitalSurface Models from Image-Based Point Clouds anda NFI Forest Definition](https://www.researchgate.net/publication/286453059_Wall-to-Wall_Forest_Mapping_Based_on_Digital_Surface_Models_from_Image-Based_Point_Clouds_and_a_NFI_Forest_Definition)
-* aus Stereo Orthophotos (zusammen mit DTM und DLM)
-* Auflösung 1m
-* 97% Overall Accuracy
-
-
-### Satellitenbilder (passiv)
-
-[JRC Forest Map](https://earthzine.org/pan-european-forest-maps-derived-from-optical-satellite-imagery)
-* 2000, 2006
-* 25m Auflösung
-* aus IRS-LISS-3 und SPOT4/5 Bildern
-* CORINE Land Cover als Trainingsdaten
-* LUCAS und eForest (Daten der NFIs) Daten zur Validierung
-* 84% Genauigkeit für 2006
+## nutzbare Waldmasken 
 
 [Copernicus HRL](https://land.copernicus.eu/pan-european/high-resolution-layers)
 * für 2012, 2015 (alle 3 Jahre)
@@ -59,8 +25,8 @@ Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinitio
       * FADSL nutzt CORINE Land Cover und HRL imperviousness um Stadt und Agrarbäume auszuweisen
 
 * Small Woody Features
-  * wurden aus VHR Bildern extrahiert und beinhalten Hecken, Alleen Baumgruppen (TOF) [Methode](https://eur02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fland.copernicus.eu%2Fpan-european%2Fhigh-resolution-layers%2Fsmall-woody-features&data=02%7C01%7CKeri.Bloomfield%40eea.europa.eu%7Cace94925eabf406bface08d7c04fb831%7Cbe2e7beab4934de5bbc58b4a6a235600%7C1%7C0%7C637189320934401467&sdata=MYO61PoeavDbkYGaMFtQYS%2Bzs29GE1%2BE0Giuew%2BXxgw%3D&reserved=0)
-  * für 2015 seit März 2020, als 5m Raster oder Vector und aggregierte Version als 100m Raster
+  * wurden aus VHR Bildern extrahiert und beinhalten Hecken, Alleen, Baumgruppen (TOF) [Methode](https://eur02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fland.copernicus.eu%2Fpan-european%2Fhigh-resolution-layers%2Fsmall-woody-features&data=02%7C01%7CKeri.Bloomfield%40eea.europa.eu%7Cace94925eabf406bface08d7c04fb831%7Cbe2e7beab4934de5bbc58b4a6a235600%7C1%7C0%7C637189320934401467&sdata=MYO61PoeavDbkYGaMFtQYS%2Bzs29GE1%2BE0Giuew%2BXxgw%3D&reserved=0)
+  * für 2015 seit März 2020 verfügbar, als 5m Raster oder Vector und aggregierte Version als 100m Raster
   * mit TCD Waldmaske (>30% und morphologische Filter) maskiert, trotzdem manche Features doppelt und andere gar nicht kartiert.
   * Genauigkeit noch nicht validiert, 80% anvisiert (Stand: April 2020)
 
@@ -68,12 +34,46 @@ Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinitio
 
 
 [LBM-DE](https://www.bkg.bund.de/DE/Ueber-das-BKG/Geoinformation/Fernerkundung/Landbedeckungsmodell/Herstellung/herstellung.html)
+* Das BKG aktualisiert mit Hilfe von Fernerkundungsdaten alle drei Jahre das Digitale Landbedeckungsmodell für Deutschland (LBM-DE)
 * Aufbauend auf Basis-DLM
 * 2012, 2015, 2018
-* Mindestkartierfläche 1 ha
-* Rapideye und Sentinel Daten zur Aktualisierung
+* Mindestkartierfläche 1 ha und die Mindestkartierbreite 15 Meter
+* bisher wurden hauptsächlich RapidEye-Satellitenbilder genutzt, "zukünftig" Copernicus Sentinel Daten zur Aktualisierung
 
-[Öhmichen](https://ediss.sub.uni-hamburg.de/volltexte/2007/3172/pdf/070111_oehmichen_dissertation.pdf)
+
+## Waldmasken aus Fernerkundungsdaten in anderen Studien
+
+[Towards automated Forest Mapping](https://link.springer.com/chapter/10.1007/978-1-4939-7331-6_7)
+* Übersicht zu Methoden und Studien
+
+### LIDAR
+
+[Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinition des Schweizerischen Landesforstinventares](https://ethz.ch/content/dam/ethz/special-interest/usys/ites/ites-dam/Education/Portal%20Forest%20and%20Landscape/Documents/MA_Abstracts_2019/Abstract_SamuelKueng.pdf)
+* Waldmaske 2019 für den Kanton Bern
+* 97% Overall Accuracy
+
+
+### Stereobilder
+
+[Wall-to-Wall Forest Mapping Based on DigitalSurface Models from Image-Based Point Clouds and a NFI Forest Definition](https://www.researchgate.net/publication/286453059_Wall-to-Wall_Forest_Mapping_Based_on_Digital_Surface_Models_from_Image-Based_Point_Clouds_and_a_NFI_Forest_Definition)
+* aus Stereo Orthophotos (zusammen mit DTM und DLM)
+* Auflösung 1m
+* für die ganze Schweiz
+* 97% Overall Accuracy
+
+
+### Satellitenbilder (passiv)
+
+[JRC Forest Map](https://earthzine.org/pan-european-forest-maps-derived-from-optical-satellite-imagery)
+* 2000, 2006
+* 25m Auflösung
+* aus Landsat-7 ETM+ (2000) und IRS-LISS-3, SPOT4/5 Bildern (2006)
+* CORINE Land Cover als Trainingsdaten
+* LUCAS und eForest (Daten der NFIs) Daten zur Validierung
+* k-NN Model (2000) und ANN Model (2006)
+* 90.8% Overall Accuracy (2000) und 84% Overall Accuracy (2006)
+
+[Satellitengestutzte Waldflachenkartierung fur die Bundeswaldinventur](https://ediss.sub.uni-hamburg.de/volltexte/2007/3172/pdf/070111_oehmichen_dissertation.pdf)
 * für Testgebiete
 * nach BWI-Definitoion
 * aus Quickbird und Landsat (7)
@@ -82,9 +82,17 @@ Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinitio
 * 93-97% Genauigkeit
 
 [Tree cover mapping based on Sentinel-2 images demonstrate high thematic accuracy in Europe](https://www.sciencedirect.com/science/article/pii/S0303243419306087)
-* für Testgebiete
-* k-means Klassifikation von einzelnen Sentinel-2 Szenen
-* Genauigkeit bis 90%
+* für Testgebiete in Europa
+* unüberwachte k-means Klassifikation von einzelnen Sentinel-2 Szenen
+* Genauigkeit bis 90% (999 Pixel als Referenz)
+
+[Mapping pan-European land cover using Landsat spectral-temporal metrics and the European LUCAS survey](https://www.sciencedirect.com/science/article/abs/pii/S0034425718305546?via%3Dihub)
+* aus Landsat-8 Daten (1 Jahr und 3 Jahre)
+* 'used annual and seasonal spectral-temporal metrics and environmental features'
+* MMU 30x30m
+* LUCAS Daten als Referenz
+* 12 LULC classes für ganz Europa
+* 75.1% Overall Accuracy
 
 
 ### Satellitenbilder (aktiv)
@@ -100,15 +108,18 @@ Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinitio
 [Annual seasonality in Sentinel-1 signal for forest mapping and forest type classification](https://www.tandfonline.com/doi/abs/10.1080/01431161.2018.1479788)
 * für Testgenbiete
 * aus Sentinel-1 Zeitreihen
-* 86-91% Genauigkeit
+* Methodik basiert auf time series similarity measures
+* 86-91% Overall Accuracy (forest/non-forest) 
+* 85% Overall Accuracy (non-forest, coniferous and broadleaf forest)
 * Copernicus HRL als Referenz
 
 [High Resolution Forest Maps from Interferometric TanDEM-X and Multitemporal Sentinel-1 SAR Data](https://link.springer.com/article/10.1007/s41064-017-0040-1)
 * für Testgebiete in Deutschland und Kanada
 * Sentinel-1 und TanDEM-X
+* Random Forest Klassifikation
 * ca 85 - 95% Genauigkeit
 
-[Project Forest/Non-Forest Map](https://www.dlr.de/hr/desktopdefault.aspx/tabid-12538/21873_read-50027/)
+[The global forest/non-forest map from TanDEM-X interferometric SAR data](https://www.sciencedirect.com/science/article/pii/S0034425717305795#s0095)
 * globale Waldmaske
 * 50m Auflösung
 * aus TanDEM-X Bildern 
@@ -125,6 +136,7 @@ Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinitio
 * dann Ableitung von Vegetation durch NDVI-Grenzwert für Segmente
 * dann Wald/Nichtwald Unterscheidung der Vegetation durch Random Forest Klassifizierung von DEM und S-2 Metriken der Segmente
 * Genauigkeit 99%
+
 
 ## Referenzdaten
 
@@ -143,8 +155,12 @@ Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinitio
 * 2-4m Auflösung
 * über Copernicus (mit Anmeldung evtl.)
 
+[The Potential of Open Geodata for Automated Large-Scale Land Use and Land Cover Classification](https://www.mdpi.com/2072-4292/11/19/2249/htm)
+* Studie zur Nutzung von Open Data als Referenz zur LULC Klassifizierung
+* anhand von Random Forest Klassifiuierung mit Landsat 7/8 
 
-### Basisdaten Zusammenfassung
+
+## Basisdaten Zusammenfassung
 
 ALK (Automatisierte Liegenschaftskarte)
 * digitaler Nachfolger der analogen Liegenschaftskarte/Flurkarte
@@ -199,7 +215,10 @@ CORINE LAND COVER
 * seit CLC2012 mit MMU 1ha aus LBM-DE abgeleitet
 * mit MMU 5ha (seit 2020), 10ha und 25ha frei verfügbar
 
-
-
+## Politischer Wille zur Nutzung von Fernerkundungsdaten
+[BMEL](https://www.bmel.de/SharedDocs/Downloads/DE/Broschueren/Fernerkundung.html)
+* Potenzial von zukünftigen Anwendungsoptionen der Fernerkundung laut TI-WO u.a.
+  * Erfassung der Waldfläche und Waldflächenänderungen
+  * Erfassung von Bäumen außerhalb des Waldes
 
 
