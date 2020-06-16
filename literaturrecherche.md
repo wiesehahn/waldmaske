@@ -4,7 +4,7 @@
   * Mindestkartierfläche jedoch einen Hektar und die Mindestkartierbreite 15 Meter
   * bisher wurden hauptsächlich RapidEye-Satellitenbilder genutzt, "zukünftig" Copernicus 
  
-[BMEL](https://www.bmel.de/SharedDocs/Downloads/Broschueren/Fernerkundung.html)
+[BMEL](https://www.bmel.de/SharedDocs/Downloads/DE/Broschueren/Fernerkundung.html)
 * Potenzial von zukünftigen Anwendungsoptionen der Fernerkundung laut TI-WO u.a.
   * Erfassung der Waldfläche und Waldflächenänderungen
   * Erfassung von Bäumen außerhalb des Waldes
