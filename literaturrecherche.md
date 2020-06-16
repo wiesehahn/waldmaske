@@ -73,7 +73,7 @@
 * k-NN Model (2000) und ANN Model (2006)
 * 90.8% Overall Accuracy (2000) und 84% Overall Accuracy (2006)
 
-[Satellitengestutzte Waldflachenkartierung fur die Bundeswaldinventur](https://ediss.sub.uni-hamburg.de/volltexte/2007/3172/pdf/070111_oehmichen_dissertation.pdf)
+[Satellitengestutzte Waldflachenkartierung für die Bundeswaldinventur](https://ediss.sub.uni-hamburg.de/volltexte/2007/3172/pdf/070111_oehmichen_dissertation.pdf)
 * für Testgebiete
 * nach BWI-Definitoion
 * aus Quickbird und Landsat (7)
@@ -167,7 +167,7 @@
 
 [The Potential of Open Geodata for Automated Large-Scale Land Use and Land Cover Classification](https://www.mdpi.com/2072-4292/11/19/2249/htm)
 * Studie zur Nutzung von Open Data als Referenz zur LULC Klassifizierung
-* anhand von Random Forest Klassifiuierung mit Landsat 7/8 
+* anhand von Random Forest Klassifiuierung mit Landsat 7/8 validiert
 
 
 ## Basisdaten Zusammenfassung
