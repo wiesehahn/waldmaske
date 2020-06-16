@@ -128,7 +128,7 @@
 
 ## Waldmaske als Nebenprodukt
 
-[Forest Stand Species Mapping Using the Sentinel-2Time Series](https://www.mdpi.com/2072-4292/11/10/1197/pdf)
+[Forest Stand Species Mapping Using the Sentinel-2 Time Series](https://www.mdpi.com/2072-4292/11/10/1197/pdf)
 * eine Sentinel-2 Szene mit Random Forest in Wald/Nichtwald klassifiziert
 
 [Forest Type Identification with Random Forest UsingSentinel-1A, Sentinel-2A, Multi-Temporal Landsat-8and DEM Data](https://www.mdpi.com/2072-4292/10/6/946/pdf)
@@ -137,6 +137,14 @@
 * dann Wald/Nichtwald Unterscheidung der Vegetation durch Random Forest Klassifizierung von DEM und S-2 Metriken der Segmente
 * Genauigkeit 99%
 
+[Intra-annual reflectance composites from Sentinel-2 and Landsat for national-scale crop and land cover mapping](http://publzalf.ext.zalf.de/publications/a1eb1367-6281-412c-b489-1801d78feddf.pdf)
+* für Deutschland
+* 30m Auflösung
+* 12 LULC Klassen
+* LUCAS und LPIS Daten als Referenz
+* aus Sentinel-2A und Landsat-8 mutlisensor-Kompositen (10-Tages, Saison- und Jahreskompositen)
+* mit Random Forest Classifier
+* 81% Overall Accuracy
 
 ## Referenzdaten
 
