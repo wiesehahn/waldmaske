@@ -30,7 +30,7 @@
   * mit TCD Waldmaske (>30% und morphologische Filter) maskiert, trotzdem manche Features doppelt und andere gar nicht kartiert.
   * Genauigkeit noch nicht validiert, 80% anvisiert (Stand: April 2020)
 
-* High Resolution Vegetation Phenology and Productivity Layer seit Februar 2020 in Produktion
+* High Resolution Vegetation Phenology and Productivity Layer seit Februar 2020 in Produktion [link](https://land.copernicus.eu/user-corner/technical-library/phenology)
 
 
 [LBM-DE](https://www.bkg.bund.de/DE/Ueber-das-BKG/Geoinformation/Fernerkundung/Landbedeckungsmodell/Herstellung/herstellung.html)
