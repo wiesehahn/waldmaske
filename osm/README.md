@@ -6,21 +6,20 @@ use of OSM data to mask out features (e.g. streets)
 
 sources used:
 
-- https://overpass-turbo.eu/
-(to query data from OSM)
+- https://overpass-turbo.eu/  
+(to query data from OSM) - simple example [query](https://overpass-turbo.eu/s/Voa) to get certain highways
 
-simple example [query](https://overpass-turbo.eu/s/Voa) to get certain highways
-
-- https://taginfo.openstreetmap.org/
+- https://taginfo.openstreetmap.org/  
 (to get information about data values/tags)
 
-- https://wiki.openstreetmap.org/wiki/Map_Features
+- https://wiki.openstreetmap.org/wiki/Map_Features  
 (to get information about data values/tags)
 
-- https://towardsdatascience.com/loading-data-from-openstreetmap-with-python-and-the-overpass-api-513882a27fd0
+- https://towardsdatascience.com/loading-data-from-openstreetmap-with-python-and-the-overpass-api-513882a27fd0  
 (how to use overpass api with python)
 
-Using the QuickOSM plugin with QGIS data with the following query can be downloaded. To reduce data amount save the layer without attributes as permanent layer.
+
+Using the following query, data can be downloaded with QGIS and the QuickOSM plugin. 
 ```
 <osm-script output="json" output-config="">
     <id-query {{geocodeArea:goettingen}} into="area_0"/>
@@ -35,3 +34,5 @@ Using the QuickOSM plugin with QGIS data with the following query can be downloa
   <print e="" from="_" geometry="skeleton" ids="yes" limit="" mode="skeleton" n="" order="quadtile" s="" w=""/>
 </osm-script>
 ```
+
+Save the layer without attributes as permanent layer to reduce data amount .
