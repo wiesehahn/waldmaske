@@ -19,20 +19,24 @@ sources used:
 (how to use overpass api with python)
 
 
-Using the following query, data can be downloaded with QGIS and the QuickOSM plugin. 
+Using the following query, data can be downloaded from overpass-api
 ```
-<osm-script output="json" output-config="">
-    <id-query {{geocodeArea:goettingen}} into="area_0"/>
-  <query into="_" type="way">
-    <has-kv k="highway" modv="" v=""/>
-    <has-kv k="highway" modv="not" regv="footway|path|bridleway|steps"/>
-    <has-kv k="tracktype" modv="not" regv="grade4|grade5"/>
-   <area-query from="area_0"/>
-  </query>
-  <print e="" from="_" geometry="skeleton" ids="yes" limit="" mode="body" n="" order="id" s="" w=""/>
-  <recurse from="_" into="_" type="down"/>
-  <print e="" from="_" geometry="skeleton" ids="yes" limit="" mode="skeleton" n="" order="quadtile" s="" w=""/>
-</osm-script>
+[out:json];
+
+area["ISO3166-2"="DE-NI"]->.suchgebiet;
+
+(
+  way
+  ["highway"]
+  [highway!~"footway|path|bridleway|steps"]
+  [tracktype!~"grade4|grade5"]
+  (area.suchgebiet);
+);
+out skel geom qt;
 ```
 
-Save the layer without attributes as permanent layer to reduce data amount .
+This query was executed from a python script inside a colab notebook. Further the data was converted to GeoJSON FeatureCollection and then to shapefile in this notebook. [colab notebook](https://github.com/wiesehahn/waldmaske/blob/master/notebooks/query_osm.ipynb)  
+
+The shapefile was zipped and uploaded to Google Earth Engine for the masking process. [GEE script](https://github.com/wiesehahn/waldmaske/blob/master/scripts/gee/05_mask_streets.js)
+
+

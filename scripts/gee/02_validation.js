@@ -25,7 +25,7 @@ var reference_random = ref_sampled.randomColumn('random');
 // remap values in two classes (forest/ no-forest)
 var reference_random = reference_random.remap({
   // [0:T3, 1:A, 2:S, 3:T1, 4:T2, 5:V1, 6:V2, 7:W]
-  lookupIn:  [0,1,2,3,4,5,6,7], 
+  lookupIn:  [0,1,2,3,4,5,6,7],
   // [0:Forest, 1:No-Forest]
   lookupOut: [0,1,1,0,0,1,1,1],
   columnName: 'class'});
@@ -46,7 +46,7 @@ var validationPartition = reference_random.filter(ee.Filter.gte('random', split)
 
 2. Build Model using best perforimg Hyperparameters from 1)
 
-3. Perform Feature selection 
+3. Perform Feature selection
 
 4. Build Model using perforimg Hyperparameters from 1) and best performing features from 3)
 
@@ -68,11 +68,11 @@ var numTrees = ee.List.sequence(10, 100, 10);
 var accuracies = numTrees.map(function(t) {
   var classifier =  ee.Classifier.smileRandomForest({numberOfTrees:t,
                                             variablesPerSplit:2,
-                                            minLeafPopulation:10, 
+                                            minLeafPopulation:10,
                                             bagFraction:0.5})
     .train({
-      features: trainingPartition, 
-      classProperty: 'class', 
+      features: trainingPartition,
+      classProperty: 'class',
       inputProperties: usedBands
     });
   return validationPartition
@@ -82,8 +82,8 @@ var accuracies = numTrees.map(function(t) {
 });
 
 print('Parameter Tuning - Number of Trees', ui.Chart.array.values({
-  array: ee.Array(accuracies), 
-  axis: 0, 
+  array: ee.Array(accuracies),
+  axis: 0,
   xLabels: numTrees
 }));
 
@@ -93,11 +93,11 @@ var numVars = ee.List([2,3,5,8,12]);
 var accuracies = numVars.map(function(t) {
   var classifier = ee.Classifier.smileRandomForest({numberOfTrees:50,
                                             variablesPerSplit:t,
-                                            minLeafPopulation:10, 
+                                            minLeafPopulation:10,
                                             bagFraction:0.5})
     .train({
-      features: trainingPartition, 
-      classProperty: 'class', 
+      features: trainingPartition,
+      classProperty: 'class',
       inputProperties: usedBands
     });
   return validationPartition
@@ -107,8 +107,8 @@ var accuracies = numVars.map(function(t) {
 });
 
 print('Parameter Tuning - Variables per Split', ui.Chart.array.values({
-  array: ee.Array(accuracies), 
-  axis: 0, 
+  array: ee.Array(accuracies),
+  axis: 0,
   xLabels: numVars
 }));
 
@@ -118,11 +118,11 @@ var minLeaf = ee.List([2,3,5,8,12]);
 var accuracies = minLeaf.map(function(t) {
   var classifier = ee.Classifier.smileRandomForest({numberOfTrees:50,
                                             variablesPerSplit:10,
-                                            minLeafPopulation:t, 
+                                            minLeafPopulation:t,
                                             bagFraction:0.5})
     .train({
-      features: trainingPartition, 
-      classProperty: 'class', 
+      features: trainingPartition,
+      classProperty: 'class',
       inputProperties: usedBands
     });
   return validationPartition
@@ -132,8 +132,8 @@ var accuracies = minLeaf.map(function(t) {
 });
 
 print('Parameter Tuning - Minimal Leaf Population', ui.Chart.array.values({
-  array: ee.Array(accuracies), 
-  axis: 0, 
+  array: ee.Array(accuracies),
+  axis: 0,
   xLabels: minLeaf
 }));
 
@@ -144,11 +144,11 @@ print('Parameter Tuning - Minimal Leaf Population', ui.Chart.array.values({
 var classifier = ee.Classifier.smileRandomForest({numberOfTrees:50,
                                             variablesPerSplit:10,
                                             // https://groups.google.com/d/msg/google-earth-engine-developers/qxVRHoI_R8c/AX-mxrrDEAAJ
-                                            minLeafPopulation:3, 
+                                            minLeafPopulation:3,
                                             bagFraction:0.5});
 
 
-// train the classifier. 
+// train the classifier.
 var model = classifier.setOutputMode('CLASSIFICATION').train(trainingPartition, 'class', usedBands);
 
 var dict_rf = model.explain();
@@ -180,14 +180,14 @@ print(chart_rf);
 
 
 // subselect features to most important seasons (visually from chart above)
-// *_1: summer (doy 90-150) 
+// *_1: summer (doy 90-150)
 // *_2: autumn (doy 150-270)
 var subselectionBands = [
   'B2_p33_1','B3_p33_1','B4_p33_1','B5_p33_1','B6_p33_1','B7_p33_1','B8_p33_1','B8A_p33_1','B11_p33_1','B12_p33_1','NDVI_p33_1','NDWI_p33_1','NBRI_p33_1','NDMI_p33_1',
   'B2_p33_2','B3_p33_2','B4_p33_2','B5_p33_2','B6_p33_2','B7_p33_2','B8_p33_2','B8A_p33_2','B11_p33_2','B12_p33_2','NDVI_p33_2','NDWI_p33_2','NBRI_p33_2','NDMI_p33_2',
   ];
 
-// train the classifier on subselection 
+// train the classifier on subselection
 var model = classifier.setOutputMode('CLASSIFICATION').train(trainingPartition, 'class', subselectionBands);
 var dict_rf = model.explain();
 
@@ -212,11 +212,11 @@ var numTrees = ee.List.sequence(10, 100, 10);
 var accuracies = numTrees.map(function(t) {
   var classifier =  ee.Classifier.smileRandomForest({numberOfTrees:t,
                                             variablesPerSplit:10,
-                                            minLeafPopulation:3, 
+                                            minLeafPopulation:3,
                                             bagFraction:0.5})
     .train({
-      features: trainingPartition, 
-      classProperty: 'class', 
+      features: trainingPartition,
+      classProperty: 'class',
       inputProperties: importantBands
     });
   return validationPartition
@@ -226,8 +226,8 @@ var accuracies = numTrees.map(function(t) {
 });
 
 print('Parameter Tuning - Number of Trees', ui.Chart.array.values({
-  array: ee.Array(accuracies), 
-  axis: 0, 
+  array: ee.Array(accuracies),
+  axis: 0,
   xLabels: numTrees
 }));
 
@@ -237,11 +237,11 @@ var numVars = ee.List([2,3,5,8,12]);
 var accuracies = numVars.map(function(t) {
   var classifier = ee.Classifier.smileRandomForest({numberOfTrees:50,
                                             variablesPerSplit:t,
-                                            minLeafPopulation:3, 
+                                            minLeafPopulation:3,
                                             bagFraction:0.5})
     .train({
-      features: trainingPartition, 
-      classProperty: 'class', 
+      features: trainingPartition,
+      classProperty: 'class',
       inputProperties: importantBands
     });
   return validationPartition
@@ -251,8 +251,8 @@ var accuracies = numVars.map(function(t) {
 });
 
 print('Parameter Tuning - Variables per Split', ui.Chart.array.values({
-  array: ee.Array(accuracies), 
-  axis: 0, 
+  array: ee.Array(accuracies),
+  axis: 0,
   xLabels: numVars
 }));
 
@@ -262,11 +262,11 @@ var minLeaf = ee.List([2,3,5,8,12]);
 var accuracies = minLeaf.map(function(t) {
   var classifier = ee.Classifier.smileRandomForest({numberOfTrees:50,
                                             variablesPerSplit:10,
-                                            minLeafPopulation:t, 
+                                            minLeafPopulation:t,
                                             bagFraction:0.5})
     .train({
-      features: trainingPartition, 
-      classProperty: 'class', 
+      features: trainingPartition,
+      classProperty: 'class',
       inputProperties: importantBands
     });
   return validationPartition
@@ -276,8 +276,8 @@ var accuracies = minLeaf.map(function(t) {
 });
 
 print('Parameter Tuning - Minimal Leaf Population', ui.Chart.array.values({
-  array: ee.Array(accuracies), 
-  axis: 0, 
+  array: ee.Array(accuracies),
+  axis: 0,
   xLabels: minLeaf
 }));
 
@@ -289,10 +289,10 @@ print('Parameter Tuning - Minimal Leaf Population', ui.Chart.array.values({
 var classifier = ee.Classifier.smileRandomForest({numberOfTrees:70,
                                             variablesPerSplit:3,
                                             // https://groups.google.com/d/msg/google-earth-engine-developers/qxVRHoI_R8c/AX-mxrrDEAAJ
-                                            minLeafPopulation:3, 
+                                            minLeafPopulation:3,
                                             bagFraction:0.5});
 
-// train the classifier. 
+// train the classifier.
 var model = classifier.setOutputMode('CLASSIFICATION').train(trainingPartition, 'class', importantBands);
 
 

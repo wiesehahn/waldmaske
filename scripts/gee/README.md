@@ -20,5 +20,8 @@ Links below will redirect to scripts in GEE (most recent version)
 [*04_display_results*](https://code.earthengine.google.com/?scriptPath=users%2Fwiesehahn%2Fwaldmaske%3Aclassification%2F04_display_results)
 (visualizes the classification)
 
+[*05_mask_streets*](https://code.earthengine.google.com/?scriptPath=users%2Fwiesehahn%2Fwaldmaske%3Aclassification%2F05_mask_streets)
+(uses osm data to mask ways)
+
 *Validation overall accuracy:
 0.9715045592705167*
