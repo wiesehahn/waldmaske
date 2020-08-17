@@ -5,7 +5,7 @@ library(dplyr)
 con <- odbcConnectAccess("C:/Users/jwiesehahn/Arbeit/data/inventory/bwi2012/bwi_all.mdb")
 
 query <- "
-SELECT b0_ecke.Tnr, b0_ecke.Enr, b3_ecke_w.Wa, b3_bestock.BestockTypFein, b3_bestock.BestockTypLN, b3_ecke_w.Begehbar
+SELECT b0_ecke.Tnr, b0_ecke.Enr, b0_ecke.Vbl, b3_ecke_w.Wa, b3_bestock.BestockTypFein, b3_bestock.BestockTypLN, b3_ecke_w.Begehbar
 FROM (b0_ecke
 LEFT JOIN b3_ecke_w ON (b0_ecke.Enr = b3_ecke_w.Enr) AND (b0_ecke.Tnr = b3_ecke_w.Tnr))
 LEFT JOIN b3_bestock ON (b0_ecke.Enr = b3_bestock.Enr) AND (b0_ecke.Tnr = b3_bestock.Tnr)
