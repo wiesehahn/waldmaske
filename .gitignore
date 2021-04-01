@@ -3,3 +3,6 @@
 .RData
 .Ruserdata
 data/classification/
+
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
