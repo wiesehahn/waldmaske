@@ -3,10 +3,10 @@
 ## nutzbare Waldmasken 
 
 [Copernicus HRL](https://land.copernicus.eu/pan-european/high-resolution-layers)
-* für 2012, 2015 (alle 3 Jahre)
+* für 2012, 2015, 2018 (alle 3 Jahre)
 * aus Sentinel-1, Sentinel-2 (sowie Landsat-8 und VHR)
-* 20m Auflösung (100m für Change Products)
-* 2018 mit 10m Auflösung generiert über DIAS (Mundi Web Services) (Start: 22.01.2019, online ab ca Mitte Mai 2020)  
+* 2012 und 2015 mit 20m Auflösung (100m für Change Products)
+* 2018 mit 10m Auflösung generiert über DIAS (Mundi Web Services) (online seit 2020)  
 * Definition für Tree Cover Mask vorhanden
 * Produkte: Tree Cover Density, Forest Type, Forest Additional Support Layer, Dominant Leaf Type, Tree Cover Density Change, Dominante Leaf Type Change
 
@@ -21,8 +21,8 @@
   20m Version besteht aus zwei Produkten:  
     1. DLT mit 0.5ha MMU und 10% TCD Grenzwert
     2. Support Layer (FADSL)
-      * keine MMU
-      * FADSL nutzt CORINE Land Cover und HRL imperviousness um Stadt und Agrarbäume auszuweisen
+     * keine MMU
+     * FADSL nutzt CORINE Land Cover und HRL imperviousness um Stadt und Agrarbäume auszuweisen
 
 * Small Woody Features
   * wurden aus VHR Bildern extrahiert und beinhalten Hecken, Alleen, Baumgruppen (TOF) ([Methode](https://eur02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fland.copernicus.eu%2Fpan-european%2Fhigh-resolution-layers%2Fsmall-woody-features&data=02%7C01%7CKeri.Bloomfield%40eea.europa.eu%7Cace94925eabf406bface08d7c04fb831%7Cbe2e7beab4934de5bbc58b4a6a235600%7C1%7C0%7C637189320934401467&sdata=MYO61PoeavDbkYGaMFtQYS%2Bzs29GE1%2BE0Giuew%2BXxgw%3D&reserved=0))

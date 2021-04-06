@@ -28,8 +28,7 @@ ref_bwi.sp <- spTransform(ref_bwi.sp, CRS("+init=epsg:4326"))
 #          "ref_bwi", driver="ESRI Shapefile")
 
 
-
-img.class <- raster("./data/classification/classification_32unc_20200623_clipped.tif")
+img.class <- raster("Y:/Jens/large-file-storage/waldmaske/classification_32unc_20200623_clipped.tif")
 
 ref.class <- raster::extract(img.class, ref_bwi.sp, sp=TRUE)
 
