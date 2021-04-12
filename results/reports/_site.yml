@@ -1,0 +1,13 @@
+name: waldmaske
+output_dir: ../../docs
+navbar:
+  title: waldmaske
+  left:
+  - text: Home
+    href: index.html
+  - text: Vergleich
+    href: compare_forest_masks.html
+  right:
+  - icon: fa-github
+    text: Source code
+    href: https://github.com/wiesehahn/waldmaske
