@@ -4,11 +4,7 @@ date: "2021-04-13"
 output: html_document
 ---
 
-```{r global_options, include=FALSE}
-knitr::opts_chunk$set(# fig.width=12, fig.height=8, 
-  echo=FALSE, warning=FALSE, message=FALSE)
-```
-
+<img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/waldmaske_banner.jpeg/>
 
 *Projekt zur Erstellung einer optimierten Waldmaske aus Fernerkundungsdaten*
 
@@ -17,7 +13,7 @@ knitr::opts_chunk$set(# fig.width=12, fig.height=8,
 - Erstellung einer Waldmaske aus frei verfügbaren Fernerkundungsdaten 
 (zunächst für ein Testgebiet, später hochskaliert auf Deutschland)
 
-## Anfordeungen 
+## Anforderungen 
 - Kartierung soll aktuell sein 
 - Kartierung muss richtig sein (> 95% Genauigkeit ?)
 - Waldmaske soll aus frei verfügbaren Satellitenbilddaten erzeugt werden

@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="wiesehahn" />
+
+<meta name="date" content="2021-04-13" />
+
+<title>literature_review.utf8</title>
+
+<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 66px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h2 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h3 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h4 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h5 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h6 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Waldmaske</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Projekt</a>
+</li>
+<li>
+  <a href="literature_review.html">Recherche</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Vergleich
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="compare_forest_masks_bwi.html">Stichprobenbasiert</a>
+    </li>
+    <li>
+      <a href="compare_forest_masks_viz.html">Visuell</a>
+    </li>
+    <li>
+      <a href="compare_forest_masks_generel.html">Generell</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/wiesehahn/waldmaske">
+    <span class="fab fa-github"></span>
+     
+    Source code
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<div id="nutzbare-waldmasken" class="section level2">
+<h2>nutzbare Waldmasken</h2>
+<p><a href="https://land.copernicus.eu/pan-european/high-resolution-layers">Copernicus HRL</a></p>
+<ul>
+<li><p>für 2012, 2015, 2018 (alle 3 Jahre)</p></li>
+<li><p>aus Sentinel-1, Sentinel-2 (sowie Landsat-8 und VHR)</p></li>
+<li><p>2012 und 2015 mit 20m Auflösung (100m für Change Products)</p></li>
+<li><p>2018 mit 10m Auflösung generiert über DIAS (Mundi Web Services) (online seit 2020)</p></li>
+<li><p>Definition für Tree Cover Mask vorhanden</p></li>
+<li><p>Produkte: Tree Cover Density, Forest Type, Forest Additional Support Layer, Dominant Leaf Type, Tree Cover Density Change, Dominante Leaf Type Change</p></li>
+<li><p>TCD</p>
+<ul>
+<li>aus HR Bildern mit VHR Bildern und Orthophotos als Referenz in einer linearen Funktion</li>
+<li>1 Pixel MMU (20/10m)</li>
+<li>90% Accuracy (<a href="http://www.gofcgold.wur.nl/documents/CopernicusREDD/12_CopernicusHRlayers.pdf">link</a>)</li>
+</ul></li>
+<li><p>DLT aus multitenmporalen Bildern mit Support Vector Mashine</p></li>
+<li><p>FTY erstellt nach FAO Walddefinition (20m-Version beinhaltet Stadt- und Agrarbäume, 100m-Version nicht) 20m Version besteht aus zwei Produkten:</p>
+<p>1.DLT mit 0.5ha MMU und 10% TCD Grenzwert</p>
+<p>2.Support Layer (FADSL)</p>
+<ul>
+<li>keine MMU</li>
+<li>FADSL nutzt CORINE Land Cover und HRL imperviousness um Stadt und Agrarbäume auszuweisen</li>
+</ul></li>
+<li><p>Small Woody Features</p>
+<ul>
+<li>wurden aus VHR Bildern extrahiert und beinhalten Hecken, Alleen, Baumgruppen (TOF) (<a href="https://eur02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fland.copernicus.eu%2Fpan-european%2Fhigh-resolution-layers%2Fsmall-woody-features&amp;data=02%7C01%7CKeri.Bloomfield%40eea.europa.eu%7Cace94925eabf406bface08d7c04fb831%7Cbe2e7beab4934de5bbc58b4a6a235600%7C1%7C0%7C637189320934401467&amp;sdata=MYO61PoeavDbkYGaMFtQYS%2Bzs29GE1%2BE0Giuew%2BXxgw%3D&amp;reserved=0">Methode</a>)</li>
+<li>für 2015 seit März 2020 verfügbar, als 5m Raster oder Vector und aggregierte Version als 100m Raster</li>
+<li>mit TCD Waldmaske (&gt;30% und morphologische Filter) maskiert, trotzdem manche Features doppelt und andere gar nicht kartiert.</li>
+<li>Genauigkeit noch nicht validiert, 80% anvisiert (Stand: April 2020)</li>
+</ul></li>
+<li><p>High Resolution Vegetation Phenology and Productivity Layer seit Februar 2020 in Produktion (<a href="https://land.copernicus.eu/user-corner/technical-library/phenology">link</a>)</p></li>
+</ul>
+<p><a href="https://www.bkg.bund.de/DE/Ueber-das-BKG/Geoinformation/Fernerkundung/Landbedeckungsmodell/Herstellung/herstellung.html">LBM-DE</a></p>
+<ul>
+<li>Das BKG aktualisiert mit Hilfe von Fernerkundungsdaten alle drei Jahre das Digitale Landbedeckungsmodell für Deutschland (LBM-DE)</li>
+<li>Aufbauend auf Basis-DLM</li>
+<li>2012, 2015, 2018</li>
+<li>Mindestkartierfläche 1 ha und die Mindestkartierbreite 15 Meter</li>
+<li>bisher wurden hauptsächlich RapidEye-Satellitenbilder genutzt, “zukünftig” Copernicus Sentinel Daten zur Aktualisierung</li>
+</ul>
+</div>
+<div id="waldmasken-aus-fernerkundungsdaten-in-anderen-studien" class="section level2">
+<h2>Waldmasken aus Fernerkundungsdaten in anderen Studien</h2>
+<p><a href="https://link.springer.com/chapter/10.1007/978-1-4939-7331-6_7">Towards automated Forest Mapping</a></p>
+<ul>
+<li>Übersicht zu Methoden und Studien</li>
+</ul>
+<div id="lidar" class="section level3">
+<h3>LIDAR</h3>
+<p><a href="https://ethz.ch/content/dam/ethz/special-interest/usys/ites/ites-dam/Education/Portal%20Forest%20and%20Landscape/Documents/MA_Abstracts_2019/Abstract_SamuelKueng.pdf">Waldabgrenzung mithilfe von 3D Fernerkundungsdaten am Beispiel der Walddefinition des Schweizerischen Landesforstinventares</a></p>
+<ul>
+<li>Waldmaske 2019 für den Kanton Bern</li>
+<li>97% Overall Accuracy</li>
+</ul>
+</div>
+<div id="stereobilder" class="section level3">
+<h3>Stereobilder</h3>
+<p><a href="https://www.researchgate.net/publication/286453059_Wall-to-Wall_Forest_Mapping_Based_on_Digital_Surface_Models_from_Image-Based_Point_Clouds_and_a_NFI_Forest_Definition">Wall-to-Wall Forest Mapping Based on DigitalSurface Models from Image-Based Point Clouds and a NFI Forest Definition</a></p>
+<ul>
+<li>aus Stereo Orthophotos (zusammen mit DTM und DLM)</li>
+<li>Auflösung 1m</li>
+<li>für die ganze Schweiz</li>
+<li>97% Overall Accuracy</li>
+</ul>
+</div>
+<div id="satellitenbilder-passiv" class="section level3">
+<h3>Satellitenbilder (passiv)</h3>
+<p><a href="https://earthzine.org/pan-european-forest-maps-derived-from-optical-satellite-imagery">JRC Forest Map</a></p>
+<ul>
+<li>2000, 2006</li>
+<li>25m Auflösung</li>
+<li>aus Landsat-7 ETM+ (2000) und IRS-LISS-3, SPOT4/5 Bildern (2006)</li>
+<li>CORINE Land Cover als Trainingsdaten</li>
+<li>LUCAS und eForest (Daten der NFIs) Daten zur Validierung</li>
+<li>k-NN Model (2000) und ANN Model (2006)</li>
+<li>90.8% Overall Accuracy (2000) und 84% Overall Accuracy (2006)</li>
+</ul>
+<p><a href="https://ediss.sub.uni-hamburg.de/volltexte/2007/3172/pdf/070111_oehmichen_dissertation.pdf">Satellitengestutzte Waldflachenkartierung für die Bundeswaldinventur</a></p>
+<ul>
+<li>für Testgebiete</li>
+<li>nach BWI-Definitoion</li>
+<li>aus Quickbird und Landsat (7)</li>
+<li>zusätzlich mit ATKIS Daten korrigiert</li>
+<li>referenziert mit BWI-Daten</li>
+<li>93-97% Genauigkeit</li>
+</ul>
+<p><a href="https://www.sciencedirect.com/science/article/pii/S0303243419306087">Tree cover mapping based on Sentinel-2 images demonstrate high thematic accuracy in Europe</a></p>
+<ul>
+<li>für Testgebiete in Europa</li>
+<li>unüberwachte k-means Klassifikation von einzelnen Sentinel-2 Szenen</li>
+<li>Genauigkeit bis 90% (999 Pixel als Referenz)</li>
+</ul>
+<p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0034425718305546?via%3Dihub">Mapping pan-European land cover using Landsat spectral-temporal metrics and the European LUCAS survey</a></p>
+<ul>
+<li>aus Landsat-8 Daten (1 Jahr und 3 Jahre)</li>
+<li>‘used annual and seasonal spectral-temporal metrics and environmental features’</li>
+<li>MMU 30x30m</li>
+<li>LUCAS Daten als Referenz</li>
+<li>12 LULC classes für ganz Europa</li>
+<li>75.1% Overall Accuracy</li>
+</ul>
+</div>
+<div id="satellitenbilder-aktiv" class="section level3">
+<h3>Satellitenbilder (aktiv)</h3>
+<p><a href="https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/III-7/227/2016/isprs-annals-III-7-227-2016.pdf">Forest area derivation from Sentinel-1 data</a></p>
+<ul>
+<li>Waldmaske für Testgebiet in Österreich</li>
+<li>Sentinel-1A</li>
+<li>Otsu thresholding and K-means clustering</li>
+<li>10m Auflösung und 500m² MMU</li>
+<li>92% Overall Accuracy</li>
+<li>kann verbeesert werden wenn Stadtgebiete ausgeschlossen werden</li>
+</ul>
+<p><a href="https://www.tandfonline.com/doi/abs/10.1080/01431161.2018.1479788">Annual seasonality in Sentinel-1 signal for forest mapping and forest type classification</a></p>
+<ul>
+<li>für Testgenbiete</li>
+<li>aus Sentinel-1 Zeitreihen</li>
+<li>Methodik basiert auf time series similarity measures</li>
+<li>86-91% Overall Accuracy (forest/non-forest)</li>
+<li>85% Overall Accuracy (non-forest, coniferous and broadleaf forest)</li>
+<li>Copernicus HRL als Referenz</li>
+</ul>
+<p><a href="https://link.springer.com/article/10.1007/s41064-017-0040-1">High Resolution Forest Maps from Interferometric TanDEM-X and Multitemporal Sentinel-1 SAR Data</a></p>
+<ul>
+<li>für Testgebiete in Deutschland und Kanada</li>
+<li>Sentinel-1 und TanDEM-X</li>
+<li>Random Forest Klassifikation</li>
+<li>ca 85 - 95% Genauigkeit</li>
+</ul>
+<p><a href="https://www.sciencedirect.com/science/article/pii/S0034425717305795#s0095">The global forest/non-forest map from TanDEM-X interferometric SAR data</a></p>
+<ul>
+<li>globale Waldmaske</li>
+<li>50m Auflösung</li>
+<li>aus TanDEM-X Bildern</li>
+<li>Genauigkeit =&gt; 90%</li>
+</ul>
+</div>
+</div>
+<div id="waldmaske-als-nebenprodukt" class="section level2">
+<h2>Waldmaske als Nebenprodukt</h2>
+<p><a href="https://www.mdpi.com/2072-4292/11/10/1197/pdf">Forest Stand Species Mapping Using the Sentinel-2 Time Series</a></p>
+<ul>
+<li>aus einer Sentinel-2 Szene (Mitte der Vegetationsperiode)</li>
+<li>mit Random Forest in Wald/Nichtwald klassifiziert</li>
+<li>99% Overall Accuracy (ausgewählte Polygone als Referenz!)</li>
+</ul>
+<p><a href="https://www.mdpi.com/2072-4292/10/6/946/pdf">Forest Type Identification with Random Forest UsingSentinel-1A, Sentinel-2A, Multi-Temporal Landsat-8and DEM Data</a></p>
+<ul>
+<li>zunächste Segmentierung mit Landsat-8, Sentinel-2 und Sentinel-1 Bildern</li>
+<li>dann Ableitung von Vegetation durch NDVI-Grenzwert für Segmente</li>
+<li>dann Wald/Nichtwald Unterscheidung der Vegetation durch Random Forest Klassifizierung von DEM und S-2 Metriken der Segmente</li>
+<li>Genauigkeit 99%</li>
+</ul>
+<p><a href="http://publzalf.ext.zalf.de/publications/a1eb1367-6281-412c-b489-1801d78feddf.pdf">Intra-annual reflectance composites from Sentinel-2 and Landsat for national-scale crop and land cover mapping</a></p>
+<ul>
+<li>für Deutschland</li>
+<li>30m Auflösung</li>
+<li>12 LULC Klassen</li>
+<li>LUCAS und LPIS Daten als Referenz</li>
+<li>aus Sentinel-2A und Landsat-8 mutlisensor-Kompositen (10-Tages, Saison- und Jahreskompositen)</li>
+<li>mit Random Forest Classifier</li>
+<li>81% Overall Accuracy</li>
+</ul>
+</div>
+<div id="referenzdaten" class="section level2">
+<h2>Referenzdaten</h2>
+<p><a href="https://ec.europa.eu/eurostat/de/web/lucas/data/primary-data/2018">LUCAS</a></p>
+<ul>
+<li>2018</li>
+<li>Walddefinition vorhanden</li>
+<li>georeferenzierte frei verfügbare Referenzdaten</li>
+<li>genaue Soll- und Ist-Koordinaten sind vorhanden</li>
+<li><a href="https://www.sciencedirect.com/science/article/pii/S0303243419307317">Beispielstudie</a></li>
+</ul>
+<p><a href="https://link.springer.com/article/10.1007/s10712-019-09533-z">Recent Advances in Forest Observation with Visual Interpretation of Very High-Resolution Imagery</a></p>
+<ul>
+<li>Tools und Methoden zur Nutzung von VHR Bildern als Referenz (Geo-Wiki, LACO-Wiki, Collect Earth)</li>
+</ul>
+<p><a href="https://spacedata.copernicus.eu/web/cscda/data-offer/core-datasets/-/asset_publisher/SMEFUkzOylMw/content/optical-vhr-multispectral-and-panchromatic-coverage-over-europe-vhr_image_2018-?_101_INSTANCE_SMEFUkzOylMw_redirect=%2Fweb%2Fcscda%2Fdata-offer%2Fcore-datasets">VHR_Image_2018</a></p>
+<ul>
+<li>2-4m Auflösung</li>
+<li>über Copernicus (mit Anmeldung evtl.)</li>
+</ul>
+<p><a href="https://www.mdpi.com/2072-4292/11/19/2249/htm">The Potential of Open Geodata for Automated Large-Scale Land Use and Land Cover Classification</a></p>
+<ul>
+<li>Studie zur Nutzung von Open Data als Referenz zur LULC Klassifizierung</li>
+<li>anhand von Random Forest Klassifiuierung mit Landsat 7/8 validiert</li>
+</ul>
+</div>
+
+&nbsp;
+<hr />
+<p style="text-align: center;"><span style="color: #808080;"><em>Jens Wiesehahn (2021)</em></span></p>
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Add font awesome icons -->
+<p style="text-align: center;">
+	<a href="mailto:wiesehahn.jens@gmail.com" class="fa fa-envelope"></a>
+    <a href="https://github.com/wiesehahn/" class="fa fa-github"></a>
+</p>
+
+&nbsp;
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = false;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,10 +1,23 @@
 name: waldmaske
 output_dir: ../../docs
+output:
+  html_document:
+    theme: readable
+    css: style.css
+    toc: true
+    toc_depth: 2
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    includes:
+      after_body: footer.html
 navbar:
   title: Waldmaske
   left:
   - text: "Projekt"
     href: index.html
+  - text: "Recherche"
+    href: literature_review.html
   - text: "Vergleich"
     menu:
         - text: "Stichprobenbasiert"
@@ -16,5 +29,5 @@ navbar:
 
   right:
   - text: Source code
-    icon: fa-github
+    icon: fab fa-github
     href: https://github.com/wiesehahn/waldmaske
