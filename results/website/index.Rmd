@@ -4,7 +4,7 @@ date: "2021-04-13"
 output: html_document
 ---
 
-<img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/waldmaske_banner.jpeg/>
+<img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/waldmaske_banner.jpg>
 
 *Projekt zur Erstellung einer optimierten Waldmaske aus Fernerkundungsdaten*
 
