@@ -9,9 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="wiesehahn" />
 
+<meta name="date" content="2021-04-13" />
 
-<title>My Website</title>
+<title>index.utf8</title>
 
 <script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
@@ -280,15 +282,30 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">waldmaske</a>
+      <a class="navbar-brand" href="index.html">Waldmaske</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">Home</a>
+  <a href="index.html">Projekt</a>
 </li>
-<li>
-  <a href="compare_forest_masks.html">Vergleich</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Vergleich
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="compare_forest_masks_bwi.html">Stichprobenbasiert</a>
+    </li>
+    <li>
+      <a href="compare_forest_masks_viz.html">Visuell</a>
+    </li>
+    <li>
+      <a href="compare_forest_masks_generel.html">Generell</a>
+    </li>
+  </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -308,12 +325,105 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">My Website</h1>
 
 </div>
 
 
-<p>Hello, Website!</p>
+<p><em>Projekt zur Erstellung einer optimierten Waldmaske aus Fernerkundungsdaten</em></p>
+<div id="ziel" class="section level2">
+<h2>Ziel</h2>
+<ul>
+<li>Erstellung einer Waldmaske aus frei verfügbaren Fernerkundungsdaten (zunächst für ein Testgebiet, später hochskaliert auf Deutschland)</li>
+</ul>
+</div>
+<div id="anfordeungen" class="section level2">
+<h2>Anfordeungen</h2>
+<ul>
+<li>Kartierung soll aktuell sein</li>
+<li>Kartierung muss richtig sein (&gt; 95% Genauigkeit ?)</li>
+<li>Waldmaske soll aus frei verfügbaren Satellitenbilddaten erzeugt werden</li>
+<li>Reproduzierbarkeit muss gewährleistet sein</li>
+<li>Karte soll in digitaler, georeferenzierter Form vorliegen</li>
+</ul>
+</div>
+<div id="schritte" class="section level2">
+<h2>Schritte</h2>
+<ul>
+<li>angefangen von einer Literatur-/Verfahrensrecherche bis hin zu einem Konzept und dessen Anwendung in Testgebieten</li>
+</ul>
+<div id="literaturrecherche" class="section level3">
+<h3>Literaturrecherche</h3>
+<ul>
+<li>Recherche zu bereits bestehenden Produkten, deren Problemen, Genauigkeiten, Methoden, Anwendungsgebieten, etc.</li>
+</ul>
+</div>
+<div id="konzeptausarbeitung" class="section level3">
+<h3>Konzeptausarbeitung</h3>
+<div id="walddefinition" class="section level4">
+<h4>Walddefinition</h4>
+<ul>
+<li>Ausarbeitung einer Definition was als Wald klassifiziert werden soll und vor allem auch was kein Wald sein soll</li>
+</ul>
+</div>
+<div id="testgebiete" class="section level4">
+<h4>Testgebiete</h4>
+<ul>
+<li>Bestimmung von Testgebieten zur Anwendung und Validierung der Methodik. Gebiete sollten objektiv und nachvollziehbar ausgewählt werden, basierend auf Kriterien wie Validierungsoptionen, Vorhandensein von Daten, Waldgesellschaften, etc.</li>
+</ul>
+</div>
+<div id="software" class="section level4">
+<h4>Software</h4>
+<ul>
+<li>Welche Umgebung soll für den Prozess genutzt werden. Abhängig von Datenverfügbarkeit, Kosten, Nutzungseinschränkungen etc.</li>
+</ul>
+</div>
+<div id="fernerkundungsdaten" class="section level4">
+<h4>Fernerkundungsdaten</h4>
+<ul>
+<li>Auswahl der Daten, welche in der Prozessierung zur Wald/Nichtwald Klassifizierung genutzt werden sollen</li>
+</ul>
+</div>
+<div id="prozessierung" class="section level4">
+<h4>Prozessierung</h4>
+<ul>
+<li>Erarbeitung einer Prozessierungskette an deren Anfang die Input-Daten stehen und deren Output die fertige Waldmaske ist</li>
+</ul>
+</div>
+<div id="validierung" class="section level4">
+<h4>Validierung</h4>
+<ul>
+<li>Erarbeitung eines Validierungskonzepts zur Bestimmung der Genauigkeit der Waldmaske. Beinhaltet die Auswahl geeigneter Daten, die Konzeptionierung eines soliden Stichprobenverfahrens und genaue Anweisungen zur Klassifizierung</li>
+</ul>
+</div>
+</div>
+<div id="verfahrensanwendung" class="section level3">
+<h3>Verfahrensanwendung</h3>
+<ul>
+<li>Anwendung des erarbeiteten Konzepts. Prozessierung der Fernerkundungsdaten zur Erstellung einer Waldmaske für die ausgewählten Testgebiete und Validierung von deren Richtigkeit.</li>
+</ul>
+</div>
+</div>
+<div id="dokumentation" class="section level2">
+<h2>Dokumentation</h2>
+<div id="verfahren" class="section level3">
+<h3>Verfahren</h3>
+<ul>
+<li>Eine Dokumentation der Planung und Durchführung des Projekts</li>
+</ul>
+</div>
+<div id="bericht" class="section level3">
+<h3>Bericht</h3>
+<ul>
+<li>Ein Bericht über die Ergebnisse (Genauigkeiten, Karten, Statistiken)</li>
+</ul>
+</div>
+<div id="lessons-learned" class="section level3">
+<h3>Lessons Learned</h3>
+<ul>
+<li>Was ist gut gelaufen und was kann in ähnlichen Projekten besser gemacht werden</li>
+</ul>
+</div>
+</div>
 
 
 

@@ -1,0 +1,78 @@
+---
+author: "wiesehahn"
+date: "2021-04-13"
+output: html_document
+---
+
+## Visueller Waldmaskenvergleich
+
+Über eine Stichprobenbasierte Genauigkeitsanalyse hinaus bietet ein einfacher visueller Vergleich weitere Informationen zu den generellen unterschieden. Deshalb werden die Waldmasken in Testgebieten vergleichsweise dargestellt.
+
+#### 10km UTM grid N573E55  {.tabset .tabset-pills} 
+Höhenzug Ahlsburg östlich des Solling
+
+##### Orthofoto
+<img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_10kmN573E55_ortho.jpeg width="500" />
+
+##### Basis-DLM
+
+<img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_10kmN573E55_basis-dlm.jpeg width="500" />
+
+##### Copernicus-HRL
+
+<img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_10kmN573E55_copernicus-hrl.jpeg width="500" />
+
+##### RF-classification / OSM-clip
+
+<img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_10kmN573E55_rf-classification_osm-clip.jpeg width="500" />
+
+##### Mundialis Incora
+
+<img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_10kmN573E55_mundialis-incora.jpeg width="500" />
+
+
+#### 1km UTM grid N5735E557  {.tabset .tabset-pills} 
+Waldrandgebiet nordöstlich des Höhenzuges Ahlsburg
+
+##### Orthofoto
+<img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_1kmN5735E557_ortho.jpeg width="500" />
+
+##### Basis-DLM
+
+<img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_1kmN5735E557_basis-dlm.jpeg width="500" />
+
+##### Copernicus-HRL
+
+<img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_1kmN5735E557_copernicus-hrl.jpeg width="500" />
+
+##### RF-classification / OSM-clip
+
+<img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_1kmN5735E557_rf-classification_osm-clip.jpeg width="500" />
+
+##### Mundialis Incora
+
+<img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_1kmN5735E557_mundialis-incora.jpeg width="500" />
+
+
+
+#### 1km UTM grid N5735E554  {.tabset .tabset-pills} 
+Waldschadensgebiet im Norden des Höhenzuges Ahlsburg
+
+##### Orthofoto
+<img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_1kmN5735E554_ortho.jpeg width="500" />
+
+##### Basis-DLM
+
+<img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_1kmN5735E554_basis-dlm.jpeg width="500" />
+
+##### Copernicus-HRL
+
+<img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_1kmN5735E554_copernicus-hrl.jpeg width="500" />
+
+##### RF-classification / OSM-clip
+
+<img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_1kmN5735E554_rf-classification_osm-clip.jpeg width="500" />
+
+##### Mundialis Incora
+
+<img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_1kmN5735E554_mundialis-incora.jpeg width="500" />
