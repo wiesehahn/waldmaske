@@ -19,6 +19,10 @@ navbar:
     href: index.html
   - text: "Recherche"
     href: literature_review.html
+  - text: "Methodik"
+    href: create_forest_mask.html
+  - text: "Karte"
+    href: literature_review.html
   - text: "Vergleich"
     href: compare_forest_masks.html
 
