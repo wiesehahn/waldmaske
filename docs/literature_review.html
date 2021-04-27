@@ -26,8 +26,6 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -40,21 +38,6 @@
   ul.task-list{list-style: none;}
     </style>
 
-<style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
 
 
 
@@ -375,23 +358,8 @@ div.tocify {
 <li>
   <a href="literature_review.html">Recherche</a>
 </li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Vergleich
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="compare_forest_masks_bwi.html">Stichprobenbasiert</a>
-    </li>
-    <li>
-      <a href="compare_forest_masks_viz.html">Visuell</a>
-    </li>
-    <li>
-      <a href="compare_forest_masks_generel.html">Generell</a>
-    </li>
-  </ul>
+<li>
+  <a href="compare_forest_masks.html">Vergleich</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -415,50 +383,100 @@ div.tocify {
 </div>
 
 
-<div id="nutzbare-waldmasken" class="section level2">
-<h2>nutzbare Waldmasken</h2>
-<p><a href="https://land.copernicus.eu/pan-european/high-resolution-layers">Copernicus HRL</a></p>
+<div id="national-verfügbare-waldmasken" class="section level2">
+<h2>National verfügbare Waldmasken</h2>
+<p><a href="https://land.copernicus.eu/pan-european/high-resolution-layers">Copernicus High Resolution Layers (HRL)</a></p>
 <ul>
-<li><p>für 2012, 2015, 2018 (alle 3 Jahre)</p></li>
-<li><p>aus Sentinel-1, Sentinel-2 (sowie Landsat-8 und VHR)</p></li>
-<li><p>2012 und 2015 mit 20m Auflösung (100m für Change Products)</p></li>
-<li><p>2018 mit 10m Auflösung generiert über DIAS (Mundi Web Services) (online seit 2020)</p></li>
-<li><p>Definition für Tree Cover Mask vorhanden</p></li>
-<li><p>Produkte: Tree Cover Density, Forest Type, Forest Additional Support Layer, Dominant Leaf Type, Tree Cover Density Change, Dominante Leaf Type Change</p></li>
-<li><p>TCD</p>
+<li>für 2012, 2015, 2018 (alle 3 Jahre)</li>
+<li>Europaweit</li>
+<li>aus Sentinel-1, Sentinel-2 (sowie Landsat-8 und VHR)</li>
+<li>2012 und 2015 mit 20m Auflösung (100m für Change Products)</li>
+<li>2018 mit 10m Auflösung generiert über DIAS (Mundi Web Services) (online seit 2020)</li>
+<li>Definition für Tree Cover Mask vorhanden</li>
+<li>Produkte: Tree Cover Density, Forest Type, Forest Additional Support Layer, Dominant Leaf Type, Tree Cover Density Change, Dominante Leaf Type Change</li>
+<li>nur Forest Type stellt eine Waldmaske dar, alle anderen Layer eine Gehölz- / Baummaske</li>
+<li>Detailiertes Manual <a href="https://land.copernicus.eu/user-corner/technical-library/forest-2018-user-manual.pdf">hier</a></li>
+</ul>
+<p>Layer:</p>
+<ul>
+<li><p>Tree Cover Density (TCD)</p>
 <ul>
 <li>aus HR Bildern mit VHR Bildern und Orthophotos als Referenz in einer linearen Funktion</li>
-<li>1 Pixel MMU (20/10m)</li>
-<li>90% Accuracy (<a href="http://www.gofcgold.wur.nl/documents/CopernicusREDD/12_CopernicusHRlayers.pdf">link</a>)</li>
+<li>1 Pixel MMU</li>
+<li>basierend auf Daten vom 01.03.-31.10.2018</li>
+<li>für Wald (30-100% TCD) / Nichtwald (0-29%) Einteilung 96.4% Overall Accuracy</li>
+<li>für Wald (1-100% TCD) / Nichtwald (0%) Einteilung 92.2% Overall Accuracy</li>
+<li>(2015: <a href="http://www.gofcgold.wur.nl/documents/CopernicusREDD/12_CopernicusHRlayers.pdf">90%</a>)</li>
 </ul></li>
-<li><p>DLT aus multitenmporalen Bildern mit Support Vector Mashine</p></li>
-<li><p>FTY erstellt nach FAO Walddefinition (20m-Version beinhaltet Stadt- und Agrarbäume, 100m-Version nicht) 20m Version besteht aus zwei Produkten:</p>
-<p>1.DLT mit 0.5ha MMU und 10% TCD Grenzwert</p>
-<p>2.Support Layer (FADSL)</p>
+<li><p>Dominant Leaf Type (DLT)</p>
 <ul>
-<li>keine MMU</li>
-<li>FADSL nutzt CORINE Land Cover und HRL imperviousness um Stadt und Agrarbäume auszuweisen</li>
+<li>aus multitenmporalen Bildern mit Support Vector Mashine (2015) bzw. Random Forest (2018)</li>
+<li>1 Pixel MMU</li>
+<li>basierend auf Daten vom 01.03.-31.10.2018</li>
+<li>96.5% Overall Accuracy</li>
+</ul></li>
+<li><p>Forest Additional Support Layer (FADSL)</p>
+<ul>
+<li>um Stadt und Agrarbäume auszuweisen</li>
+<li>erstellt aus DLT, TCD, Corine Land Cover 2018 und HRL Imperviousness Degree 2018</li>
+<li>1 Pixel MMU</li>
+</ul></li>
+<li><p>Forest Type (FTY)</p>
+<ul>
+<li>Wald nach FAO Walddefinition</li>
+<li>erstellt aus Verschneidung von TCD und DLT</li>
+<li>agrar und urbane Flächen werden mit FADSL maskiert</li>
+<li>0.5 ha MMU</li>
+<li>10% TCD Grenzwert</li>
 </ul></li>
 <li><p>Small Woody Features</p>
 <ul>
-<li>wurden aus VHR Bildern extrahiert und beinhalten Hecken, Alleen, Baumgruppen (TOF) (<a href="https://eur02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fland.copernicus.eu%2Fpan-european%2Fhigh-resolution-layers%2Fsmall-woody-features&amp;data=02%7C01%7CKeri.Bloomfield%40eea.europa.eu%7Cace94925eabf406bface08d7c04fb831%7Cbe2e7beab4934de5bbc58b4a6a235600%7C1%7C0%7C637189320934401467&amp;sdata=MYO61PoeavDbkYGaMFtQYS%2Bzs29GE1%2BE0Giuew%2BXxgw%3D&amp;reserved=0">Methode</a>)</li>
+<li>wurden aus VHR Bildern extrahiert und beinhalten Hecken, Alleen, Baumgruppen (TOF)</li>
 <li>für 2015 seit März 2020 verfügbar, als 5m Raster oder Vector und aggregierte Version als 100m Raster</li>
+<li>2018 ab Ende 2021 verfügbar</li>
 <li>mit TCD Waldmaske (&gt;30% und morphologische Filter) maskiert, trotzdem manche Features doppelt und andere gar nicht kartiert.</li>
 <li>Genauigkeit noch nicht validiert, 80% anvisiert (Stand: April 2020)</li>
 </ul></li>
 <li><p>High Resolution Vegetation Phenology and Productivity Layer seit Februar 2020 in Produktion (<a href="https://land.copernicus.eu/user-corner/technical-library/phenology">link</a>)</p></li>
 </ul>
-<p><a href="https://www.bkg.bund.de/DE/Ueber-das-BKG/Geoinformation/Fernerkundung/Landbedeckungsmodell/Herstellung/herstellung.html">LBM-DE</a></p>
+<p><strong><em>Das Projekt aus dem Bedürfnis nach einer aktuellen Waldmaske entstanden. Die Copernicus High Resolution Layers 2018 waren zum Zeitpunkt des Projektbeginns (2020) noch nicht vorhanden!</em></strong></p>
+<p><a href="https://www.bkg.bund.de/DE/Ueber-das-BKG/Geoinformation/Fernerkundung/Landbedeckungsmodell/Herstellung/herstellung.html">Landschaftsmodell (Basis-DLM)</a></p>
 <ul>
-<li>Das BKG aktualisiert mit Hilfe von Fernerkundungsdaten alle drei Jahre das Digitale Landbedeckungsmodell für Deutschland (LBM-DE)</li>
+<li>topographischen Objekte der Landschaft und das Relief der Erdoberfläche im Vektorformat</li>
+<li>aus DGK5, Atualisierungen mit Orthofotos (DOPs)</li>
+<li>Inhalt orientiert sich an TK25</li>
+<li>Grundaktualisierung alle paar Jahre (Landestypisch)</li>
+<li>Spitzenaktualisierung (z.B. Autobahnen) alle paar Monate</li>
+</ul>
+<p><a href="https://www.bkg.bund.de/DE/Ueber-das-BKG/Geoinformation/Fernerkundung/Landbedeckungsmodell/Herstellung/herstellung.html">Landbedeckungsmodell (LBM-DE)</a></p>
+<ul>
+<li>enthält flächenhafte Informationen zur Landbedeckung</li>
+<li>Das BKG aktualisiert mit Hilfe von Fernerkundungsdaten alle drei Jahre das Digitale Landbedeckungsmodell für Deutschland</li>
 <li>Aufbauend auf Basis-DLM</li>
 <li>2012, 2015, 2018</li>
 <li>Mindestkartierfläche 1 ha und die Mindestkartierbreite 15 Meter</li>
 <li>bisher wurden hauptsächlich RapidEye-Satellitenbilder genutzt, “zukünftig” Copernicus Sentinel Daten zur Aktualisierung</li>
+<li>Kombination von Landbedeckung und Landnutzung wird generalisiert für Corine Land Cover genutzt</li>
+</ul>
+<p><a href="https://www.mundialis.de/de/deutschland-2019-landbedeckung-auf-basis-von-sentinel-2-daten/">Incora Landbedeckung</a></p>
+<ul>
+<li>Projekt für ein jährliches Flächenmonitoring</li>
+<li>durchgeführt von Mundialis</li>
+<li>Masken für 2016 und 2019 verfügbar</li>
+<li>Bundesweit</li>
+<li>auf Basis von Sentinel-2 Daten (10m Auflösung)</li>
+</ul>
+<p><a href="https://data.globalforestwatch.org/datasets/tree-cover-2000">Hansen Tree Cover Map</a></p>
+<ul>
+<li>Landbedeckungskarte für das Jahr 2000</li>
+<li>Landbedeckungsänderungen 2000</li>
+<li>2019</li>
+<li>30m Auflösung generiert aus Landsat</li>
+<li>Weltweit</li>
 </ul>
 </div>
-<div id="waldmasken-aus-fernerkundungsdaten-in-anderen-studien" class="section level2">
-<h2>Waldmasken aus Fernerkundungsdaten in anderen Studien</h2>
+<div id="waldmasken-aus-fernerkundungsdaten" class="section level2">
+<h2>Waldmasken aus Fernerkundungsdaten</h2>
 <p><a href="https://link.springer.com/chapter/10.1007/978-1-4939-7331-6_7">Towards automated Forest Mapping</a></p>
 <ul>
 <li>Übersicht zu Methoden und Studien</li>
@@ -516,6 +534,13 @@ div.tocify {
 <li>LUCAS Daten als Referenz</li>
 <li>12 LULC classes für ganz Europa</li>
 <li>75.1% Overall Accuracy</li>
+</ul>
+<p><a href="https://doi.org/10.3390/f11121322">Forest Cover Mapping Based on a Combination ofAerial Images and Sentinel-2 Satellite Data Comparedto National Forest Inventory Data</a></p>
+<ul>
+<li>aus Sentinel-2 (2017-2019) und Orthofotos (auch DSM)</li>
+<li>für Baden-Württemberg</li>
+<li>BWI Daten als Referenzdaten</li>
+<li>95% Overall Accuracy</li>
 </ul>
 </div>
 <div id="satellitenbilder-aktiv" class="section level3">

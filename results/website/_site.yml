@@ -4,6 +4,7 @@ output:
   html_document:
     theme: readable
     css: style.css
+    highlight: kate
     toc: true
     toc_depth: 2
     toc_float:
@@ -19,13 +20,7 @@ navbar:
   - text: "Recherche"
     href: literature_review.html
   - text: "Vergleich"
-    menu:
-        - text: "Stichprobenbasiert"
-          href: compare_forest_masks_bwi.html
-        - text: "Visuell"
-          href: compare_forest_masks_viz.html
-        - text: "Generell"
-          href: compare_forest_masks_generel.html
+    href: compare_forest_masks.html
 
   right:
   - text: Source code

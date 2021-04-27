@@ -51,8 +51,8 @@ ref_bwi[cols] <- lapply(ref_bwi[cols], as.factor)
 ref_bwi <- ref_bwi %>% filter(Vbl %in% c("308", "316"))
 
 ref_bwi <- st_as_sf(x = ref_bwi,
-                        coords = c("GK3_Rechts", "GK3_Hoch"),
-                        crs = CRS("+init=epsg:31467")) %>%
+                    coords = c("GK3_Rechts", "GK3_Hoch"),
+                    crs = CRS("+init=epsg:31467")) %>%
   st_transform(CRS("+init=epsg:25832"))
 
 
@@ -88,13 +88,13 @@ ref_comp <- ref_comp %>% mutate(copernicus_hrl= as.factor(ifelse(copernicus_hrl=
 veg02 <- st_read("K:/aktiver_datenbestand/ni/lverm/basis_dlm/stand_2019_0604/daten/20180930_nba_bkg_bdlm_ni_V4.2.gdb", layer = "veg02_f")
 veg03 <- st_read("K:/aktiver_datenbestand/ni/lverm/basis_dlm/stand_2019_0604/daten/20180930_nba_bkg_bdlm_ni_V4.2.gdb", layer = "veg03_f")
 
-dlm <- rbind(veg02 %>% select(OBJART_TXT, Shape),
-             veg03 %>% select(OBJART_TXT, Shape) %>%
-                       filter(OBJART_TXT=="AX_Gehoelz"))
+dlm <- rbind(veg02 %>% dplyr::select(OBJART_TXT, Shape),
+             veg03 %>% dplyr::select(OBJART_TXT, Shape) %>%
+               filter(OBJART_TXT=="AX_Gehoelz"))
 
 ref_comp = st_join(ref_comp, dlm) %>%
   mutate(basis_dlm = as.factor(ifelse(is.na(OBJART_TXT), 0, 1))) %>%
-  select(-OBJART_TXT)
+  dplyr::select(-OBJART_TXT)
 
 #save to rda file
 save(ref_comp, file = here("data/interim/bwi_ni_extracted.rda"))
@@ -106,7 +106,7 @@ save(ref_comp, file = here("data/interim/bwi_ni_extracted.rda"))
 
 # accuracy function
 accuracy <- function(forestmask){
-  cm <- caret::confusionMatrix(data = ref_comp %>% select(starts_with(forestmask)) %>% st_drop_geometry() %>% pull(), reference = ref_comp$bwi)
+  cm <- caret::confusionMatrix(data = ref_comp %>% dplyr::select(starts_with(forestmask)) %>% st_drop_geometry() %>% pull(), reference = ref_comp$bwi)
 
   df <- data.frame(Waldmaske = forestmask) %>%
     mutate(Datenpunkte = sum(cm$table),
@@ -119,9 +119,9 @@ accuracy <- function(forestmask){
 }
 
 comparison_table<- rbind(accuracy("basis_dlm"),
-             accuracy("mundialis"),
-             accuracy("copernicus_hrl"),
-             accuracy("rf_osm"))
+                         accuracy("mundialis"),
+                         accuracy("copernicus_hrl"),
+                         accuracy("rf_osm"))
 
 #save to rda file
 save(comparison_table, file = here("data/interim/bwi_ni_accuracy.rda"))

@@ -21,14 +21,23 @@ lucas_filtered <- lucas %>%
   # merge classes
   mutate(
     class = as.numeric(case_when(
+      # mixed forest
       startsWith(as.character(LC1), "C3")            ~ 0,
+      # artificial land
       startsWith(as.character(LC1), "A")             ~ 1,
+      # open soil
       LC1 %in% c("F10", "F20", "F30")                ~ 2,
+      # High seasonal (decidious forest)
       LC1 %in% c("C10", "B71", "B72", "B73", "B74")  ~ 3,
+      # High perennial (broadleafed forest)
       LC1 %in% c("C21", "C22", "C23")                ~ 4,
+      # Low seasonal
       LC1 %in% c("B84", "D20", "E20", "H11", "H12")  ~ 5,
+      # Low perennial
       startsWith(as.character(LC1), "B")             ~ 6,
+      # Water
       startsWith(as.character(LC1), "G")             ~ 7,
+      # Everything else
       TRUE                                           ~ 99
     )),
     label = as.factor(case_when(
