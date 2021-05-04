@@ -61,7 +61,7 @@ ref_lucas <- ref_lucas %>%
 ##### extract forest mask values and convert to 1/0 (Forest/No-Forest) ####
 #____________________________________________________
 
-#convert bwi -> 0/1
+#convert lucas -> 0/1
 ref_comp <- ref_lucas %>% mutate(lucas= as.factor(ifelse(class %in% c(0,3,4), 1, 0)))
 
 #extract own mask values
@@ -92,6 +92,11 @@ ref_comp = st_join(ref_comp, dlm) %>%
   mutate(basis_dlm = as.factor(ifelse(is.na(OBJART_TXT), 0, 1))) %>%
   dplyr::select(-OBJART_TXT)
 
+#extract fnews mask values and convert to 0/1
+img.class <- raster("Y:/Jens/large-file-storage/waldmaske/niklas/Version_05/V5_TCD_2015_Germany_10m_S2Al_32632_Mdlm_TCD50_2bit_FADSL_mmu25_2_0_TCD2018_WM_V5_2_0.tif")
+ref_comp$fnews <- raster::extract(img.class, ref_comp)
+ref_comp <- ref_comp %>% mutate(fnews= as.factor(if_else(fnews==1, 1, 0, missing = 0)))
+
 #save to rda file
 save(ref_comp, file = here("data/interim/lucas_ni_extracted.rda"))
 
@@ -115,7 +120,8 @@ accuracy <- function(forestmask){
 comparison_table<- rbind(accuracy("basis_dlm"),
              accuracy("mundialis"),
              accuracy("copernicus_hrl"),
-             accuracy("rf_osm"))
+             accuracy("rf_osm"),
+             accuracy("fnews"))
 
 #save to rda file
 save(comparison_table, file = here("data/interim/lucas_ni_accuracy.rda"))

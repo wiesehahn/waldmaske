@@ -39,13 +39,17 @@ Von den bereits genannten national verfügbaren Waldmasken werden die folgenden 
 
 Das Basis-DLM ist teilweise gebührenpflichtig, für Landes- und Bundebehörden aber meist verfügbar. Aus den bundesweit verfügbaren Landnutzungsdaten kann eine Waldmaske abgeleitet werden. Hier wurden alle Objekte mit der Kennung "Wald" oder "Gehoelz" genutzt (Minimum Mapping unit 0.1 ha).
 
-**Copernicus HRL Forest**
+**Copernicus HRL Forest 2018**
 
 Betrachtet wird die Version aus 2018, welche rein aus Fernerkundungsdaten hergestellt wurde, also vor der Verschneidung mit Landnutzungsdaten. Dementsprechend handelt es sich um eine Gehölzmaske. Hier wurde der Dominant Leaf Type Layer ohne jegliche Filterung genutzt (Minimum Mapping unit 0.01 ha; alle Tree Cover Densities).
 
 **Incora Landbedeckung**
 
 Betrachtet wird die Version aus 2019, welche auch aus Sentinel-2 generiert wurde. Dementsprechend handelt es sich auch hier um eine Gehölzmaske.
+
+**FNEWS (Copernicus HRL 2015+2018)**
+
+Für das Fernerkundungsbasierte Nationale Erfassungssytem Waldschäden (FNEWS) wurde basierend auf den Gehölzmasken der Copernicus High Resolution Layer Forest 2015 und 2018 eine Waldmaske erstellt. Die genauere Version aus 2018 wurde dabei mit der Version aus 2015 ergänzt um schadbedingte Kahlflächen der Jahre 2015 bis 2018 dem Wald zuzuordnen (Minimum Mapping Unit 0.25 ha).
 
 **Random Forest - Open Street Map**
 
@@ -77,7 +81,8 @@ Aktuell ist deshalb die Validierung mit aktuellen Daten sowie eingemessenen Koor
 comparison_table_bwi %>%
   mutate(Waldmaske = case_when(Waldmaske == "basis_dlm" ~ "Basis-DLM",
                                Waldmaske == "mundialis" ~ "Incora Landbedeckung",
-                               Waldmaske == "copernicus_hrl" ~ "Copernicus HRL DLT",
+                               Waldmaske == "copernicus_hrl" ~ "Copernicus HRL 2018",
+                               Waldmaske == "fnews" ~ "FNEWS (HRL 2015+2018)",
                                Waldmaske == "rf_osm" ~ "Random Forest + Open Street Map",
                                TRUE ~ Waldmaske)) %>%
   knitr::kable("html", escape = F, rownames = T, digits = 2, align = "lcccccc", caption = "Vergleich der Waldmasken für Niedersachsen basierend auf Daten der dritten Bundeswaldinventur")%>%
@@ -100,7 +105,8 @@ Bei der Interpretation der Ergebnisse ist zu beachten, dass LUCAS-Daten bei Cope
 comparison_table_lucas %>%
   mutate(Waldmaske = case_when(Waldmaske == "basis_dlm" ~ "Basis-DLM",
                                Waldmaske == "mundialis" ~ "Incora Landbedeckung",
-                               Waldmaske == "copernicus_hrl" ~ "Copernicus HRL DLT",
+                               Waldmaske == "copernicus_hrl" ~ "Copernicus HRL 2018",
+                               Waldmaske == "fnews" ~ "FNEWS (HRL 2015+2018)",
                                Waldmaske == "rf_osm" ~ "Random Forest + Open Street Map",
                                TRUE ~ Waldmaske)) %>%
   knitr::kable("html", escape = F, rownames = T, digits = 2, align = "lcccccc", caption = "Vergleich der Waldmasken für Niedersachsen basierend auf Daten der LUCAS-Erhebung")%>%
@@ -159,7 +165,7 @@ Visualisierung der Stichprobenpunkte mit Differenzen zwischen der LUCAS-Erhebung
 
 <!-- ``` -->
 
-##### LUCAS - Basis-DLM
+##### Basis-DLM
 ```{r plot_lucas_dlm, fig.cap= "Unterschiede zwischen LUCAS und Basis-DLM"}
 
 ref_comp_lucas %>% mutate(wald = ifelse(lucas=="1" & basis_dlm == "0", "nur LUCAS",
@@ -181,7 +187,7 @@ ref_comp_lucas %>% mutate(wald = ifelse(lucas=="1" & basis_dlm == "0", "nur LUCA
 
 ```
 
-##### LUCAS - Incora
+##### Incora
 ```{r plot_lucas_incora, fig.cap= "Unterschiede zwischen LUCAS und Incora Landbedeckung 2019"}
 
 ref_comp_lucas %>% mutate(wald = ifelse(lucas=="1" & basis_dlm == "0", "nur LUCAS",
@@ -203,7 +209,7 @@ ref_comp_lucas %>% mutate(wald = ifelse(lucas=="1" & mundialis == "0", "nur LUCA
 
 ```
 
-##### LUCAS - Copernicus HRL
+##### HRL 2018
 ```{r plot_lucas_hrl, fig.cap= "Unterschiede zwischen LUCAS und Copernicus HRL"}
 
 ref_comp_lucas %>% mutate(wald = ifelse(lucas=="1" & basis_dlm == "0", "nur LUCAS",
@@ -225,7 +231,29 @@ ref_comp_lucas %>% mutate(wald = ifelse(lucas=="1" & copernicus_hrl == "0", "nur
 
 ```
 
-##### LUCAS - RandomForest-OSM
+##### FNEWS
+```{r plot_lucas_fnews, fig.cap= "Unterschiede zwischen LUCAS und FNEWs (HRL 2015+2018)"}
+
+ref_comp_lucas %>% mutate(wald = ifelse(lucas=="1" & fnews == "0", "nur LUCAS",
+                                        ifelse(lucas=="0" & fnews =="1", "nur FNEWS",
+                                               ifelse(lucas=="0" & fnews =="0", "kein Wald", "Wald")))) %>%
+  select(lucas, fnews, wald) %>%
+  filter(wald == "Wald") %>%
+  
+  mapview(layer.name ="beide Wald", alpha = 0.2, alpha.regions=0, cex=1, col.regions = "grey") +  
+  
+  
+ref_comp_lucas %>% mutate(wald = ifelse(lucas=="1" & fnews == "0", "nur LUCAS",
+                                        ifelse(lucas=="0" & fnews =="1", "nur FNEWS",
+                                               ifelse(lucas=="0" & fnews =="0", "kein Wald", "Wald")))) %>%
+  select(lucas, fnews, wald) %>%
+  filter(wald %in% c("nur LUCAS", "nur FNEWS")) %>%
+  
+  mapview(zcol="wald", col.regions = c("#0066ff", "#00cc66"), layer.name ="Differenzen", cex = 4)
+
+```
+
+##### RF-OSM
 ```{r plot_lucas_rf-osm, fig.cap= "Unterschiede zwischen LUCAS und RandomForest - OSM"}
 
 ref_comp_lucas %>% mutate(wald = ifelse(lucas=="1" & rf_osm == "0", "nur LUCAS",
@@ -263,15 +291,19 @@ Höhenzug Ahlsburg östlich des Solling
 
 <img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_10kmN573E55_basis-dlm.jpeg width="500" />
 
-##### Incora Landbedeckung
+##### Incora
 
 <img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_10kmN573E55_mundialis-incora.jpeg width="500" />
 
-##### Copernicus-HRL
+##### HRL 2018
 
 <img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_10kmN573E55_copernicus-hrl.jpeg width="500" />
 
-##### RandomForest - OSM
+##### FNEWs
+
+<img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_10kmN573E55_fnews.jpeg width="500" />
+
+##### RF-OSM
 
 <img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_10kmN573E55_rf-classification_osm-clip.jpeg width="500" />
 
@@ -286,15 +318,19 @@ Waldrandgebiet nordöstlich des Höhenzuges Ahlsburg
 
 <img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_1kmN5735E557_basis-dlm.jpeg width="500" />
 
-##### Incora Landbedeckung
+##### Incora
 
 <img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_1kmN5735E557_mundialis-incora.jpeg width="500" />
 
-##### Copernicus-HRL
+##### HRL 2018
 
 <img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_1kmN5735E557_copernicus-hrl.jpeg width="500" />
 
-##### RandomForest - OSM
+##### FNEWS
+
+<img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_1kmN5735E557_fnews.jpeg width="500" />
+
+##### RF-OSM
 
 <img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_1kmN5735E557_rf-classification_osm-clip.jpeg width="500" />
 
@@ -310,15 +346,19 @@ Waldschadensgebiet im Norden des Höhenzuges Ahlsburg
 
 <img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_1kmN5735E554_basis-dlm.jpeg width="500" />
 
-##### Incora Landbedeckung
+##### Incora
 
 <img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_1kmN5735E554_mundialis-incora.jpeg width="500" />
 
-##### Copernicus-HRL
+##### HRL 2018
 
 <img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_1kmN5735E554_copernicus-hrl.jpeg width="500" />
 
-##### RandomForest - OSM
+##### FNEWS
+
+<img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_1kmN5735E554_fnews.jpeg width="500" />
+
+##### RF-OSM
 
 <img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/results/figures/comparison/forest-mask_1kmN5735E554_rf-classification_osm-clip.jpeg width="500" />
 
@@ -338,7 +378,7 @@ Sowohl die Waldmaskierung basierend auf dem Basis-DLM als auch die Waldmaske der
 - Felder etc werden oftmals falsch als Wald klassifiziert
 - Waldfläche wird deutlich überschätzt
 
-### Copernicus HRL Forest
+### Copernicus HRL Forest 2018
 - Gehölz wird gut erkannt
 - dadurch in urbanen und Agrargebieten zu viele Pixel als Wald ausgewiesen
 - Kahlflächen werden als Nichtwald ausgewiesen
