@@ -384,7 +384,13 @@ Sowohl die Waldmaskierung basierend auf dem Basis-DLM als auch die Waldmaske der
 - Kahlflächen werden als Nichtwald ausgewiesen
 - Generell wird Waldfläche etwas überschätzt 
 
-### RandomForest - OSM
+### FNEWS (Copernicus HRL 2015+2018)
+- nach 2015 entstandene Kahlflächen werden als Wald ausgewiesen
+- kleine Waldstücke werden durch 0.25 ha MMU als Nicht-Wald ausgewiesen
+- Waldfläche wird durch Filterung etwas generalisiert
+- tendenziell wird die Waldfläche unterschätzt
+
+### Random Forest - Open Street Map
 - ähnlich dem HRL, Gehölz wird gut erkannt aber in urbanen und Agrargebieten zu viele Waldpixel
 - Kahlflächen werden als Nichtwald ausgewiesen
 - Generell wird Waldfläche überschätzt
