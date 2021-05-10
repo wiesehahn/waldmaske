@@ -21,7 +21,11 @@ load(here("data/interim/bwi_ni_extracted.rda"))
 ref_comp_bwi <- ref_comp
 load(here("data/interim/bwi_ni_accuracy.rda"))
 comparison_table_bwi <- comparison_table
-  
+
+load(here("data/interim/ci2017_ni_extracted.rda"))
+ref_comp_ci <- ref_comp
+load(here("data/interim/ci2017_ni_accuracy.rda"))
+comparison_table_ci <- comparison_table
 
 load(here("data/interim/lucas_ni_extracted.rda"))
 ref_comp_lucas <- ref_comp
@@ -68,31 +72,30 @@ Geeignete Datensätze dazu sind aber rar, da eine Reihe von Anforderungen an sie
 - Es müssen auch Beobachtungen außerhalb des Waldes verfügbar sein
 - Der Zeitpunkt von Waldmaske und Referenzdaten sollte identisch sein
 
-Bundesweit gibt es zwei Datensätze die diese Anforderungen zumindest großteils erfüllen, der [LUCAS Datensatz](https://ec.europa.eu/eurostat/de/web/lucas/overview) und die Daten der [Bundeswaldinventur](https://www.bundeswaldinventur.de/). 
+Zwei Datensätze die diese Anforderungen zumindest großteils erfüllen und bundesweit zur vorliegen, sind der [LUCAS Datensatz](https://ec.europa.eu/eurostat/de/web/lucas/overview) und die Daten der [Bundeswaldinventur](https://www.bundeswaldinventur.de/). 
 
 ### Bundeswaldinventur
-Basierend auf den Daten der dritten Bundeswaldinventur wurden Genauigkeitsmetriken der Waldmasken errechnet. Es ist zu beachten, dass die Inventurpunkte in Niedersachsen nicht oder nur unzureichend mit GNSS eingemessen wurden. Deshalb wurden die Soll-Koordinaten zum Verschnitt mit den Waldmasken herangezogen. Erfahrungen haben gezeigt, dass dies in vielen Fällen ausreichend ist, in manchen Fällen sogar präzieser als eine ungenaue GNSS-Koordinate. Dennoch können besonders in Grenzfällen Ungenauigkeiten dadurch entstehen und zu Unterschieden zwischen BWI und Waldmaske führen. Außerdem ist Wald in der BWI eher an eine Landnutzung als eine Landbedeckung orientiert. Und drittens sind die Daten der dritten Bundeswaldinventur von 2012.  
 
-Aktuell ist deshalb die Validierung mit aktuellen Daten sowie eingemessenen Koordinaten geplant.
+Basierend auf den Daten der Kohlenstoffinventur 2017 (CI-17) wurden Genauigkeitsmetriken der Waldmasken errechnet. Die Daten der Kohlenstoffinventur wurden in den Jahren 2017/18 auf einer Unterstichprobe der BWI mit derselben Methodik erhoben. Der Waldentscheid wurde aber auf dem kompletten BWI-Netz durchgeführt, so dass der Datensatz gut für die Evaluierung der Waldmasken genutzt werden konnte (im Folgenden daher auch BWI bezeichnet). Es ist allerdings zu beachten, dass die Inventurpunkte in Niedersachsen nur teilweise präzise mit GNSS eingemessen wurden. An Inventurpunkten ohne gültige GNSS-Messung wurden deshalb die Soll-Koordinaten zum Verschnitt mit den Waldmasken herangezogen. Erfahrungen haben gezeigt, dass dies in vielen Fällen ausreichend ist, in manchen Fällen sogar präzieser als eine ungenaue GNSS-Koordinate. Dennoch können besonders in Grenzfällen Ungenauigkeiten dadurch entstehen und zu Unterschieden zwischen BWI und Waldmaske führen. Außerdem ist Wald in der BWI eher an eine Landnutzung als eine Landbedeckung orientiert. 
+
 
 #### Genauigkeitstabelle
 
 ```{r}
-comparison_table_bwi %>%
+comparison_table_ci %>%
   mutate(Waldmaske = case_when(Waldmaske == "basis_dlm" ~ "Basis-DLM",
                                Waldmaske == "mundialis" ~ "Incora Landbedeckung",
                                Waldmaske == "copernicus_hrl" ~ "Copernicus HRL 2018",
                                Waldmaske == "fnews" ~ "FNEWS (HRL 2015+2018)",
                                Waldmaske == "rf_osm" ~ "Random Forest + Open Street Map",
                                TRUE ~ Waldmaske)) %>%
-  knitr::kable("html", escape = F, rownames = T, digits = 2, align = "lcccccc", caption = "Vergleich der Waldmasken für Niedersachsen basierend auf Daten der dritten Bundeswaldinventur")%>%
+  knitr::kable("html", escape = F, rownames = T, digits = 2, align = "lcccccc", caption = "Vergleich der Waldmasken für Niedersachsen basierend auf Daten der BWI (Kohlenstoffinventur 2017)")%>%
   kableExtra::kable_styling(full_width = F, bootstrap_options = c("hover", "condensed", "responsive")) %>%
   kableExtra::footnote(general = "OA: Gesamtgenauigkeit (Stichprobenanteil mit derselben Klassenzugehörigkeit, richtig klassifizierter Flächenanteil der Karte)
   UA: Nutzergenauigkeit (Wahrscheinlichkeit dass ein Waldgebiet in der Waldmaske auch tatsächlich Wald ist)
   PA: Produzentengenauigkeit (Wahrscheinlichkeit dass tatsächlicher Wald (Nichtwald) auch als solcher klassifiziert wurde)" , general_title = "Abkürzungen: "
            )
 ```
-
 
 ### LUCAS
 
@@ -118,52 +121,27 @@ comparison_table_lucas %>%
 
 #### Stichprobenpunkte mit Differenzen {.tabset .tabset-pills} 
 
-Visualisierung der Stichprobenpunkte mit Differenzen zwischen der LUCAS-Erhebung und den Waldmasken.
-
-<!-- #### BWI - Basis-DLM -->
-<!-- ```{r plot_bwi_dlm, fig.cap= "Unterschiede zwischen BWI und Basis-DLM"} -->
-
-<!-- bwi_dlm <- ref_comp_bwi %>% mutate(wald = ifelse(bwi=="1" & basis_dlm == "0", "nur BWI", -->
-<!--                                              ifelse(bwi=="0" & basis_dlm =="1", "nur DLM",  -->
-<!--                                                     ifelse(bwi=="0" & basis_dlm =="0", "kein Wald", "Wald")))) %>% -->
-<!--   select(bwi, basis_dlm, wald) -->
-
-
-
-<!--  # mapview(bwi_dlm %>% filter(wald == "Wald"), layer.name ="beide Wald", alpha = 0.2, alpha.regions=0, cex=1, col.regions = "grey") + -->
-<!--     mapview(bwi_dlm %>% filter(wald %in% c("nur BWI", "nur DLM")), zcol="wald", layer.name ="Differenzen", cex = 4) -->
-
-<!-- ``` -->
-
-<!-- #### BWI - Copernicus HRL -->
-<!-- ```{r plot_bwi_hrl, fig.cap= "Unterschiede zwischen BWI und Copernicus HRL DLT 2018"} -->
-
-<!-- bwi_hrl <- ref_comp_bwi %>% mutate(wald = ifelse(bwi=="1" & copernicus_hrl == "0", "nur BWI", -->
-<!--                                              ifelse(bwi=="0" & copernicus_hrl =="1", "nur HRL",  -->
-<!--                                                     ifelse(bwi=="0" & copernicus_hrl =="0", "kein Wald", "Wald")))) %>% -->
-<!--   select(bwi, copernicus_hrl, wald) -->
-
-
-
-<!--  # mapview(bwi_hrl %>% filter(wald == "Wald"), layer.name ="beide Wald", alpha = 0.2, alpha.regions=0, cex=1, col.regions = "grey") + -->
-<!--     mapview(bwi_hrl %>% filter(wald %in% c("nur BWI", "nur HRL")), zcol="wald", layer.name ="Differenzen", cex = 4) -->
-
-<!-- ``` -->
-
-<!-- #### BWI - Incora -->
+<!-- #### BWI - FNEWS -->
 <!-- ```{r plot_bwi_incora, fig.cap= "Unterschiede zwischen BWI und Incora Landbedeckung 2019"} -->
 
-<!-- bwi_mdl <- ref_comp_bwi %>% mutate(wald = ifelse(bwi=="1" & mundialis == "0", "nur BWI", -->
-<!--                                              ifelse(bwi=="0" & mundialis =="1", "nur Incora", -->
-<!--                                                     ifelse(bwi=="0" & mundialis =="0", "kein Wald", "Wald")))) %>% -->
-<!--   select(bwi, mundialis, wald) -->
 
+<!-- ref <- ref_comp_ci %>% mutate(wald = ifelse(bwi=="1" & fnews == "0", "nur bwi", -->
+<!--                                         ifelse(bwi=="0" & fnews =="1", "nur fnews", -->
+<!--                                                ifelse(bwi=="0" & fnews =="0", "kein Wald", "Wald")))) %>% -->
+<!--   select(bwi, fnews, wald, wa) -->
 
+<!-- ref %>% -->
+<!--   filter(wald == "Wald") %>% -->
+<!--   mapview(layer.name ="beide Wald", alpha = 0.2, alpha.regions=0, cex=1, col.regions = "grey") + -->
 
-<!-- #  mapview(bwi_mdl %>% filter(wald == "Wald"), layer.name ="beide Wald", alpha = 0.2, alpha.regions=0, cex=1, col.regions = "grey") + -->
-<!--     mapview(bwi_mdl %>% filter(wald %in% c("nur BWI", "nur Incora")), zcol="wald", layer.name ="Differenzen", cex = 4) -->
+<!-- ref %>% filter(wald %in% c("nur bwi", "nur fnews")) %>% -->
+
+<!--   mapview(zcol="wald", col.regions = c("#0066ff", "#00cc66"), layer.name ="Differenzen", cex = 4) -->
 
 <!-- ``` -->
+
+Visualisierung der Stichprobenpunkte mit Differenzen zwischen der LUCAS-Erhebung und den Waldmasken.
+
 
 ##### Basis-DLM
 ```{r plot_lucas_dlm, fig.cap= "Unterschiede zwischen LUCAS und Basis-DLM"}
