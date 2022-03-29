@@ -53,7 +53,7 @@ Betrachtet wird die Version aus 2019, welche auch aus Sentinel-2 generiert wurde
 
 **FNEWS**
 
-Für das Fernerkundungsbasierte Nationale Erfassungssytem Waldschäden (FNEWS) wurden zwei Waldmasken basierend auf den Gehölzmasken der Copernicus High-Resolution-Layer Forest 2015 und 2018 erstellt. Um Waldschäden vor 2018 kartieren zu können wurde eine Waldmaske für das Referenzjahr 2015 erstellt. Dazu wurde die genauere Version aus 2018 mit der Version aus 2015 ergänzt um schadbedingte Kahlflächen der Jahre 2015 bis 2018 dem Wald zuzuordnen. Für Schadkartierungen ab 2018 wurde eine Waldmaske nur aus der 2018er Version erstellt. Bei beiden Masken wurde eine Minimum Mapping Unit von 0.25 ha angewandt.
+Für das Fernerkundungsbasierte Nationale Erfassungssytem Waldschäden (FNEWS) wurden zwei Waldmasken basierend auf den Gehölzmasken der Copernicus High-Resolution-Layer Forest 2015 und 2018 erstellt. Diese wurden auf eine Tree-Cover-Density von mindestens 50% gefiltert und zusätzlich mit Waldlayern des Basis-DLM (AX_Wald, AX_Sumpf, AX_Moor) und dem Forest Additional Support Layer verschnitten. Um Waldschäden vor 2018 kartieren zu können wurde eine Waldmaske für das Referenzjahr 2015 erstellt. Dazu wurde die genauere Version aus 2018 mit der Version aus 2015 ergänzt um schadbedingte Kahlflächen der Jahre 2015 bis 2018 dem Wald zuzuordnen. Für Schadkartierungen ab 2018 wurde eine Waldmaske nur aus der 2018er Version erstellt. Bei beiden Masken wurde eine Minimum Mapping Unit von 0.25 ha angewandt.
 
 **Random Forest - Open Street Map**
 

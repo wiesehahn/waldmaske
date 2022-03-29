@@ -4,12 +4,36 @@ date: "2021-04-13"
 output: html_document
 ---
 
+## Walddefinitionen
+
+Es gibt keine allgemeingültige Definition für "Wald". Was als solcher angesehen wird, variiert, von Land zu Land und Anwendungsfall zu Anwendungsfall. Häufig wird auch zwischen einer Waldmaske und einer Gehölzmaske unterschieden. Die Gehölzmaske beinhaltet in dem Fall aktuell bestockte Holzbodenflächen, während die Waldmaske auch nicht bestockte Flächen wie beispielsweise Waldwege oder Kahlflächen umfasst. Eine einheitliche Definition dafür gibt es aber auch hier nicht.
+
+Beispielhaft werden hier zwei häufig verwendete Walddefinitionen gegeben, die der Bundeswaldinventur und die der Ernährungs- und Landwirtschaftsorganisation der Vereinten Nationen.
+
+### Walddefinition der Bundeswaldinventur (BWI)
+
+Wald im Sinne der BWI ist, unabhängig von den Angaben im Kataster oder ähnlichen Verzeichnissen, jede mit Forstpflanzen bestockte Grundfläche. Als Wald gelten auch kahl geschlagene oder verlichtete Grundflächen, Waldwege, Waldeinteilungs- und Sicherungsstreifen, Waldblößen und Lichtungen, Waldwiesen, Wildäsungsplätze, Holzlagerplätze, im Wald gelegene Leitungsschneisen, weitere mit dem Wald verbundene und ihm dienende Flächen einschließlich Flächen mit Erholungseinrichtungen, zugewachsene Heiden und Moore, zugewachsene ehemalige Weiden, Almflächen und Hutungen sowie Latschen- und Grünerlenflächen. Heiden, Moore, Weiden, Almflächen und Hutungen gelten als zugewachsen, wenn die natürlich aufgekommene Bestockung ein durchschnittliches Alter von fünf Jahren erreicht hat und wenn mindestens 50 % der Fläche bestockt sind. 
+
+In der Flur oder im bebauten Gebiet gelegene bestockte Flächen unter 1.000 m², Gehölzstreifen unter 10 m Breite und Weihnachtsbaum- und Schmuckreisigkulturen, gewerbliche Forstbaumschulen sowie zum Wohnbereich gehörende Parkanlagen sind nicht Wald im Sinne der BWI. Wasserläufe bis 5 m Breite unterbrechen nicht den Zusammenhang einer Waldfläche. 
+
+Weihnachtsbaum- und Schmuckreisigkulturen sowie Kurzumtriebsplantagen im Wald sind Wald im Sinne der BWI.
+
+### Internationale Walddefinition (FAO)
+
+Wald ist jede Landfläche größer als 0,5 Hektar mit Bäumen höher als 5 m und einer Baumkronenüberschirmung über 10 %, oder Bäume die diese Mindesthöhe erreichen können. Junge Bestände, welche noch unter 5 m Höhe haben und/oder noch keine Baumkronenüberschirmung von mehr als 10 % besitzen, gehören somit auch zum Wald. Ebenso gehören vorübergehend unbestockte Flächen (durch Forstnutzung oder natürliche Störung) zum Wald.
+
+Erläuterungen: 
+
+Beinhaltet Forststraßen, Brandschneisen und andere Freiflächen, Wald in Nationalparks, Naturschutzgebieten und anderen Schutzgebieten, die von besonderem ökologischem, wissenschaftlichem, historischem, kulturellem oder spirituellem Interesse sind.
+
+Beinhaltet Windschutzstreifen, Schutzgürtel und Korridore von Bäumen mit einer Fläche von mehr als 0,5 ha und einer Breite von mehr als 20 Metern.
+
 
 ## National verfügbare Waldmasken
 
 [Copernicus High Resolution Layers (HRL)](https://land.copernicus.eu/pan-european/high-resolution-layers)
 
--   für 2012, 2015, 2018 (alle 3 Jahre)
+-   für 2012, 2015, 2018, (2021) (alle 3 Jahre)
 -   Europaweit
 -   aus Sentinel-1, Sentinel-2 (sowie Landsat-8 und VHR)
 -   2012 und 2015 mit 20m Auflösung (100m für Change Products)
@@ -59,9 +83,15 @@ Layer:
     -   mit TCD Waldmaske (\>30% und morphologische Filter) maskiert, trotzdem manche Features doppelt und andere gar nicht kartiert.
     -   Genauigkeit noch nicht validiert, 80% anvisiert (Stand: April 2020)
 
--   High Resolution Vegetation Phenology and Productivity Layer seit Februar 2020 in Produktion ([link](https://land.copernicus.eu/user-corner/technical-library/phenology))
+-   High-Resolution Vegetation Phenology and Productivity product suite ([HR-VPP](https://land.copernicus.eu/pan-european/biophysical-parameters/high-resolution-vegetation-phenology-and-productivity))
+    -   10m Auflösung
+    -   aus Sentinel-2 Daten
+    -   enthält 3 Produktgruppen und 31 Produkttypen pro Jahr
+        -   Vegetationsindizes (Leaf Area Index (LAI), Fraction of Absorbed Photosynthetically Active Radiation (FAPAR), Normalized Difference Vegetation Index (NDVI) and Plant Phenology Index (PPI))
+        -   Seasonal Trajectories (STs)
+        -   Vegetation Phenology Parameters (VPPs)
 
-***Das Projekt aus dem Bedürfnis nach einer aktuellen Waldmaske entstanden. Die Copernicus High Resolution Layers 2018 waren zum Zeitpunkt des Projektbeginns (2020) noch nicht vorhanden!***
+(*Das Projekt ist aus dem Bedürfnis nach einer aktuellen Waldmaske entstanden. Die Copernicus High Resolution Layers 2018 waren zum Zeitpunkt des Projektbeginns (2020) noch nicht vorhanden!*)
 
 [Landschaftsmodell (Basis-DLM)](https://www.bkg.bund.de/DE/Ueber-das-BKG/Geoinformation/Fernerkundung/Landbedeckungsmodell/Herstellung/herstellung.html)
 
@@ -101,7 +131,7 @@ Layer:
 
 [Towards automated Forest Mapping](https://link.springer.com/chapter/10.1007/978-1-4939-7331-6_7)
 
--   Übersicht zu Methoden und Studien
+-   Übersicht zu Methoden und Studien (2017)
 
 ### LIDAR
 
@@ -112,7 +142,7 @@ Layer:
 
 ### Stereobilder
 
-[Wall-to-Wall Forest Mapping Based on DigitalSurface Models from Image-Based Point Clouds and a NFI Forest Definition](https://www.researchgate.net/publication/286453059_Wall-to-Wall_Forest_Mapping_Based_on_Digital_Surface_Models_from_Image-Based_Point_Clouds_and_a_NFI_Forest_Definition)
+[Wall-to-Wall Forest Mapping Based on Digital Surface Models from Image-Based Point Clouds and a NFI Forest Definition](https://www.researchgate.net/publication/286453059_Wall-to-Wall_Forest_Mapping_Based_on_Digital_Surface_Models_from_Image-Based_Point_Clouds_and_a_NFI_Forest_Definition)
 
 -   aus Stereo Orthophotos (zusammen mit DTM und DLM)
 -   Auflösung 1m
@@ -131,7 +161,7 @@ Layer:
 -   k-NN Model (2000) und ANN Model (2006)
 -   90.8% Overall Accuracy (2000) und 84% Overall Accuracy (2006)
 
-[Satellitengestutzte Waldflachenkartierung für die Bundeswaldinventur](https://ediss.sub.uni-hamburg.de/volltexte/2007/3172/pdf/070111_oehmichen_dissertation.pdf)
+[Satellitengestutzte Waldflächenkartierung für die Bundeswaldinventur](https://ediss.sub.uni-hamburg.de/volltexte/2007/3172/pdf/070111_oehmichen_dissertation.pdf)
 
 -   für Testgebiete
 -   nach BWI-Definitoion
@@ -155,7 +185,7 @@ Layer:
 -   12 LULC classes für ganz Europa
 -   75.1% Overall Accuracy
 
-[Forest Cover Mapping Based on a Combination ofAerial Images and Sentinel-2 Satellite Data Comparedto National Forest Inventory Data](https://doi.org/10.3390/f11121322)
+[Forest Cover Mapping Based on a Combination of Aerial Images and Sentinel-2 Satellite Data Compared to National Forest Inventory Data](https://doi.org/10.3390/f11121322)
 
 -   aus Sentinel-2 (2017-2019) und Orthofotos (auch DSM)
 -   für Baden-Württemberg

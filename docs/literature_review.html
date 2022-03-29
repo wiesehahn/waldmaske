@@ -13,15 +13,24 @@
 
 <meta name="date" content="2021-04-13" />
 
-<title>literature_review.utf8</title>
+<title>literature_review.knit</title>
 
-<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
@@ -41,32 +50,7 @@
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
 
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -78,10 +62,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -98,40 +78,16 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 66px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 71px;
-  margin-top: -71px;
-}
-.section h2 {
-  padding-top: 71px;
-  margin-top: -71px;
-}
-.section h3 {
-  padding-top: 71px;
-  margin-top: -71px;
-}
-.section h4 {
-  padding-top: 71px;
-  margin-top: -71px;
-}
-.section h5 {
-  padding-top: 71px;
-  margin-top: -71px;
-}
-.section h6 {
-  padding-top: 71px;
-  margin-top: -71px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -159,7 +115,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -171,7 +127,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -182,10 +138,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -197,7 +166,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -329,7 +297,7 @@ div.tocify {
 
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
+<div class="row">
 <div class="col-xs-12 col-sm-4 col-md-3">
 <div id="TOC" class="tocify">
 </div>
@@ -343,7 +311,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -378,7 +346,7 @@ div.tocify {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -386,11 +354,29 @@ div.tocify {
 </div>
 
 
+<div id="walddefinitionen" class="section level2">
+<h2>Walddefinitionen</h2>
+<p>Es gibt keine allgemeingültige Definition für “Wald”. Was als solcher angesehen wird, variiert, von Land zu Land und Anwendungsfall zu Anwendungsfall. Häufig wird auch zwischen einer Waldmaske und einer Gehölzmaske unterschieden. Die Gehölzmaske beinhaltet in dem Fall aktuell bestockte Holzbodenflächen, während die Waldmaske auch nicht bestockte Flächen wie beispielsweise Waldwege oder Kahlflächen umfasst. Eine einheitliche Definition dafür gibt es aber auch hier nicht.</p>
+<p>Beispielhaft werden hier zwei häufig verwendete Walddefinitionen gegeben, die der Bundeswaldinventur und die der Ernährungs- und Landwirtschaftsorganisation der Vereinten Nationen.</p>
+<div id="walddefinition-der-bundeswaldinventur-bwi" class="section level3">
+<h3>Walddefinition der Bundeswaldinventur (BWI)</h3>
+<p>Wald im Sinne der BWI ist, unabhängig von den Angaben im Kataster oder ähnlichen Verzeichnissen, jede mit Forstpflanzen bestockte Grundfläche. Als Wald gelten auch kahl geschlagene oder verlichtete Grundflächen, Waldwege, Waldeinteilungs- und Sicherungsstreifen, Waldblößen und Lichtungen, Waldwiesen, Wildäsungsplätze, Holzlagerplätze, im Wald gelegene Leitungsschneisen, weitere mit dem Wald verbundene und ihm dienende Flächen einschließlich Flächen mit Erholungseinrichtungen, zugewachsene Heiden und Moore, zugewachsene ehemalige Weiden, Almflächen und Hutungen sowie Latschen- und Grünerlenflächen. Heiden, Moore, Weiden, Almflächen und Hutungen gelten als zugewachsen, wenn die natürlich aufgekommene Bestockung ein durchschnittliches Alter von fünf Jahren erreicht hat und wenn mindestens 50 % der Fläche bestockt sind.</p>
+<p>In der Flur oder im bebauten Gebiet gelegene bestockte Flächen unter 1.000 m², Gehölzstreifen unter 10 m Breite und Weihnachtsbaum- und Schmuckreisigkulturen, gewerbliche Forstbaumschulen sowie zum Wohnbereich gehörende Parkanlagen sind nicht Wald im Sinne der BWI. Wasserläufe bis 5 m Breite unterbrechen nicht den Zusammenhang einer Waldfläche.</p>
+<p>Weihnachtsbaum- und Schmuckreisigkulturen sowie Kurzumtriebsplantagen im Wald sind Wald im Sinne der BWI.</p>
+</div>
+<div id="internationale-walddefinition-fao" class="section level3">
+<h3>Internationale Walddefinition (FAO)</h3>
+<p>Wald ist jede Landfläche größer als 0,5 Hektar mit Bäumen höher als 5 m und einer Baumkronenüberschirmung über 10 %, oder Bäume die diese Mindesthöhe erreichen können. Junge Bestände, welche noch unter 5 m Höhe haben und/oder noch keine Baumkronenüberschirmung von mehr als 10 % besitzen, gehören somit auch zum Wald. Ebenso gehören vorübergehend unbestockte Flächen (durch Forstnutzung oder natürliche Störung) zum Wald.</p>
+<p>Erläuterungen:</p>
+<p>Beinhaltet Forststraßen, Brandschneisen und andere Freiflächen, Wald in Nationalparks, Naturschutzgebieten und anderen Schutzgebieten, die von besonderem ökologischem, wissenschaftlichem, historischem, kulturellem oder spirituellem Interesse sind.</p>
+<p>Beinhaltet Windschutzstreifen, Schutzgürtel und Korridore von Bäumen mit einer Fläche von mehr als 0,5 ha und einer Breite von mehr als 20 Metern.</p>
+</div>
+</div>
 <div id="national-verfügbare-waldmasken" class="section level2">
 <h2>National verfügbare Waldmasken</h2>
 <p><a href="https://land.copernicus.eu/pan-european/high-resolution-layers">Copernicus High Resolution Layers (HRL)</a></p>
 <ul>
-<li>für 2012, 2015, 2018 (alle 3 Jahre)</li>
+<li>für 2012, 2015, 2018, (2021) (alle 3 Jahre)</li>
 <li>Europaweit</li>
 <li>aus Sentinel-1, Sentinel-2 (sowie Landsat-8 und VHR)</li>
 <li>2012 und 2015 mit 20m Auflösung (100m für Change Products)</li>
@@ -440,9 +426,19 @@ div.tocify {
 <li>mit TCD Waldmaske (&gt;30% und morphologische Filter) maskiert, trotzdem manche Features doppelt und andere gar nicht kartiert.</li>
 <li>Genauigkeit noch nicht validiert, 80% anvisiert (Stand: April 2020)</li>
 </ul></li>
-<li><p>High Resolution Vegetation Phenology and Productivity Layer seit Februar 2020 in Produktion (<a href="https://land.copernicus.eu/user-corner/technical-library/phenology">link</a>)</p></li>
+<li><p>High-Resolution Vegetation Phenology and Productivity product suite (<a href="https://land.copernicus.eu/pan-european/biophysical-parameters/high-resolution-vegetation-phenology-and-productivity">HR-VPP</a>)</p>
+<ul>
+<li>10m Auflösung</li>
+<li>aus Sentinel-2 Daten</li>
+<li>enthält 3 Produktgruppen und 31 Produkttypen pro Jahr
+<ul>
+<li>Vegetationsindizes (Leaf Area Index (LAI), Fraction of Absorbed Photosynthetically Active Radiation (FAPAR), Normalized Difference Vegetation Index (NDVI) and Plant Phenology Index (PPI))</li>
+<li>Seasonal Trajectories (STs)</li>
+<li>Vegetation Phenology Parameters (VPPs)</li>
+</ul></li>
+</ul></li>
 </ul>
-<p><strong><em>Das Projekt aus dem Bedürfnis nach einer aktuellen Waldmaske entstanden. Die Copernicus High Resolution Layers 2018 waren zum Zeitpunkt des Projektbeginns (2020) noch nicht vorhanden!</em></strong></p>
+<p>(<em>Das Projekt ist aus dem Bedürfnis nach einer aktuellen Waldmaske entstanden. Die Copernicus High Resolution Layers 2018 waren zum Zeitpunkt des Projektbeginns (2020) noch nicht vorhanden!</em>)</p>
 <p><a href="https://www.bkg.bund.de/DE/Ueber-das-BKG/Geoinformation/Fernerkundung/Landbedeckungsmodell/Herstellung/herstellung.html">Landschaftsmodell (Basis-DLM)</a></p>
 <ul>
 <li>topographischen Objekte der Landschaft und das Relief der Erdoberfläche im Vektorformat</li>
@@ -482,7 +478,7 @@ div.tocify {
 <h2>Waldmasken aus Fernerkundungsdaten</h2>
 <p><a href="https://link.springer.com/chapter/10.1007/978-1-4939-7331-6_7">Towards automated Forest Mapping</a></p>
 <ul>
-<li>Übersicht zu Methoden und Studien</li>
+<li>Übersicht zu Methoden und Studien (2017)</li>
 </ul>
 <div id="lidar" class="section level3">
 <h3>LIDAR</h3>
@@ -494,7 +490,7 @@ div.tocify {
 </div>
 <div id="stereobilder" class="section level3">
 <h3>Stereobilder</h3>
-<p><a href="https://www.researchgate.net/publication/286453059_Wall-to-Wall_Forest_Mapping_Based_on_Digital_Surface_Models_from_Image-Based_Point_Clouds_and_a_NFI_Forest_Definition">Wall-to-Wall Forest Mapping Based on DigitalSurface Models from Image-Based Point Clouds and a NFI Forest Definition</a></p>
+<p><a href="https://www.researchgate.net/publication/286453059_Wall-to-Wall_Forest_Mapping_Based_on_Digital_Surface_Models_from_Image-Based_Point_Clouds_and_a_NFI_Forest_Definition">Wall-to-Wall Forest Mapping Based on Digital Surface Models from Image-Based Point Clouds and a NFI Forest Definition</a></p>
 <ul>
 <li>aus Stereo Orthophotos (zusammen mit DTM und DLM)</li>
 <li>Auflösung 1m</li>
@@ -514,7 +510,7 @@ div.tocify {
 <li>k-NN Model (2000) und ANN Model (2006)</li>
 <li>90.8% Overall Accuracy (2000) und 84% Overall Accuracy (2006)</li>
 </ul>
-<p><a href="https://ediss.sub.uni-hamburg.de/volltexte/2007/3172/pdf/070111_oehmichen_dissertation.pdf">Satellitengestutzte Waldflachenkartierung für die Bundeswaldinventur</a></p>
+<p><a href="https://ediss.sub.uni-hamburg.de/volltexte/2007/3172/pdf/070111_oehmichen_dissertation.pdf">Satellitengestutzte Waldflächenkartierung für die Bundeswaldinventur</a></p>
 <ul>
 <li>für Testgebiete</li>
 <li>nach BWI-Definitoion</li>
@@ -538,7 +534,7 @@ div.tocify {
 <li>12 LULC classes für ganz Europa</li>
 <li>75.1% Overall Accuracy</li>
 </ul>
-<p><a href="https://doi.org/10.3390/f11121322">Forest Cover Mapping Based on a Combination ofAerial Images and Sentinel-2 Satellite Data Comparedto National Forest Inventory Data</a></p>
+<p><a href="https://doi.org/10.3390/f11121322">Forest Cover Mapping Based on a Combination of Aerial Images and Sentinel-2 Satellite Data Compared to National Forest Inventory Data</a></p>
 <ul>
 <li>aus Sentinel-2 (2017-2019) und Orthofotos (auch DSM)</li>
 <li>für Baden-Württemberg</li>
@@ -677,7 +673,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
@@ -686,6 +682,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')
