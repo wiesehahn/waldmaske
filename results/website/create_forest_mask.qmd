@@ -1,0 +1,81 @@
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(# fig.width=12, fig.height=8, 
+ warning=FALSE, message=FALSE)
+```
+
+[![rf-osm_banner](https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/rf-osm_banner.jpg)](https://code.earthengine.google.com/a18022396a6428bb3894b7b7fab1c75a?hideCode=true)       
+
+
+## RandomForest - OpenStreetMap
+
+### Referenzdaten
+Als Trainingsdaten wurden die Daten der LUCAS-Erhebung aus dem Jahr 2018 verwendet. 
+
+
+### Bilddaten
+Die Waldmaske wurde basierend auf Sentinel-2 (Surface Reflectance) Bildern erstellt.
+
+
+### Zeitraum
+
+Sentinel-2 Bilder aus dem Jahr 2019 wurden in vier Zeiträumen zusammengefasst:
+
+- `Kalendertag 1-90` (Jan-Mär)
+- `Kalendertag 90-150` (Apr-Mai)
+- `Kalendertag 150-270` (Jun-Sep)
+- `Kalendertag 270-330` (Okt-Nov)
+
+Beim Model-Tuning zeigten sich die Bilder aus Apr-Mai und Jun-Sep am relevantesten. 
+In der finalen Klassifizierung wurden Bildkompositen aus diesen Zeiträumen verwendet.
+
+### Bänder
+
+Als mögliche Modellvariablen wurden die folgenden Bänder und Indizes gewählt:
+
+- `B2`,`B3`,`B4`,`B5`,`B6`,`B7`,`B8`,`B8A`,`B11`,`B12`,`NDVI`,`NDWI`,`NBRI`,`NDMI`
+
+Beim Model-Tuning zeigten sich die Bänder B2, B3, B5, B6, B7, B8, B8A, NDVI, NDWI, NBRI am relevantesten. 
+In der finalen Klassifizierung wurden diese Bänder aus den beiden Zeiträumen verwendet.
+
+
+### Algorithmus
+
+Zur Klassifizierung wurde der Random-Forest Algorithmus genutzt. Dabei wurden die Variablen `numberOfTrees`, `variablesPerSplit` und `minLeafPopulation` im Model-Tuning optimiert.
+
+
+### Prozessierung
+
+Die Klassifizierung wurde komplett in der Google Earth Engine durchgeführt. Die Prozessierung in der Cloud ermöglicht die Verarbeitung großer Datenmengen und die Skalierung auf große Gebiete.
+
+
+### Postprozessierung
+
+Im Nachgang zur Wald-/Nichtwald Klassifizierung aus den Satelitenbilddaten wurden OpenStreetMap Daten genutzt um größere Wege und Straßen im Wald der Nichtwald-Klasse zuzuordnen.
+
+
+_________
+
+*Übersicht*
+
+- `r fontawesome::fa("map-marker-alt")` -   LUCAS
+- `r fontawesome::fa("satellite")`    -   Sentinel-2 Surface Reflectance
+- `r fontawesome::fa("calendar-alt")`   -   Frühjar und Sommer 2019
+- `r fontawesome::fa("layer-group")`    -   B2, B3, B5, B6, B7, B8, B8A, NDVI, NDWI, NBRI
+- `r fontawesome::fa("network-wired")`    -   Random-Forest
+- `r fontawesome::fa("microchip")`    -   Google Earth Engine
+- `r fontawesome::fa("road")`   -   Open Street Map
+
+*Notebook zur Ableitung von OSM-Daten:*
+
+- [`r fontawesome::fa("file-code")` **query_osm.ipynb**](https://github.com/wiesehahn/waldmaske/blob/master/code/data/query_osm.ipynb) 
+
+*Skripte zur Datenprozessierung in GEE:*
+
+- [`r fontawesome::fa("file-code")` **00_variable_settings.js**](https://github.com/wiesehahn/waldmaske/blob/master/code/data/gee/00_variable_settings.js)
+- [`r fontawesome::fa("file-code")` **01_reference_export.js**](https://github.com/wiesehahn/waldmaske/blob/master/code/data/gee/01_reference_export.js)
+- [`r fontawesome::fa("file-code")` **02_validation.js**](https://github.com/wiesehahn/waldmaske/blob/master/code/data/gee/02_validation.js)
+- [`r fontawesome::fa("file-code")` **03_classification.js**](https://github.com/wiesehahn/waldmaske/blob/master/code/data/gee/03_classification.js)
+- [`r fontawesome::fa("file-code")` **04_display_results.js**](https://github.com/wiesehahn/waldmaske/blob/master/code/data/gee/04_display_results.js)
+- [`r fontawesome::fa("file-code")` **05_mask_streets.js**](https://github.com/wiesehahn/waldmaske/blob/master/code/data/gee/05_mask_streets.js)
+

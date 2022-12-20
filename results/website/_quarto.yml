@@ -1,0 +1,53 @@
+project:
+  type: website
+  output-dir: ../../docs
+
+website:
+  title: "Waldmaske"
+  search: false
+  navbar:
+    title: Waldmaske
+    left:
+      - text: "Projekt"
+        href: index.qmd
+      - text: "Recherche"
+        href: literature_review.qmd
+      - text: "Methodik"
+        href: create_forest_mask.qmd
+      - text: "Vergleich"
+        href: compare_forest_masks.qmd
+
+    right:
+      - icon: github
+        href: https://github.com/wiesehahn/waldmaske
+
+
+  page-footer:
+    border: false
+    left: "Copyright 2022, Jens Wiesehahn"
+    right:
+      - icon: github
+        href: https://github.com/wiesehahn
+      - icon: twitter
+        href: https://twitter.com/JensWiesehahn
+      - icon: mastodon
+        href: https://fosstodon.org/@JensWiesehahn
+
+
+format:
+  html:
+    theme: litera
+    css: style.css
+    smooth-scroll: true
+    highlight: kate
+    toc: true
+
+editor: visual
+
+execute:
+  echo: false
+  freeze: true
+
+crossref:
+  fig-title: Abb
+  tbl-title: Tab

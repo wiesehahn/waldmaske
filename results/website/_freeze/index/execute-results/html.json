@@ -1,0 +1,14 @@
+{
+  "hash": "b35a501ef56ca780d6812dce91213d0b",
+  "result": {
+    "markdown": "---\nauthor: \"wiesehahn\"\ndate: \"2021-04-13\"\noutput: html_document\n---\n\n\n<img src=https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/waldmaske_banner.jpg>\n\n*Projekt zur Erstellung einer optimierten Waldmaske aus Fernerkundungsdaten*\n\n\n## Ziel\n- Erstellung einer Waldmaske aus frei verfügbaren Fernerkundungsdaten \n(zunächst für ein Testgebiet, später hochskaliert auf Deutschland)\n\n## Anforderungen \n- Kartierung soll aktuell sein \n- Kartierung muss richtig sein (> 95% Genauigkeit ?)\n- Waldmaske soll aus frei verfügbaren Satellitenbilddaten erzeugt werden\n- Reproduzierbarkeit muss gewährleistet sein\n- Karte soll in digitaler, georeferenzierter Form vorliegen\n\n\n## Schritte\n- angefangen von einer Literatur-/Verfahrensrecherche bis hin zu einem Konzept und dessen Anwendung in Testgebieten\n\n### Literaturrecherche\n- Recherche zu bereits bestehenden Produkten, deren Problemen, Genauigkeiten, Methoden, Anwendungsgebieten, etc.\n\n\n### Konzeptausarbeitung\n\n#### Walddefinition\n- Ausarbeitung einer Definition was als Wald klassifiziert werden soll und vor allem auch was kein Wald sein soll\n\n#### Testgebiete\n- Bestimmung von Testgebieten zur Anwendung und Validierung der Methodik. Gebiete sollten objektiv und nachvollziehbar ausgewählt werden, basierend auf Kriterien wie Validierungsoptionen, Vorhandensein von Daten, Waldgesellschaften, etc.\n\n#### Software\n- Welche Umgebung soll für den Prozess genutzt werden. Abhängig von Datenverfügbarkeit, Kosten, Nutzungseinschränkungen etc.\n\n#### Fernerkundungsdaten\n- Auswahl der Daten, welche in der Prozessierung zur Wald/Nichtwald Klassifizierung genutzt werden sollen\n\n#### Prozessierung\n- Erarbeitung einer Prozessierungskette an deren Anfang die Input-Daten stehen und deren Output die fertige Waldmaske ist\n\n#### Validierung\n- Erarbeitung eines Validierungskonzepts zur Bestimmung der Genauigkeit der Waldmaske. Beinhaltet die Auswahl geeigneter Daten, die Konzeptionierung eines soliden Stichprobenverfahrens und genaue Anweisungen zur Klassifizierung\n\n\n### Verfahrensanwendung\n- Anwendung des erarbeiteten Konzepts. Prozessierung der Fernerkundungsdaten zur Erstellung einer Waldmaske für die ausgewählten Testgebiete und Validierung von deren Richtigkeit.\n\n## Dokumentation\n\n### Verfahren\n- Eine Dokumentation der Planung und Durchführung des Projekts\n\n### Bericht\n- Ein Bericht über die Ergebnisse (Genauigkeiten, Karten, Statistiken)\n\n### Lessons Learned\n- Was ist gut gelaufen und was kann in ähnlichen Projekten besser gemacht werden\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
