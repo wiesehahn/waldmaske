@@ -1,7 +1,7 @@
 
 ## Walddefinitionen
 
-Es gibt keine allgemeingültige Definition für "Wald". Was als solcher angesehen wird, variiert, von Land zu Land und Anwendungsfall zu Anwendungsfall. Häufig wird auch zwischen einer Waldmaske und einer Gehölzmaske unterschieden. Die Gehölzmaske beinhaltet in dem Fall aktuell bestockte Holzbodenflächen, während die Waldmaske auch nicht bestockte Flächen wie beispielsweise Waldwege oder Kahlflächen umfasst. Eine einheitliche Definition dafür gibt es aber auch hier nicht.
+Es gibt keine allgemeingültige Definition für "Wald". Was als solcher angesehen wird, variiert, von Land zu Land und Anwendungsfall zu Anwendungsfall. Häufig wird auch zwischen einer Waldmaske und einer Gehölzmaske unterschieden. Die Gehölzmaske beinhaltet in dem Fall aktuell bestockte Holzbodenflächen, während die Waldmaske auch nicht bestockte Flächen wie beispielsweise Waldwege oder Kahlflächen umfasst. Eine einheitliche Definition dafür gibt es aber auch hier nicht. Eine Übersicht zu dem Thema gibt es z.B. im [AWF-Wiki](http://wiki.awf.forst.uni-goettingen.de/wiki/index.php/Forest_Definition).
 
 Beispielhaft werden hier zwei häufig verwendete Walddefinitionen gegeben, die der Bundeswaldinventur und die der Ernährungs- und Landwirtschaftsorganisation der Vereinten Nationen.
 
@@ -28,7 +28,7 @@ Beinhaltet Windschutzstreifen, Schutzgürtel und Korridore von Bäumen mit einer
 
 [Copernicus High Resolution Layers (HRL)](https://land.copernicus.eu/pan-european/high-resolution-layers)
 
--   für 2012, 2015, 2018, (2021) (alle 3 Jahre)
+-   für 2012, 2015, 2018 (alle 3 Jahre)
 -   Europaweit
 -   aus Sentinel-1, Sentinel-2 (sowie Landsat-8 und VHR)
 -   2012 und 2015 mit 20m Auflösung (100m für Change Products)
@@ -86,15 +86,21 @@ Layer:
         -   Seasonal Trajectories (STs)
         -   Vegetation Phenology Parameters (VPPs)
 
-(*Das Projekt ist aus dem Bedürfnis nach einer aktuellen Waldmaske entstanden. Die Copernicus High Resolution Layers 2018 waren zum Zeitpunkt des Projektbeginns (2020) noch nicht vorhanden!*)
+-   Vegetated Land Cover Characteristics (VLCC)
+    -  Die oben genannten Produkten werden zukünftig als Vegetated Land Cover Characteristics (VLCC) bereitgestellt
+    -  Die Produkte sollen dann jählich bereitgestellt werden (anstatt 3-jährlich)
+    -  FTY und Changes weiter 3-jährlich
+    -  die Produktion wurde Ende 2022 begonnen und erste Ergebnisse ab 2018 sind für Ende 2023 angekündigt
+
 
 [Landschaftsmodell (Basis-DLM)](https://www.bkg.bund.de/DE/Ueber-das-BKG/Geoinformation/Fernerkundung/Landbedeckungsmodell/Herstellung/herstellung.html)
 
--   topographischen Objekte der Landschaft und das Relief der Erdoberfläche im Vektorformat
+-   topographische Objekte der Landschaft und das Relief der Erdoberfläche im Vektorformat
 -   aus DGK5, Atualisierungen mit Orthofotos (DOPs)
 -   Inhalt orientiert sich an TK25
 -   Grundaktualisierung alle paar Jahre (Landestypisch)
 -   Spitzenaktualisierung (z.B. Autobahnen) alle paar Monate
+-   Mindestkartierfläche 0.1 ha 
 
 [Landbedeckungsmodell (LBM-DE)](https://www.bkg.bund.de/DE/Ueber-das-BKG/Geoinformation/Fernerkundung/Landbedeckungsmodell/Herstellung/herstellung.html)
 
@@ -104,15 +110,22 @@ Layer:
 -   2012, 2015, 2018
 -   Mindestkartierfläche 1 ha und die Mindestkartierbreite 15 Meter
 -   bisher wurden hauptsächlich RapidEye-Satellitenbilder genutzt, "zukünftig" Copernicus Sentinel Daten zur Aktualisierung
--   Kombination von Landbedeckung und Landnutzung wird generalisiert für Corine Land Cover genutzt
+-   Kombination von Landbedeckung und Landnutzung wird generalisiert für [Corine Land Cover](https://land.copernicus.eu/pan-european/corine-land-cover) genutzt
 
 [Incora Landbedeckung](https://www.mundialis.de/de/deutschland-2019-landbedeckung-auf-basis-von-sentinel-2-daten/)
 
 -   Projekt für ein jährliches Flächenmonitoring
 -   durchgeführt von Mundialis
--   Masken für 2016 und 2019 verfügbar
+-   Masken für 2016, 2019 und 2020 verfügbar
+-   "eine jährliche Aktualisierung angestrebt"
 -   Bundesweit
 -   auf Basis von Sentinel-2 Daten (10m Auflösung)
+
+[DLR LandCover-DE 2015](https://doi.org/10.15489/1ccmlap3mn39)
+
+- unterscheidet zwischen 7 Landbedeckungsklassen
+- auf Basis von Sentinel-2 Daten der Jahre 2015 bis 2017
+- LUCAS Daten von 2015 als Referenz
 
 [Hansen Tree Cover Map](https://data.globalforestwatch.org/datasets/tree-cover-2000)
 
@@ -121,6 +134,14 @@ Layer:
 -   2019
 -   30m Auflösung generiert aus Landsat
 -   Weltweit
+
+[OpenStreetMap](https://www.openstreetmap.de/)
+
+-   von Community produziert und aktualisiert
+-   Aktualität ist variabel
+-   Wald im Sinne von Landnutzung und Landbedeckung wird häufig synonym genutzt ([siehe Beschreibung](https://wiki.openstreetmap.org/wiki/Forest))
+
+
 
 ## Waldmasken aus Fernerkundungsdaten
 
@@ -143,6 +164,14 @@ Layer:
 -   Auflösung 1m
 -   für die ganze Schweiz
 -   97% Overall Accuracy
+
+[FVA-Waldbedeckung](https://metadaten.geoportal-bw.de/geonetwork/srv/api/records/7f8e2ce6-d21e-4182-92a4-af87f2b0d7e0)
+
+- aus Luft- und Satellitenbildern sowie bildbasiertem nDSM
+- Ableitung von Einzelbäumen für Baumbedeckungskarte
+- Daraus Ableitung von Bestockungskarte (nach BWI Definition)
+- Lücken in Bestockungskarte werden geschlossen für Waldbedeckungskarte
+- Jähliche Aktualisierung (Orthobilder in 3-Jahres Zyklus)
 
 ### Satellitenbilder (passiv)
 

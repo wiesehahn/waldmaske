@@ -24,7 +24,7 @@ website:
 
   page-footer:
     border: false
-    left: "Copyright 2022, Jens Wiesehahn"
+    left: "Copyright 2023, Jens Wiesehahn"
     right:
       - icon: github
         href: https://github.com/wiesehahn

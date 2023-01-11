@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.189">
+<meta name="generator" content="quarto-1.2.313">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,23 +71,27 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">Projekt</a>
+    <a class="nav-link" href="./index.html">
+ <span class="menu-text">Projekt</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./literature_review.html" aria-current="page">Recherche</a>
+    <a class="nav-link active" href="./literature_review.html" aria-current="page">
+ <span class="menu-text">Recherche</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./create_forest_mask.html">Methodik</a>
+    <a class="nav-link" href="./create_forest_mask.html">
+ <span class="menu-text">Methodik</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./compare_forest_masks.html">Vergleich</a>
+    <a class="nav-link" href="./compare_forest_masks.html">
+ <span class="menu-text">Vergleich</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/wiesehahn/waldmaske"><i class="bi bi-github" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -128,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="walddefinitionen" class="level2">
 <h2 class="anchored" data-anchor-id="walddefinitionen">Walddefinitionen</h2>
-<p>Es gibt keine allgemeingültige Definition für “Wald”. Was als solcher angesehen wird, variiert, von Land zu Land und Anwendungsfall zu Anwendungsfall. Häufig wird auch zwischen einer Waldmaske und einer Gehölzmaske unterschieden. Die Gehölzmaske beinhaltet in dem Fall aktuell bestockte Holzbodenflächen, während die Waldmaske auch nicht bestockte Flächen wie beispielsweise Waldwege oder Kahlflächen umfasst. Eine einheitliche Definition dafür gibt es aber auch hier nicht.</p>
+<p>Es gibt keine allgemeingültige Definition für “Wald”. Was als solcher angesehen wird, variiert, von Land zu Land und Anwendungsfall zu Anwendungsfall. Häufig wird auch zwischen einer Waldmaske und einer Gehölzmaske unterschieden. Die Gehölzmaske beinhaltet in dem Fall aktuell bestockte Holzbodenflächen, während die Waldmaske auch nicht bestockte Flächen wie beispielsweise Waldwege oder Kahlflächen umfasst. Eine einheitliche Definition dafür gibt es aber auch hier nicht. Eine Übersicht zu dem Thema gibt es z.B. im <a href="http://wiki.awf.forst.uni-goettingen.de/wiki/index.php/Forest_Definition">AWF-Wiki</a>.</p>
 <p>Beispielhaft werden hier zwei häufig verwendete Walddefinitionen gegeben, die der Bundeswaldinventur und die der Ernährungs- und Landwirtschaftsorganisation der Vereinten Nationen.</p>
 <section id="walddefinition-der-bundeswaldinventur-bwi" class="level3">
 <h3 class="anchored" data-anchor-id="walddefinition-der-bundeswaldinventur-bwi">Walddefinition der Bundeswaldinventur (BWI)</h3>
@@ -148,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="national-verfügbare-waldmasken">National verfügbare Waldmasken</h2>
 <p><a href="https://land.copernicus.eu/pan-european/high-resolution-layers">Copernicus High Resolution Layers (HRL)</a></p>
 <ul>
-<li>für 2012, 2015, 2018, (2021) (alle 3 Jahre)</li>
+<li>für 2012, 2015, 2018 (alle 3 Jahre)</li>
 <li>Europaweit</li>
 <li>aus Sentinel-1, Sentinel-2 (sowie Landsat-8 und VHR)</li>
 <li>2012 und 2015 mit 20m Auflösung (100m für Change Products)</li>
@@ -209,15 +213,22 @@ ul.task-list li input[type="checkbox"] {
 <li>Vegetation Phenology Parameters (VPPs)</li>
 </ul></li>
 </ul></li>
+<li><p>Vegetated Land Cover Characteristics (VLCC)</p>
+<ul>
+<li>Die oben genannten Produkten werden zukünftig als Vegetated Land Cover Characteristics (VLCC) bereitgestellt</li>
+<li>Die Produkte sollen dann jählich bereitgestellt werden (anstatt 3-jährlich)</li>
+<li>FTY und Changes weiter 3-jährlich</li>
+<li>die Produktion wurde Ende 2022 begonnen und erste Ergebnisse ab 2018 sind für Ende 2023 angekündigt</li>
+</ul></li>
 </ul>
-<p>(<em>Das Projekt ist aus dem Bedürfnis nach einer aktuellen Waldmaske entstanden. Die Copernicus High Resolution Layers 2018 waren zum Zeitpunkt des Projektbeginns (2020) noch nicht vorhanden!</em>)</p>
 <p><a href="https://www.bkg.bund.de/DE/Ueber-das-BKG/Geoinformation/Fernerkundung/Landbedeckungsmodell/Herstellung/herstellung.html">Landschaftsmodell (Basis-DLM)</a></p>
 <ul>
-<li>topographischen Objekte der Landschaft und das Relief der Erdoberfläche im Vektorformat</li>
+<li>topographische Objekte der Landschaft und das Relief der Erdoberfläche im Vektorformat</li>
 <li>aus DGK5, Atualisierungen mit Orthofotos (DOPs)</li>
 <li>Inhalt orientiert sich an TK25</li>
 <li>Grundaktualisierung alle paar Jahre (Landestypisch)</li>
 <li>Spitzenaktualisierung (z.B. Autobahnen) alle paar Monate</li>
+<li>Mindestkartierfläche 0.1 ha</li>
 </ul>
 <p><a href="https://www.bkg.bund.de/DE/Ueber-das-BKG/Geoinformation/Fernerkundung/Landbedeckungsmodell/Herstellung/herstellung.html">Landbedeckungsmodell (LBM-DE)</a></p>
 <ul>
@@ -227,15 +238,22 @@ ul.task-list li input[type="checkbox"] {
 <li>2012, 2015, 2018</li>
 <li>Mindestkartierfläche 1 ha und die Mindestkartierbreite 15 Meter</li>
 <li>bisher wurden hauptsächlich RapidEye-Satellitenbilder genutzt, “zukünftig” Copernicus Sentinel Daten zur Aktualisierung</li>
-<li>Kombination von Landbedeckung und Landnutzung wird generalisiert für Corine Land Cover genutzt</li>
+<li>Kombination von Landbedeckung und Landnutzung wird generalisiert für <a href="https://land.copernicus.eu/pan-european/corine-land-cover">Corine Land Cover</a> genutzt</li>
 </ul>
 <p><a href="https://www.mundialis.de/de/deutschland-2019-landbedeckung-auf-basis-von-sentinel-2-daten/">Incora Landbedeckung</a></p>
 <ul>
 <li>Projekt für ein jährliches Flächenmonitoring</li>
 <li>durchgeführt von Mundialis</li>
-<li>Masken für 2016 und 2019 verfügbar</li>
+<li>Masken für 2016, 2019 und 2020 verfügbar</li>
+<li>“eine jährliche Aktualisierung angestrebt”</li>
 <li>Bundesweit</li>
 <li>auf Basis von Sentinel-2 Daten (10m Auflösung)</li>
+</ul>
+<p><a href="https://doi.org/10.15489/1ccmlap3mn39">DLR LandCover-DE 2015</a></p>
+<ul>
+<li>unterscheidet zwischen 7 Landbedeckungsklassen</li>
+<li>auf Basis von Sentinel-2 Daten der Jahre 2015 bis 2017</li>
+<li>LUCAS Daten von 2015 als Referenz</li>
 </ul>
 <p><a href="https://data.globalforestwatch.org/datasets/tree-cover-2000">Hansen Tree Cover Map</a></p>
 <ul>
@@ -244,6 +262,12 @@ ul.task-list li input[type="checkbox"] {
 <li>2019</li>
 <li>30m Auflösung generiert aus Landsat</li>
 <li>Weltweit</li>
+</ul>
+<p><a href="https://www.openstreetmap.de/">OpenStreetMap</a></p>
+<ul>
+<li>von Community produziert und aktualisiert</li>
+<li>Aktualität ist variabel</li>
+<li>Wald im Sinne von Landnutzung und Landbedeckung wird häufig synonym genutzt (<a href="https://wiki.openstreetmap.org/wiki/Forest">siehe Beschreibung</a>)</li>
 </ul>
 </section>
 <section id="waldmasken-aus-fernerkundungsdaten" class="level2">
@@ -268,6 +292,14 @@ ul.task-list li input[type="checkbox"] {
 <li>Auflösung 1m</li>
 <li>für die ganze Schweiz</li>
 <li>97% Overall Accuracy</li>
+</ul>
+<p><a href="https://metadaten.geoportal-bw.de/geonetwork/srv/api/records/7f8e2ce6-d21e-4182-92a4-af87f2b0d7e0">FVA-Waldbedeckung</a></p>
+<ul>
+<li>aus Luft- und Satellitenbildern sowie bildbasiertem nDSM</li>
+<li>Ableitung von Einzelbäumen für Baumbedeckungskarte</li>
+<li>Daraus Ableitung von Bestockungskarte (nach BWI Definition)</li>
+<li>Lücken in Bestockungskarte werden geschlossen für Waldbedeckungskarte</li>
+<li>Jähliche Aktualisierung (Orthobilder in 3-Jahres Zyklus)</li>
 </ul>
 </section>
 <section id="satellitenbilder-passiv" class="level3">
@@ -446,7 +478,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -482,31 +531,49 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">Copyright 2022, Jens Wiesehahn</div>   
+    <div class="nav-footer-left">Copyright 2023, Jens Wiesehahn</div>   
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
