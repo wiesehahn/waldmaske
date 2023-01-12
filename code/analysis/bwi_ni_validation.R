@@ -106,7 +106,12 @@ img.class <- raster("Y:/Jens/large-file-storage/waldmaske/niklas/Version_05/V5_T
 ref_comp$fnews2018 <- raster::extract(img.class, ref_comp)
 ref_comp <- ref_comp %>% mutate(fnews2018= as.factor(if_else(fnews2018==1, 1, 0, missing = 0)))
 
-#save to rda file
+
+#save to rda file with coords
+save(ref_comp, file = here("data/interim/bwi_ni_extracted_coords.rda"))
+
+#save to rda file without coords
+ref_comp <- ref_comp %>% sf::st_drop_geometry()
 save(ref_comp, file = here("data/interim/bwi_ni_extracted.rda"))
 
 
