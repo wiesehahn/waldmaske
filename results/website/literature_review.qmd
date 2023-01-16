@@ -102,7 +102,7 @@ Layer:
 -   Spitzenaktualisierung (z.B. Autobahnen) alle paar Monate
 -   Mindestkartierfläche 0.1 ha 
 
-[Landbedeckungsmodell (LBM-DE)](https://www.bkg.bund.de/DE/Ueber-das-BKG/Geoinformation/Fernerkundung/Landbedeckungsmodell/Herstellung/herstellung.html)
+[Landbedeckungsmodell (LBM-DE)](https://gdz.bkg.bund.de/index.php/default/digitales-landbedeckungsmodell-fur-deutschland-stand-2018-lbm-de2018.html)
 
 -   enthält flächenhafte Informationen zur Landbedeckung
 -   Das BKG aktualisiert mit Hilfe von Fernerkundungsdaten alle drei Jahre das Digitale Landbedeckungsmodell für Deutschland
@@ -165,13 +165,17 @@ Layer:
 -   für die ganze Schweiz
 -   97% Overall Accuracy
 
-[FVA-Waldbedeckung](https://metadaten.geoportal-bw.de/geonetwork/srv/api/records/7f8e2ce6-d21e-4182-92a4-af87f2b0d7e0)
+[Forest Cover Mapping Based on a Combination of Aerial Images and Sentinel-2 Satellite Data Compared to National Forest Inventory Data](https://doi.org/10.3390/f11121322)
 
+- für Baden-Württemberg
 - aus Luft- und Satellitenbildern sowie bildbasiertem nDSM
 - Ableitung von Einzelbäumen für Baumbedeckungskarte
 - Daraus Ableitung von Bestockungskarte (nach BWI Definition)
 - Lücken in Bestockungskarte werden geschlossen für Waldbedeckungskarte
-- Jähliche Aktualisierung (Orthobilder in 3-Jahres Zyklus)
+- Jährliche Aktualisierung (Orthobilder in 3-Jahres Zyklus)
+- BWI Daten als Referenzdaten
+- 95% Overall Accuracy
+
 
 ### Satellitenbilder (passiv)
 
@@ -209,12 +213,6 @@ Layer:
 -   12 LULC classes für ganz Europa
 -   75.1% Overall Accuracy
 
-[Forest Cover Mapping Based on a Combination of Aerial Images and Sentinel-2 Satellite Data Compared to National Forest Inventory Data](https://doi.org/10.3390/f11121322)
-
--   aus Sentinel-2 (2017-2019) und Orthofotos (auch DSM)
--   für Baden-Württemberg
--   BWI Daten als Referenzdaten
--   95% Overall Accuracy
 
 ### Satellitenbilder (aktiv)
 
