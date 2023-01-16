@@ -1,0 +1,452 @@
+---
+title: "Waldmasken"
+subtitle: "Ein Überblick"
+author: "Jens Wiesehahn"
+format:
+  revealjs:
+    width: 1600
+    height: 900
+    title-slide-attributes:
+      data-background-image: https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/waldmaske_rayshade.png
+      # https://www.sueddeutsche.de/image/sz.1.4556399/1408x792?v=1565275226&format=webp
+      data-background-size: cover
+      data-background-opacity: "0.9"
+    slide-number: true
+    transition: slide
+    background-transition: fade
+    preview-links: false #true
+    preload-iframes: false # true
+    multiplex: true
+    # embed-resources: true
+    chalkboard:
+      theme: whiteboard
+      boardmarker-width: 5
+      buttons: false
+    theme: [default, custom.scss]
+    navigation-mode: vertical
+    tbl-cap-location: bottom
+    #logo: https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png
+    #footer: "[Repo](https://github.com/wiesehahn/waldmaske)"
+revealjs-plugins:
+  - verticator
+  - attribution
+---
+
+
+# Hintergrund
+
+
+## Wozu brauchen wir eine Waldmaske?
+
+- {{< fa clone size=sm >}} [Verschneidung mit Geodaten]{.fragment .highlight-current-blue fragment-index=1}
+
+- {{< fa satellite size=sm >}} [Maskierung von Fernerkundungs-Produkten]{.fragment .highlight-current-blue fragment-index=2}
+
+- {{< fa map size=sm >}} [Kartographische Visualisierung]{.fragment .highlight-current-blue fragment-index=3}
+
+- {{< fa maximize size=sm >}} [Flächenableitung]{.fragment .highlight-current-blue fragment-index=4}
+
+
+::: {.r-stack}
+[*Wo sind potenzielle Standorte für Windkraftanlagen?*]{.fragment .fade-in-then-out  fragment-index=1}
+
+[*Veränderung des NDVI im Wald*]{.fragment .fade-in-then-out  fragment-index=2}
+
+[*Google Maps, DTK, ...*]{.fragment .fade-in-then-out  fragment-index=3}
+
+[*eher stichprobenbasiert*]{.fragment .fade-in-then-out  fragment-index=4}
+:::
+
+::: {.notes}
+Waldmasken werden für viele Anwendungen benötigt
+
+:::
+
+## Beispiel Baumartenkartierung
+
+::: {.r-stack}
+![](https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/treespecies_edgeeffect_ortho_solling.jpeg){width=1200 fragment-index=1}
+
+![](https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/treespecies_edgeeffect_probability_solling.jpeg){.fragment width=1200 fragment-index=2}
+
+![](https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/treespecies_edgeeffect_species_solling.jpeg){.fragment width=1200 fragment-index=3}
+:::
+
+::: {.attribution}
+image by Jens Wiesehahn
+:::
+
+::: {.r-stack}
+[*soll nur auf Bereiche mit Bäumen angewendet werden*]{.fragment .fade-in-then-out fragment-index=1}
+
+[*Unsicherheit in Rand- und Offenbereichen am größten*]{.fragment .fade-in-then-out  fragment-index=2}
+
+[*führt zu falscher Klassifizierung*]{.fragment .fade-in-then-out  fragment-index=3}
+:::
+
+
+## Beispiel Waldschadensmonitoring
+
+![](https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/disturbances_brocken.jpg){fig-align="center"}
+
+::: {.attribution}
+image by Jens Wiesehahn
+:::
+
+
+::: {.r-stack}
+*Ausmaskieren alter Schäden und unbestockter Flächen*
+:::
+
+
+# Herausforderungen
+
+## Anforderungen an eine Waldmaske
+
+<br>
+
+:::: {}
+- möglichst genau
+- aktuell
+- für mehrere Zeitpunkte
+
+:::{.fragment .light}
+- bundesweit verfügbar 
+- Open Data
+- Online über moderne Schnittstellen als Vektordatensatz abrufbar
+:::
+::::
+
+
+## Wald oder Nicht-Wald? {background-iframe="https://wiesehahn.github.io/maps/forest_noforest_example.html" background-interactive="true"}
+
+
+## Definitionssache {transition="slide-in fade-out"}
+
+:::: {.columns}
+::: {.column width="50%"}
+### FAO^[Food and Agriculture Organization of the United Nations]
+
+Wald ist jede [Landfläche größer als 0,5 Hektar (breiter als 20 m) mit Bäumen höher als 5 m und einer Baumkronenüberschirmung über 10 %]{.highlight1}, oder Bäume die diese Mindesthöhe erreichen können. Junge Bestände, welche noch unter 5 m Höhe haben und/oder noch keine Baumkronenüberschirmung von mehr als 10 % besitzen, gehören somit auch zum Wald. [Ebenso gehören vorübergehend unbestockte Flächen zum Wald]{.highlight2}.
+:::
+
+::: {.column width="50%"}
+### BWaldG^[§ 2 Bundeswaldgesetz]
+
+Wald im Sinne dieses Gesetzes ist [jede mit Forstpflanzen bestockte Grundfläche]{.highlight2}. Als Wald gelten [auch kahl geschlagene oder verlichtete Grundflächen]{.highlight2}, Waldwege, (...) weitere mit dem Wald verbundene und ihm dienende Flächen (...).
+
+In der Flur oder im bebauten Gebiet gelegene [kleinere Flächen mit einzelnen Baumgruppen]{.highlight1}.
+:::
+::::
+
+
+## Definitionssache {transition="fade-in slide-out"}
+
+:::: {.columns}
+::: {.column width="50%"}
+### FAO^[Food and Agriculture Organization of the United Nations]
+
+Wald ist jede [Landfläche größer als 0,5 Hektar (breiter als 20 m) mit Bäumen höher als 5 m und einer Baumkronenüberschirmung über 10 %]{.highlight1}, oder Bäume die diese Mindesthöhe erreichen können. Junge Bestände, welche noch unter 5 m Höhe haben und/oder noch keine Baumkronenüberschirmung von mehr als 10 % besitzen, gehören somit auch zum Wald. [Ebenso gehören vorübergehend unbestockte Flächen zum Wald]{.highlight2}.
+:::
+
+::: {.column width="50%"}
+### BWI^[Bundeswaldinventur]
+
+Wald im Sinne der BWI ist (...) [jede mit Forstpflanzen bestockte Grundfläche]{.highlight2}. Als Wald gelten [auch kahl geschlagene oder verlichtete Grundflächen]{.highlight2}, Waldwege, (...) weitere mit dem Wald verbundene und ihm dienende Flächen (...).
+
+In der Flur oder im bebauten Gebiet gelegene bestockte [Flächen unter 1.000 m², Gehölzstreifen unter 10 m Breite und (...) Parkanlagen sind nicht Wald im Sinne der BWI]{.highlight1}.
+:::
+::::
+
+
+## Nationale Waldinventuren {transition="slide-in fade-out"}
+
+
+|               | Min. Breite  |  Min. Fläche  |  Min. Überschirmung  |
+|---------------|:--------------:|:--------------:|:-------------------:|
+| Germany       |  10m           |  0.1 ha        |  -                  |
+|  Finland      |  -             |  0.25 ha       |  -                  |
+|  France       |  15m           |  0.05 ha       |  10%                |
+|  Austria      |  10m           |  0.05 ha       |  30%                |
+|  Netherlands  |  30m           |  0.5 ha        |  30%                |
+|  Spain        |  20m           |  0.25 ha       |  5%                 |
+
+: Kriterien zur Walddefinition bei europäischen NFIs (1996)
+
+::: {.attribution}
+Tabelle: [AWF-Wiki](http://wiki.awf.forst.uni-goettingen.de)
+:::
+
+<br>
+
+- {{< fa earth-europe >}} regionale Unterschiede
+
+
+::: {.notes}
+In der Schweiz "können die Kantone bestim­men, ab welcher Breite, welcher Fläche und welchem Alter eine einwachsende Fläche sowie ab welcher Breite und welcher Fläche eine andere Bestockung als Wald gilt."
+
+§ 2 BWaldG (2): "Die Länder können andere Grundflächen dem Wald zurechnen und Weihnachtsbaum- und Schmuckreisigkulturen sowie zum Wohnbereich gehörende Parkanlagen vom Waldbegriff ausnehmen."
+:::
+
+
+## Nationale Waldinventuren {transition="fade-in slide-out"}
+
+
+|               | Min. Breite  |  Min. Fläche  |  Min. Überschirmung  |
+|---------------|:--------------:|:--------------:|:-------------------:|
+| Germany       |  10m           |  0.1 ha        |  -                  |
+|  Finland      |  -             |  0.25 ha       |  -                  |
+|  France       |  [20m]{.highlight2}  |  [0.5 ha]{.highlight2}|  10%   |
+|  Austria      |  10m           |  0.05 ha       |  30%                |
+|  Netherlands  |  30m           |  0.5 ha        |  30%                |
+|  Spain        |  20m           |  0.25 ha       |  [10%]{.highlight2} |
+
+: Kriterien zur Walddefinition bei europäischen NFIs (2013)
+
+::: {.attribution}
+Tabelle: [AWF-Wiki](http://wiki.awf.forst.uni-goettingen.de) ([EFI Technichl Report](https://efi.int/sites/default/files/files/publication-bank/2018/tr_88_annex1.pdf))
+:::
+
+<br>
+
+- {{< fa earth-europe >}} regionale Unterschiede
+- {{< fa clock >}} zeitliche Unterschiede
+
+
+## Zwischenfazit
+
+<br>
+
+**Es gibt keine allgemeingültige Definition für Wald!**
+
+<br> 
+
+[**Es gibt gibt nicht die eine perfekte Waldmaske!**]{.fragment}
+
+<br>
+
+::::{.fragment}
+::: {style="text-align: center;"}
+[Landnutzung]{.highlight1} vs. [Landbedeckung]{.highlight2}
+
+[Waldmaske]{.highlight1} vs. [Gehölzmaske]{.highlight2}
+:::
+::::
+
+::: {.notes}
+Unterschiede zwischen ökologischer, waldbaulicher und rechtlicher Sicht
+
+keine allgemeingültige Walddefinition -> keine perfekte Waldmaske
+
+Landnutzung ändert sich kaum (BWaldG)
+- "Wald darf nur mit Genehmigung in eine andere Nutzungsart umgewandelt werden"
+- "Erstaufforstung von Flächen bedarf der Genehmigung"
+
+Zur Verschneidung mit Fernerkundungsdaten häufig Landbedeckung relevanter
+
+- Ist Weißdorn ein Baum?
+- Kann ein Bambushain als Kohlenstoffsenke angerechnet werden?
+:::
+
+
+# Produkte
+
+## Ausgewählte Waldmasken {auto-animate=true}
+
+(bundesweit verfügbar)
+
+<br>
+
+- [Digitales Landschaftsmodell (DLM)](https://www.bkg.bund.de/DE/Ueber-das-BKG/Geoinformation/Fernerkundung/Landbedeckungsmodell/Herstellung/herstellung.html)
+- [Landbedeckungsmodell (LBM)](https://gdz.bkg.bund.de/index.php/default/digitales-landbedeckungsmodell-fur-deutschland-stand-2018-lbm-de2018.html)
+- [OpenStreetMap Daten](https://www.openstreetmap.de/)
+- [Copernicus High Resolution Layers (HRL)](https://land.copernicus.eu/pan-european/high-resolution-layers)
+- [Incora Landbedeckung](https://www.mundialis.de/de/deutschland-2019-landbedeckung-auf-basis-von-sentinel-2-daten/)
+- [DLR LandCover-DE 2015](https://doi.org/10.15489/1ccmlap3mn39)
+- [Hansen Tree Cover Map](https://data.globalforestwatch.org/datasets/tree-cover-2000)
+
+
+## Ausgewählte Waldmasken {auto-animate=true}
+
+<br>
+
+[~ Landnutzung]{.highlight1} / [Waldmaske]{.highlight1}
+
+- [Digitales Landschaftsmodell (DLM)](https://www.bkg.bund.de/DE/Ueber-das-BKG/Geoinformation/Fernerkundung/Landbedeckungsmodell/Herstellung/herstellung.html)
+- [Landbedeckungsmodell (LBM)](https://gdz.bkg.bund.de/index.php/default/digitales-landbedeckungsmodell-fur-deutschland-stand-2018-lbm-de2018.html)
+- [OpenStreetMap Daten](https://www.openstreetmap.de/)
+
+[~ Landbedeckung]{.highlight2} / [Gehölzmaske]{.highlight2}
+
+- [Copernicus High Resolution Layers (HRL)](https://land.copernicus.eu/pan-european/high-resolution-layers)
+- [Incora Landbedeckung](https://www.mundialis.de/de/deutschland-2019-landbedeckung-auf-basis-von-sentinel-2-daten/)
+- [DLR LandCover-DE 2015](https://doi.org/10.15489/1ccmlap3mn39)
+- [Hansen Tree Cover Map](https://data.globalforestwatch.org/datasets/tree-cover-2000)
+- [OpenStreetMap Daten](https://www.openstreetmap.de/)
+
+
+## Ausgewählte Waldmasken {auto-animate=true}
+
+<br>
+
+[Digitales Landschaftsmodell (DLM)]{.highlight1}
+
+-    Grundaktualisierung alle paar Jahre (Landestypisch)
+-    aus DGK5, Aktualisierungen mit Orthofotos
+-    Mindestkartierfläche Wald 0.1 ha
+-    Vektordatensatz
+
+[Copernicus High Resolution Layers (HRL)]{.highlight2}
+
+-    2012, 2015, 2018, [2019, 2020, ...]{.light}
+-    aus Sentinel-1, Sentinel-2 (sowie Landsat-8 und VHR)
+-    10/20 m Auflösung (1px MMU)
+-    Rasterdatensätze
+
+:::{.notes}
+Copernicus HRL
+-    Produkte: FTY, TCD, FADSL, DLT, (Changes)
+-    FTY = Waldmaske (FAO-Definition), andere = Gehölzmaske
+:::
+
+## Visueller Vergleich - ~ Landnutzung
+
+::: {.r-stack}
+![](https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/sonnenberg_forestmask_ortho2018.jpeg)
+
+![](https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/sonnenberg_forestmask_dlm.jpeg){.fragment width=1200 fragment-index=1}
+
+![](https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/sonnenberg_forestmask_osm.jpeg){.fragment width=1200 fragment-index=2}
+
+![](https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/sonnenberg_forestmask_forsteinrichtung.jpeg){.fragment width=1200 fragment-index=3}
+:::
+
+::: {.r-stack}
+[*Grafik: J.Wiesehahn (Daten: Luftbild der NW-FVA)*]{.fragment .fade-out  fragment-index=1 .attribution}
+
+[*Grafik: J.Wiesehahn (Daten: Luftbild, Basis-DLM)*]{.fragment .fade-in-then-out  fragment-index=1 .attribution}
+
+[*Grafik: J.Wiesehahn (Daten: Luftbild, OSM)*]{.fragment .fade-in-then-out  fragment-index=2 .attribution}
+
+[*Grafik: J.Wiesehahn (Daten: Luftbild, Forsteinrichtung)*]{.fragment .fade-in-then-out  fragment-index=3 .attribution}
+:::
+
+::: {.r-stack}
+[*Sonnenberg - Harz, im Luftbild (Winter 2018)*]{.fragment .fade-out  fragment-index=1}
+
+[*Digitales Landschaftsmodell (Wald)*]{.fragment .fade-in-then-out  fragment-index=1}
+
+[*Open Street Map (wood)*]{.fragment .fade-in-then-out  fragment-index=2}
+
+[*Niedersächsiche Forsteinrichtung (Holzboden)*]{.fragment .fade-in-then-out  fragment-index=3}
+:::
+
+## Visueller Vergleich - ~ Landbedeckung
+
+::: {.r-stack}
+![](https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/sonnenberg_forestmask_ortho2018.jpeg)
+
+![](https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/sonnenberg_forestmask_als.jpeg){.fragment width=1200 fragment-index=1}
+
+![](https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/sonnenberg_forestmask_copernicus-dlt.jpeg){.fragment width=1200 fragment-index=2}
+
+![](https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/sonnenberg_forestmask_incora.jpeg){.fragment width=1200 fragment-index=3}
+:::
+
+::: {.r-stack}
+[*Grafik: J.Wiesehahn (Daten: Luftbild der NW-FVA)*]{.fragment .fade-out  fragment-index=1 .attribution}
+
+[*Grafik: J.Wiesehahn (Daten: Luftbild, nds. ALS)*]{.fragment .fade-in-then-out  fragment-index=1 .attribution}
+
+[*Grafik: J.Wiesehahn (Daten: Luftbild, Copernicus HRL-DLT)*]{.fragment .fade-in-then-out  fragment-index=2 .attribution}
+
+[*Grafik: J.Wiesehahn (Daten: Luftbild, Mundialis Incora)*]{.fragment .fade-in-then-out  fragment-index=3 .attribution}
+:::
+
+::: {.r-stack}
+[*Sonnenberg - Harz, im Luftbild (Winter 2018)*]{.fragment .fade-out  fragment-index=1}
+
+[*Airborne Laserscanning (nDOM > 5m)*]{.fragment .fade-in-then-out  fragment-index=1}
+
+[*Copernicus Dominant Leaf Type 2018 (Wald)*]{.fragment .fade-in-then-out  fragment-index=2}
+
+[*Incora 2019 (Wald)*]{.fragment .fade-in-then-out  fragment-index=3}
+:::
+
+## Vergleich mit BWI
+
+| Waldmaske              	|  Datenpunkte  	|   OA[^1]|  UA[^2]    	|  PA[^3]    	|
+|------------------------	|:-------------:	|:------:	|:---------:	|:---------:	|
+|  Basis-DLM             	|     18334     	|  0.96  	|    0.95   	|    0.88   	|
+|  Incora Landbedeckung  	|     18319     	|  0.87  	|    0.64   	|    0.94   	|
+|  Copernicus HRL 2018   	|     18334     	|  0.94  	|    0.80   	|    0.94   	|
+
+:Genauigkeit von Waldmasken in Niedersachsen basierend auf Traktinformationen der Bundeswaldinventur (CI2017) 
+
+[^1]: Gesamtgenauigkeit (richtig klassifizierter Flächenanteil der Karte)
+[^2]: Nutzergenauigkeit (Wahrscheinlichkeit dass ein Waldgebiet in der Waldmaske auch tatsächlich Wald ist)
+[^3]: Produzentengenauigkeit (Wahrscheinlichkeit dass tatsächlicher Wald auch als solcher klassifiziert wurde)
+
+::: {.attribution}
+Tabelle: J.Wiesehahn
+:::
+
+:::{.notes}
+BWI = Landnutzung
+Basis-DLM = Landnutzung
+-> höchste Genauigkeit logisch
+
+Incora u. HRL = Landbedeckung
+-> geringe UA logisch 
+(Allee klassifiziert aber kein Wald)
+
+Hohe Genauigkeit hier heißt nicht zwangsläufig dass die Waldmaske für Anwendung gut ist
+:::
+
+## Ausblick {auto-animate=true}
+
+Die Kombination aus **Gehölzmaske (Landbedeckung)** und **Waldmaske (Landnutzung)** kann zur Differenzierung von [Holzboden (Wald)]{.highlightgreen}, [Nichtholzboden (Wald)]{.highlight2} und [Bäumen außerhalb Wald]{.highlightpetrol} genutzt werden
+
+::: {.r-stack}
+![](https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/sonnenberg_forestmask_dlm-als-seperate.jpeg)
+:::
+
+::: {.attribution}
+image by Jens Wiesehahn
+:::
+
+::: {.notes}
+mit zusätzlichen Daten auch temporär unbestockte Flächen (Blößen)
+
+hier vermischen sich Waldmasken und Waldstrukturkarten
+:::
+
+# Zusammenfassung
+
+## Zusammenfassung
+
+<br>
+
+1. **Bedarf nach *Waldmasken* ist da**
+2. **es gibt viele verschiedene Masken**
+3. **es muss zwischen [Gehölzmaske (Landbedeckung)]{.highlight2} und [Waldmaske (Landnutzung)]{.highlight1} unterschieden werden**
+4. **die perfekte Maske gibt es nicht pauschal, sondern je nach Anwendung**
+5. **es muss klar definiert sein wofür die Maske benötigt wird**
+
+
+::: {.notes}
+die perfekte Landnutzungsmaske bringt wenig für eine Baumartenmaskierung
+die perfekte Gehölzmaske bringt wenig zur Bestimmung der Landnutzungsänderung
+:::
+
+
+# Interaktive Karten {visibility="uncounted"}
+
+## [Basis-DLM]{.dark} {background-iframe="https://wiesehahn.github.io/maps/comparison/basis-dlm_ortho.html" background-interactive="true" visibility="uncounted"}
+
+
+## [OpenStreetMap]{.dark} {background-iframe="https://wiesehahn.github.io/maps/comparison/osm_ortho.html" background-interactive="true" visibility="uncounted"}
+
+
+## [Basis-DLM - OSM]{.dark} {background-iframe="https://wiesehahn.github.io/maps/comparison/basis-dlm_osm.html" background-interactive="true" visibility="uncounted"}
+
