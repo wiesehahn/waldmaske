@@ -174,7 +174,7 @@ In der Flur oder im bebauten Gebiet gelegene bestockte [Flächen unter 1.000 m²
 : Kriterien zur Walddefinition bei europäischen NFIs (1996)
 
 ::: {.attribution}
-Tabelle: [AWF-Wiki](http://wiki.awf.forst.uni-goettingen.de)
+Tabelle: [AWF-Wiki](http://wiki.awf.forst.uni-goettingen.de/wiki/index.php/Forest_Definition)
 :::
 
 <br>
@@ -204,7 +204,7 @@ In der Schweiz "können die Kantone bestim­men, ab welcher Breite, welcher Flä
 : Kriterien zur Walddefinition bei europäischen NFIs (2013)
 
 ::: {.attribution}
-Tabelle: [AWF-Wiki](http://wiki.awf.forst.uni-goettingen.de) ([EFI Technichl Report](https://efi.int/sites/default/files/files/publication-bank/2018/tr_88_annex1.pdf))
+Tabelle: [AWF-Wiki](http://wiki.awf.forst.uni-goettingen.de/wiki/index.php/Forest_Definition) ([EFI Technichl Report](https://efi.int/sites/default/files/files/publication-bank/2018/tr_88_annex1.pdf))
 :::
 
 <br>
@@ -432,6 +432,13 @@ hier vermischen sich Waldmasken und Waldstrukturkarten
 3. **es muss zwischen [Gehölzmaske (Landbedeckung)]{.highlight2} und [Waldmaske (Landnutzung)]{.highlight1} unterschieden werden**
 4. **die perfekte Maske gibt es nicht pauschal, sondern je nach Anwendung**
 5. **es muss klar definiert sein wofür die Maske benötigt wird**
+
+<br>
+<br>
+
+##### {{< fa brands github size=sm >}}  [wiesehahn.github.io/waldmaske/](https://wiesehahn.github.io/waldmaske/index.html)
+
+##### {{< fa brands github size=sm >}}  [wiesehahn.github.io/waldmaske/presentation](https://wiesehahn.github.io/waldmaske/presentation.html)
 
 
 ::: {.notes}
