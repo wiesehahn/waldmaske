@@ -356,10 +356,10 @@ Jens Wiesehahn
 <li><p><i class="fa-solid fa-maximize fa-sm" aria-label="maximize"></i> <span class="fragment highlight-current-blue" data-fragment-index="4">Flächenableitung</span></p></li>
 </ul>
 <div class="r-stack">
-<p><span class="fragment fade-in-then-out" data-fragment-index="1"><em>Wo sind potenzielle Standorte für Windkraftanlagen?</em></span></p>
-<p><span class="fragment fade-in-then-out" data-fragment-index="2"><em>Veränderung des NDVI im Wald</em></span></p>
-<p><span class="fragment fade-in-then-out" data-fragment-index="3"><em>Google Maps, DTK, …</em></span></p>
-<p><span class="fragment fade-in-then-out" data-fragment-index="4"><em>eher stichprobenbasiert</em></span></p>
+<p><span class="fragment fade-in-then-out" data-fragment-index="1"><em>Standortanalyse für Windkraftanlagen im Wald</em></span></p>
+<p><span class="fragment fade-in-then-out" data-fragment-index="2"><em>Veränderung der Vitalität im Wald</em></span></p>
+<p><span class="fragment fade-in-then-out" data-fragment-index="3"><em>Google Maps, Digitale Topographische Karte, …</em></span></p>
+<p><span class="fragment fade-in-then-out" data-fragment-index="4"><em>Waldfläche in Verwaltungseinheit (evtl. eher stichprobenbasiert)</em></span></p>
 </div>
 <aside class="notes">
 <p>Waldmasken werden für viele Anwendungen benötigt</p>
@@ -378,17 +378,15 @@ Jens Wiesehahn
 <section id="beispiel-baumartenkartierung" class="slide level2">
 <h2>Beispiel Baumartenkartierung</h2>
 <div class="r-stack">
-<p><img data-src="https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/treespecies_edgeeffect_ortho_solling.jpeg" data-fragment-index="1" width="1200"></p>
-<p><img data-src="https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/treespecies_edgeeffect_probability_solling.jpeg" class="fragment" data-fragment-index="2" width="1200"></p>
-<p><img data-src="https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/treespecies_edgeeffect_species_solling.jpeg" class="fragment" data-fragment-index="3" width="1200"></p>
+<p><img data-src="https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/treespecies_edgeeffect_ortho_solling.jpeg" width="1200"></p>
+<p><img data-src="https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/treespecies_edgeeffect_probability_solling.jpeg" class="fragment" data-fragment-index="1" width="1200"></p>
 </div>
 <div class="attribution">
 <p>image by Jens Wiesehahn</p>
 </div>
 <div class="r-stack">
-<p><span class="fragment fade-in-then-out" data-fragment-index="1"><em>soll nur auf Bereiche mit Bäumen angewendet werden</em></span></p>
-<p><span class="fragment fade-in-then-out" data-fragment-index="2"><em>Unsicherheit in Rand- und Offenbereichen am größten</em></span></p>
-<p><span class="fragment fade-in-then-out" data-fragment-index="3"><em>führt zu falscher Klassifizierung</em></span></p>
+<p><span class="fragment fade-out" data-fragment-index="1"><em>Luftbild im Solling</em></span></p>
+<p><span class="fragment fade-in-then-out" data-fragment-index="1"><em>Unsicherheit des Klassifikations-Algorithmus (<span class="highlight2">niedrig</span> - <span class="highlight1">hoch</span>)</em></span></p>
 </div>
 </section>
 <section id="beispiel-waldschadensmonitoring" class="slide level2">
@@ -398,7 +396,7 @@ Jens Wiesehahn
 <p>image by Jens Wiesehahn</p>
 </div>
 <div class="r-stack">
-<p><em>Ausmaskieren alter Schäden und unbestockter Flächen</em></p>
+<p><em>Waldschäden im Nationalpark Harz (2018-2020)</em></p>
 </div>
 </section></section>
 <section>
@@ -409,20 +407,11 @@ Jens Wiesehahn
 <section id="anforderungen-an-eine-waldmaske" class="slide level2">
 <h2>Anforderungen an eine Waldmaske</h2>
 <p><br></p>
-<div>
 <ul>
 <li>möglichst genau</li>
 <li>aktuell</li>
 <li>für mehrere Zeitpunkte</li>
 </ul>
-<div class="fragment light">
-<ul>
-<li>bundesweit verfügbar</li>
-<li>Open Data</li>
-<li>Online über moderne Schnittstellen als Vektordatensatz abrufbar</li>
-</ul>
-</div>
-</div>
 </section>
 <section id="wald-oder-nicht-wald" class="slide level2" data-background-iframe="https://wiesehahn.github.io/maps/forest_noforest_example.html" data-background-interactive="true">
 <h2>Wald oder Nicht-Wald?</h2>
@@ -436,7 +425,7 @@ Jens Wiesehahn
 </div><div class="column" style="width:50%;">
 <h3 id="bwaldg">BWaldG<sup>2</sup></h3>
 <p>Wald im Sinne dieses Gesetzes ist <span class="highlight2">jede mit Forstpflanzen bestockte Grundfläche</span>. Als Wald gelten <span class="highlight2">auch kahl geschlagene oder verlichtete Grundflächen</span>, Waldwege, (…) weitere mit dem Wald verbundene und ihm dienende Flächen (…).</p>
-<p>In der Flur oder im bebauten Gebiet gelegene <span class="highlight1">kleinere Flächen mit einzelnen Baumgruppen</span>.</p>
+<p>In der Flur oder im bebauten Gebiet gelegene <span class="highlight1">kleinere Flächen mit einzelnen Baumgruppen sind nicht Wald</span> im Sinne des Gesetzes.</p>
 </div>
 </div>
 <aside><ol class="aside-footnotes"><li id="fn1"><p>Food and Agriculture Organization of the United Nations</p></li><li id="fn2"><p>§ 2 Bundeswaldgesetz</p></li></ol></aside></section>
@@ -449,7 +438,7 @@ Jens Wiesehahn
 </div><div class="column" style="width:50%;">
 <h3 id="bwi">BWI<sup>2</sup></h3>
 <p>Wald im Sinne der BWI ist (…) <span class="highlight2">jede mit Forstpflanzen bestockte Grundfläche</span>. Als Wald gelten <span class="highlight2">auch kahl geschlagene oder verlichtete Grundflächen</span>, Waldwege, (…) weitere mit dem Wald verbundene und ihm dienende Flächen (…).</p>
-<p>In der Flur oder im bebauten Gebiet gelegene bestockte <span class="highlight1">Flächen unter 1.000 m², Gehölzstreifen unter 10 m Breite und (…) Parkanlagen sind nicht Wald im Sinne der BWI</span>.</p>
+<p>In der Flur oder im bebauten Gebiet gelegene bestockte <span class="highlight1">Flächen unter 1.000 m², Gehölzstreifen unter 10 m Breite und (…) Parkanlagen sind nicht Wald</span> im Sinne der BWI.</p>
 </div>
 </div>
 <aside><ol class="aside-footnotes"><li id="fn3"><p>Food and Agriculture Organization of the United Nations</p></li><li id="fn4"><p>Bundeswaldinventur</p></li></ol></aside></section>
@@ -647,7 +636,6 @@ Jens Wiesehahn
 <li><a href="https://www.openstreetmap.de/">OpenStreetMap Daten</a></li>
 <li><a href="https://land.copernicus.eu/pan-european/high-resolution-layers">Copernicus High Resolution Layers (HRL)</a></li>
 <li><a href="https://www.mundialis.de/de/deutschland-2019-landbedeckung-auf-basis-von-sentinel-2-daten/">Incora Landbedeckung</a></li>
-<li><a href="https://doi.org/10.15489/1ccmlap3mn39">DLR LandCover-DE 2015</a></li>
 <li><a href="https://data.globalforestwatch.org/datasets/tree-cover-2000">Hansen Tree Cover Map</a></li>
 </ul>
 </section>
@@ -664,7 +652,6 @@ Jens Wiesehahn
 <ul>
 <li><a href="https://land.copernicus.eu/pan-european/high-resolution-layers">Copernicus High Resolution Layers (HRL)</a></li>
 <li><a href="https://www.mundialis.de/de/deutschland-2019-landbedeckung-auf-basis-von-sentinel-2-daten/">Incora Landbedeckung</a></li>
-<li><a href="https://doi.org/10.15489/1ccmlap3mn39">DLR LandCover-DE 2015</a></li>
 <li><a href="https://data.globalforestwatch.org/datasets/tree-cover-2000">Hansen Tree Cover Map</a></li>
 <li><a href="https://www.openstreetmap.de/">OpenStreetMap Daten</a></li>
 </ul>
@@ -742,6 +729,70 @@ Jens Wiesehahn
 <p><span class="fragment fade-in-then-out" data-fragment-index="3"><em>Incora 2019 (Wald)</em></span></p>
 </div>
 </section>
+<section id="ausblick" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Ausblick</h2>
+<p>Die Kombination aus <strong>Gehölzmaske (Landbedeckung)</strong> und <strong>Waldmaske (Landnutzung)</strong> kann zur Differenzierung von <span class="highlightgreen">Holzboden (Wald)</span>, <span class="highlight2">Nichtholzboden (Wald)</span> und <span class="highlightpetrol">Bäumen außerhalb Wald</span> genutzt werden</p>
+<div class="r-stack">
+<p><img data-src="https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/sonnenberg_forestmask_dlm-als-seperate.jpeg"></p>
+</div>
+<div class="r-stack">
+<p><em>Kombination von Landbedeckung (ALS) und Landnutzung (Basis-DLM)</em></p>
+</div>
+<div class="attribution">
+<p>image by Jens Wiesehahn</p>
+</div>
+<aside class="notes">
+<p>mit zusätzlichen Daten auch temporär unbestockte Flächen (Blößen)</p>
+<p>hier vermischen sich Waldmasken und Waldstrukturkarten</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="zusammenfassung" class="title-slide slide level1 center">
+<h1>Zusammenfassung</h1>
+
+</section>
+<section id="zusammenfassung-1" class="slide level2">
+<h2>Zusammenfassung</h2>
+<p><br></p>
+<ol type="1">
+<li><strong>Bedarf nach <em>Waldmasken</em> ist da</strong></li>
+<li><strong>es gibt viele verschiedene Masken</strong></li>
+<li><strong>es muss zwischen <span class="highlight2">Gehölzmaske (Landbedeckung)</span> und <span class="highlight1">Waldmaske (Landnutzung)</span> unterschieden werden</strong></li>
+<li><strong>die perfekte Maske gibt es nicht pauschal, sondern je nach Anwendung</strong></li>
+<li><strong>es muss klar definiert sein wofür die Maske benötigt wird</strong></li>
+</ol>
+<p><br> <br></p>
+<h5 id="fa-brands-github-sizesm-wiesehahn.github.iowaldmaske"><i class="fa-brands fa-github fa-sm" aria-label="github"></i> <a href="https://wiesehahn.github.io/waldmaske/index.html">wiesehahn.github.io/waldmaske/</a></h5>
+<h5 id="fa-brands-github-sizesm-wiesehahn.github.iowaldmaskepresentation"><i class="fa-brands fa-github fa-sm" aria-label="github"></i> <a href="https://wiesehahn.github.io/waldmaske/presentation.html">wiesehahn.github.io/waldmaske/presentation</a></h5>
+<aside class="notes">
+<p>die perfekte Landnutzungsmaske bringt wenig für eine Baumartenmaskierung die perfekte Gehölzmaske bringt wenig zur Bestimmung der Landnutzungsänderung</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="anhang" class="title-slide slide level1 center" data-visibility="uncounted">
+<h1>Anhang</h1>
+
+</section>
 <section id="vergleich-mit-bwi" class="slide level2">
 <h2>Vergleich mit BWI</h2>
 <table>
@@ -805,67 +856,6 @@ Jens Wiesehahn
           display:block!important;
       }</style></aside>
 <aside><ol class="aside-footnotes"><li id="fn5"><p>Gesamtgenauigkeit (richtig klassifizierter Flächenanteil der Karte)</p></li><li id="fn6"><p>Nutzergenauigkeit (Wahrscheinlichkeit dass ein Waldgebiet in der Waldmaske auch tatsächlich Wald ist)</p></li><li id="fn7"><p>Produzentengenauigkeit (Wahrscheinlichkeit dass tatsächlicher Wald auch als solcher klassifiziert wurde)</p></li></ol></aside></section>
-<section id="ausblick" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Ausblick</h2>
-<p>Die Kombination aus <strong>Gehölzmaske (Landbedeckung)</strong> und <strong>Waldmaske (Landnutzung)</strong> kann zur Differenzierung von <span class="highlightgreen">Holzboden (Wald)</span>, <span class="highlight2">Nichtholzboden (Wald)</span> und <span class="highlightpetrol">Bäumen außerhalb Wald</span> genutzt werden</p>
-<div class="r-stack">
-<p><img data-src="https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/sonnenberg_forestmask_dlm-als-seperate.jpeg"></p>
-</div>
-<div class="attribution">
-<p>image by Jens Wiesehahn</p>
-</div>
-<aside class="notes">
-<p>mit zusätzlichen Daten auch temporär unbestockte Flächen (Blößen)</p>
-<p>hier vermischen sich Waldmasken und Waldstrukturkarten</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section></section>
-<section>
-<section id="zusammenfassung" class="title-slide slide level1 center">
-<h1>Zusammenfassung</h1>
-
-</section>
-<section id="zusammenfassung-1" class="slide level2">
-<h2>Zusammenfassung</h2>
-<p><br></p>
-<ol type="1">
-<li><strong>Bedarf nach <em>Waldmasken</em> ist da</strong></li>
-<li><strong>es gibt viele verschiedene Masken</strong></li>
-<li><strong>es muss zwischen <span class="highlight2">Gehölzmaske (Landbedeckung)</span> und <span class="highlight1">Waldmaske (Landnutzung)</span> unterschieden werden</strong></li>
-<li><strong>die perfekte Maske gibt es nicht pauschal, sondern je nach Anwendung</strong></li>
-<li><strong>es muss klar definiert sein wofür die Maske benötigt wird</strong></li>
-</ol>
-<p><br> <br></p>
-<h5 id="fa-brands-github-sizesm-wiesehahn.github.iowaldmaske"><i class="fa-brands fa-github fa-sm" aria-label="github"></i> <a href="https://wiesehahn.github.io/waldmaske/index.html">wiesehahn.github.io/waldmaske/</a></h5>
-<h5 id="fa-brands-github-sizesm-wiesehahn.github.iowaldmaskepresentation"><i class="fa-brands fa-github fa-sm" aria-label="github"></i> <a href="https://wiesehahn.github.io/waldmaske/presentation.html">wiesehahn.github.io/waldmaske/presentation</a></h5>
-<aside class="notes">
-<p>die perfekte Landnutzungsmaske bringt wenig für eine Baumartenmaskierung die perfekte Gehölzmaske bringt wenig zur Bestimmung der Landnutzungsänderung</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section></section>
-<section>
-<section id="interaktive-karten" class="title-slide slide level1 center" data-visibility="uncounted">
-<h1>Interaktive Karten</h1>
-
-</section>
 <section id="basis-dlm" class="slide level2" data-background-iframe="https://wiesehahn.github.io/maps/comparison/basis-dlm_ortho.html" data-background-interactive="true" data-visibility="uncounted">
 <h2><span class="dark">Basis-DLM</span></h2>
 </section>
@@ -918,7 +908,7 @@ Jens Wiesehahn
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'chalkboard': {"buttons":false,"theme":"whiteboard","boardmarkerWidth":5},
-'multiplex': {"secret":null,"id":"4fcd1149cde5bd8a","url":"https://reveal-multiplex.glitch.me/"},
+'multiplex': {"secret":null,"id":"729e46247fb5fedb","url":"https://reveal-multiplex.glitch.me/"},
 'verticator': {"themetag":"h1","color":"","inversecolor":"","skipuncounted":false,"clickable":true,"position":"auto","offset":"3vmin","autogenerate":true,"tooltip":false,"scale":1},
 'smaller': false,
  

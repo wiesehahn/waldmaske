@@ -116,28 +116,28 @@
     "href": "presentation.html#wozu-brauchen-wir-eine-waldmaske",
     "title": "Waldmasken",
     "section": "Wozu brauchen wir eine Waldmaske?",
-    "text": "Wozu brauchen wir eine Waldmaske?\n\n Verschneidung mit Geodaten\n Maskierung von Fernerkundungs-Produkten\n Kartographische Visualisierung\n Flächenableitung\n\n\nWo sind potenzielle Standorte für Windkraftanlagen?\nVeränderung des NDVI im Wald\nGoogle Maps, DTK, …\neher stichprobenbasiert\n\n\nWaldmasken werden für viele Anwendungen benötigt"
+    "text": "Wozu brauchen wir eine Waldmaske?\n\n Verschneidung mit Geodaten\n Maskierung von Fernerkundungs-Produkten\n Kartographische Visualisierung\n Flächenableitung\n\n\nStandortanalyse für Windkraftanlagen im Wald\nVeränderung der Vitalität im Wald\nGoogle Maps, Digitale Topographische Karte, …\nWaldfläche in Verwaltungseinheit (evtl. eher stichprobenbasiert)\n\n\nWaldmasken werden für viele Anwendungen benötigt"
   },
   {
     "objectID": "presentation.html#beispiel-baumartenkartierung",
     "href": "presentation.html#beispiel-baumartenkartierung",
     "title": "Waldmasken",
     "section": "Beispiel Baumartenkartierung",
-    "text": "Beispiel Baumartenkartierung\n\n\n\n\n\n\nimage by Jens Wiesehahn\n\n\nsoll nur auf Bereiche mit Bäumen angewendet werden\nUnsicherheit in Rand- und Offenbereichen am größten\nführt zu falscher Klassifizierung"
+    "text": "Beispiel Baumartenkartierung\n\n\n\n\n\nimage by Jens Wiesehahn\n\n\nLuftbild im Solling\nUnsicherheit des Klassifikations-Algorithmus (niedrig - hoch)"
   },
   {
     "objectID": "presentation.html#beispiel-waldschadensmonitoring",
     "href": "presentation.html#beispiel-waldschadensmonitoring",
     "title": "Waldmasken",
     "section": "Beispiel Waldschadensmonitoring",
-    "text": "Beispiel Waldschadensmonitoring\n\n\nimage by Jens Wiesehahn\n\n\nAusmaskieren alter Schäden und unbestockter Flächen"
+    "text": "Beispiel Waldschadensmonitoring\n\n\nimage by Jens Wiesehahn\n\n\nWaldschäden im Nationalpark Harz (2018-2020)"
   },
   {
     "objectID": "presentation.html#anforderungen-an-eine-waldmaske",
     "href": "presentation.html#anforderungen-an-eine-waldmaske",
     "title": "Waldmasken",
     "section": "Anforderungen an eine Waldmaske",
-    "text": "Anforderungen an eine Waldmaske\n\n\n\nmöglichst genau\naktuell\nfür mehrere Zeitpunkte\n\n\n\nbundesweit verfügbar\nOpen Data\nOnline über moderne Schnittstellen als Vektordatensatz abrufbar"
+    "text": "Anforderungen an eine Waldmaske\n\n\nmöglichst genau\naktuell\nfür mehrere Zeitpunkte"
   },
   {
     "objectID": "presentation.html#wald-oder-nicht-wald",
@@ -151,7 +151,7 @@
     "href": "presentation.html#definitionssache",
     "title": "Waldmasken",
     "section": "Definitionssache",
-    "text": "Definitionssache\n\n\nFAO1\nWald ist jede Landfläche größer als 0,5 Hektar (breiter als 20 m) mit Bäumen höher als 5 m und einer Baumkronenüberschirmung über 10 %, oder Bäume die diese Mindesthöhe erreichen können. Junge Bestände, welche noch unter 5 m Höhe haben und/oder noch keine Baumkronenüberschirmung von mehr als 10 % besitzen, gehören somit auch zum Wald. Ebenso gehören vorübergehend unbestockte Flächen zum Wald.\n\nBWaldG2\nWald im Sinne dieses Gesetzes ist jede mit Forstpflanzen bestockte Grundfläche. Als Wald gelten auch kahl geschlagene oder verlichtete Grundflächen, Waldwege, (…) weitere mit dem Wald verbundene und ihm dienende Flächen (…).\nIn der Flur oder im bebauten Gebiet gelegene kleinere Flächen mit einzelnen Baumgruppen.\n\n\nFood and Agriculture Organization of the United Nations§ 2 Bundeswaldgesetz"
+    "text": "Definitionssache\n\n\nFAO1\nWald ist jede Landfläche größer als 0,5 Hektar (breiter als 20 m) mit Bäumen höher als 5 m und einer Baumkronenüberschirmung über 10 %, oder Bäume die diese Mindesthöhe erreichen können. Junge Bestände, welche noch unter 5 m Höhe haben und/oder noch keine Baumkronenüberschirmung von mehr als 10 % besitzen, gehören somit auch zum Wald. Ebenso gehören vorübergehend unbestockte Flächen zum Wald.\n\nBWaldG2\nWald im Sinne dieses Gesetzes ist jede mit Forstpflanzen bestockte Grundfläche. Als Wald gelten auch kahl geschlagene oder verlichtete Grundflächen, Waldwege, (…) weitere mit dem Wald verbundene und ihm dienende Flächen (…).\nIn der Flur oder im bebauten Gebiet gelegene kleinere Flächen mit einzelnen Baumgruppen sind nicht Wald im Sinne des Gesetzes.\n\n\nFood and Agriculture Organization of the United Nations§ 2 Bundeswaldgesetz"
   },
   {
     "objectID": "presentation.html#definitionssache-1",
@@ -186,14 +186,14 @@
     "href": "presentation.html#ausgewählte-waldmasken",
     "title": "Waldmasken",
     "section": "Ausgewählte Waldmasken",
-    "text": "Ausgewählte Waldmasken\n(bundesweit verfügbar)\n\n\nDigitales Landschaftsmodell (DLM)\nLandbedeckungsmodell (LBM)\nOpenStreetMap Daten\nCopernicus High Resolution Layers (HRL)\nIncora Landbedeckung\nDLR LandCover-DE 2015\nHansen Tree Cover Map"
+    "text": "Ausgewählte Waldmasken\n(bundesweit verfügbar)\n\n\nDigitales Landschaftsmodell (DLM)\nLandbedeckungsmodell (LBM)\nOpenStreetMap Daten\nCopernicus High Resolution Layers (HRL)\nIncora Landbedeckung\nHansen Tree Cover Map"
   },
   {
     "objectID": "presentation.html#ausgewählte-waldmasken-1",
     "href": "presentation.html#ausgewählte-waldmasken-1",
     "title": "Waldmasken",
     "section": "Ausgewählte Waldmasken",
-    "text": "Ausgewählte Waldmasken\n\n~ Landnutzung / Waldmaske\n\nDigitales Landschaftsmodell (DLM)\nLandbedeckungsmodell (LBM)\nOpenStreetMap Daten\n\n~ Landbedeckung / Gehölzmaske\n\nCopernicus High Resolution Layers (HRL)\nIncora Landbedeckung\nDLR LandCover-DE 2015\nHansen Tree Cover Map\nOpenStreetMap Daten"
+    "text": "Ausgewählte Waldmasken\n\n~ Landnutzung / Waldmaske\n\nDigitales Landschaftsmodell (DLM)\nLandbedeckungsmodell (LBM)\nOpenStreetMap Daten\n\n~ Landbedeckung / Gehölzmaske\n\nCopernicus High Resolution Layers (HRL)\nIncora Landbedeckung\nHansen Tree Cover Map\nOpenStreetMap Daten"
   },
   {
     "objectID": "presentation.html#ausgewählte-waldmasken-2",
@@ -228,7 +228,7 @@
     "href": "presentation.html#ausblick",
     "title": "Waldmasken",
     "section": "Ausblick",
-    "text": "Ausblick\nDie Kombination aus Gehölzmaske (Landbedeckung) und Waldmaske (Landnutzung) kann zur Differenzierung von Holzboden (Wald), Nichtholzboden (Wald) und Bäumen außerhalb Wald genutzt werden\n\n\n\n\nimage by Jens Wiesehahn\n\n\nmit zusätzlichen Daten auch temporär unbestockte Flächen (Blößen)\nhier vermischen sich Waldmasken und Waldstrukturkarten"
+    "text": "Ausblick\nDie Kombination aus Gehölzmaske (Landbedeckung) und Waldmaske (Landnutzung) kann zur Differenzierung von Holzboden (Wald), Nichtholzboden (Wald) und Bäumen außerhalb Wald genutzt werden\n\n\n\n\nKombination von Landbedeckung (ALS) und Landnutzung (Basis-DLM)\n\n\nimage by Jens Wiesehahn\n\n\nmit zusätzlichen Daten auch temporär unbestockte Flächen (Blößen)\nhier vermischen sich Waldmasken und Waldstrukturkarten"
   },
   {
     "objectID": "presentation.html#zusammenfassung-1",

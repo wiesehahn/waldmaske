@@ -48,13 +48,13 @@ revealjs-plugins:
 
 
 ::: {.r-stack}
-[*Wo sind potenzielle Standorte für Windkraftanlagen?*]{.fragment .fade-in-then-out  fragment-index=1}
+[*Standortanalyse für Windkraftanlagen im Wald*]{.fragment .fade-in-then-out  fragment-index=1}
 
-[*Veränderung des NDVI im Wald*]{.fragment .fade-in-then-out  fragment-index=2}
+[*Veränderung der Vitalität im Wald*]{.fragment .fade-in-then-out  fragment-index=2}
 
-[*Google Maps, DTK, ...*]{.fragment .fade-in-then-out  fragment-index=3}
+[*Google Maps, Digitale Topographische Karte, ...*]{.fragment .fade-in-then-out  fragment-index=3}
 
-[*eher stichprobenbasiert*]{.fragment .fade-in-then-out  fragment-index=4}
+[*Waldfläche in Verwaltungseinheit (evtl. eher stichprobenbasiert)*]{.fragment .fade-in-then-out  fragment-index=4}
 :::
 
 ::: {.notes}
@@ -65,11 +65,9 @@ Waldmasken werden für viele Anwendungen benötigt
 ## Beispiel Baumartenkartierung
 
 ::: {.r-stack}
-![](https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/treespecies_edgeeffect_ortho_solling.jpeg){width=1200 fragment-index=1}
+![](https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/treespecies_edgeeffect_ortho_solling.jpeg){width=1200}
 
-![](https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/treespecies_edgeeffect_probability_solling.jpeg){.fragment width=1200 fragment-index=2}
-
-![](https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/treespecies_edgeeffect_species_solling.jpeg){.fragment width=1200 fragment-index=3}
+![](https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/treespecies_edgeeffect_probability_solling.jpeg){.fragment width=1200 fragment-index=1}
 :::
 
 ::: {.attribution}
@@ -77,11 +75,9 @@ image by Jens Wiesehahn
 :::
 
 ::: {.r-stack}
-[*soll nur auf Bereiche mit Bäumen angewendet werden*]{.fragment .fade-in-then-out fragment-index=1}
+[*Luftbild im Solling*]{.fragment .fade-out fragment-index=1}
 
-[*Unsicherheit in Rand- und Offenbereichen am größten*]{.fragment .fade-in-then-out  fragment-index=2}
-
-[*führt zu falscher Klassifizierung*]{.fragment .fade-in-then-out  fragment-index=3}
+[*Unsicherheit des Klassifikations-Algorithmus ([niedrig]{.highlight2} - [hoch]{.highlight1})*]{.fragment .fade-in-then-out  fragment-index=1}
 :::
 
 
@@ -95,7 +91,7 @@ image by Jens Wiesehahn
 
 
 ::: {.r-stack}
-*Ausmaskieren alter Schäden und unbestockter Flächen*
+*Waldschäden im Nationalpark Harz (2018-2020)*
 :::
 
 
@@ -105,17 +101,10 @@ image by Jens Wiesehahn
 
 <br>
 
-:::: {}
+
 - möglichst genau
 - aktuell
 - für mehrere Zeitpunkte
-
-:::{.fragment .light}
-- bundesweit verfügbar 
-- Open Data
-- Online über moderne Schnittstellen als Vektordatensatz abrufbar
-:::
-::::
 
 
 ## Wald oder Nicht-Wald? {background-iframe="https://wiesehahn.github.io/maps/forest_noforest_example.html" background-interactive="true"}
@@ -135,7 +124,7 @@ Wald ist jede [Landfläche größer als 0,5 Hektar (breiter als 20 m) mit Bäume
 
 Wald im Sinne dieses Gesetzes ist [jede mit Forstpflanzen bestockte Grundfläche]{.highlight2}. Als Wald gelten [auch kahl geschlagene oder verlichtete Grundflächen]{.highlight2}, Waldwege, (...) weitere mit dem Wald verbundene und ihm dienende Flächen (...).
 
-In der Flur oder im bebauten Gebiet gelegene [kleinere Flächen mit einzelnen Baumgruppen]{.highlight1}.
+In der Flur oder im bebauten Gebiet gelegene [kleinere Flächen mit einzelnen Baumgruppen sind nicht Wald]{.highlight1} im Sinne des Gesetzes.
 :::
 ::::
 
@@ -154,7 +143,7 @@ Wald ist jede [Landfläche größer als 0,5 Hektar (breiter als 20 m) mit Bäume
 
 Wald im Sinne der BWI ist (...) [jede mit Forstpflanzen bestockte Grundfläche]{.highlight2}. Als Wald gelten [auch kahl geschlagene oder verlichtete Grundflächen]{.highlight2}, Waldwege, (...) weitere mit dem Wald verbundene und ihm dienende Flächen (...).
 
-In der Flur oder im bebauten Gebiet gelegene bestockte [Flächen unter 1.000 m², Gehölzstreifen unter 10 m Breite und (...) Parkanlagen sind nicht Wald im Sinne der BWI]{.highlight1}.
+In der Flur oder im bebauten Gebiet gelegene bestockte [Flächen unter 1.000 m², Gehölzstreifen unter 10 m Breite und (...) Parkanlagen sind nicht Wald]{.highlight1} im Sinne der BWI.
 :::
 ::::
 
@@ -262,7 +251,6 @@ Zur Verschneidung mit Fernerkundungsdaten häufig Landbedeckung relevanter
 - [OpenStreetMap Daten](https://www.openstreetmap.de/)
 - [Copernicus High Resolution Layers (HRL)](https://land.copernicus.eu/pan-european/high-resolution-layers)
 - [Incora Landbedeckung](https://www.mundialis.de/de/deutschland-2019-landbedeckung-auf-basis-von-sentinel-2-daten/)
-- [DLR LandCover-DE 2015](https://doi.org/10.15489/1ccmlap3mn39)
 - [Hansen Tree Cover Map](https://data.globalforestwatch.org/datasets/tree-cover-2000)
 
 
@@ -280,7 +268,6 @@ Zur Verschneidung mit Fernerkundungsdaten häufig Landbedeckung relevanter
 
 - [Copernicus High Resolution Layers (HRL)](https://land.copernicus.eu/pan-european/high-resolution-layers)
 - [Incora Landbedeckung](https://www.mundialis.de/de/deutschland-2019-landbedeckung-auf-basis-von-sentinel-2-daten/)
-- [DLR LandCover-DE 2015](https://doi.org/10.15489/1ccmlap3mn39)
 - [Hansen Tree Cover Map](https://data.globalforestwatch.org/datasets/tree-cover-2000)
 - [OpenStreetMap Daten](https://www.openstreetmap.de/)
 
@@ -373,35 +360,6 @@ Copernicus HRL
 [*Incora 2019 (Wald)*]{.fragment .fade-in-then-out  fragment-index=3}
 :::
 
-## Vergleich mit BWI
-
-| Waldmaske              	|  Datenpunkte  	|   OA[^1]|  UA[^2]    	|  PA[^3]    	|
-|------------------------	|:-------------:	|:------:	|:---------:	|:---------:	|
-|  Basis-DLM             	|     18334     	|  0.96  	|    0.95   	|    0.88   	|
-|  Incora Landbedeckung  	|     18319     	|  0.87  	|    0.64   	|    0.94   	|
-|  Copernicus HRL 2018   	|     18334     	|  0.94  	|    0.80   	|    0.94   	|
-
-:Genauigkeit von Waldmasken in Niedersachsen basierend auf Traktinformationen der Bundeswaldinventur (CI2017) 
-
-[^1]: Gesamtgenauigkeit (richtig klassifizierter Flächenanteil der Karte)
-[^2]: Nutzergenauigkeit (Wahrscheinlichkeit dass ein Waldgebiet in der Waldmaske auch tatsächlich Wald ist)
-[^3]: Produzentengenauigkeit (Wahrscheinlichkeit dass tatsächlicher Wald auch als solcher klassifiziert wurde)
-
-::: {.attribution}
-Tabelle: J.Wiesehahn
-:::
-
-:::{.notes}
-BWI = Landnutzung
-Basis-DLM = Landnutzung
--> höchste Genauigkeit logisch
-
-Incora u. HRL = Landbedeckung
--> geringe UA logisch 
-(Allee klassifiziert aber kein Wald)
-
-Hohe Genauigkeit hier heißt nicht zwangsläufig dass die Waldmaske für Anwendung gut ist
-:::
 
 ## Ausblick {auto-animate=true}
 
@@ -410,6 +368,11 @@ Die Kombination aus **Gehölzmaske (Landbedeckung)** und **Waldmaske (Landnutzun
 ::: {.r-stack}
 ![](https://raw.githubusercontent.com/wiesehahn/waldmaske/master/resources/figures/sonnenberg_forestmask_dlm-als-seperate.jpeg)
 :::
+
+::: {.r-stack}
+*Kombination von Landbedeckung (ALS) und Landnutzung (Basis-DLM)*
+:::
+
 
 ::: {.attribution}
 image by Jens Wiesehahn
@@ -447,7 +410,37 @@ die perfekte Gehölzmaske bringt wenig zur Bestimmung der Landnutzungsänderung
 :::
 
 
-# Interaktive Karten {visibility="uncounted"}
+# Anhang {visibility="uncounted"}
+
+## Vergleich mit BWI
+
+| Waldmaske              	|  Datenpunkte  	|   OA[^1]|  UA[^2]    	|  PA[^3]    	|
+|------------------------	|:-------------:	|:------:	|:---------:	|:---------:	|
+|  Basis-DLM             	|     18334     	|  0.96  	|    0.95   	|    0.88   	|
+|  Incora Landbedeckung  	|     18319     	|  0.87  	|    0.64   	|    0.94   	|
+|  Copernicus HRL 2018   	|     18334     	|  0.94  	|    0.80   	|    0.94   	|
+
+:Genauigkeit von Waldmasken in Niedersachsen basierend auf Traktinformationen der Bundeswaldinventur (CI2017) 
+
+[^1]: Gesamtgenauigkeit (richtig klassifizierter Flächenanteil der Karte)
+[^2]: Nutzergenauigkeit (Wahrscheinlichkeit dass ein Waldgebiet in der Waldmaske auch tatsächlich Wald ist)
+[^3]: Produzentengenauigkeit (Wahrscheinlichkeit dass tatsächlicher Wald auch als solcher klassifiziert wurde)
+
+::: {.attribution}
+Tabelle: J.Wiesehahn
+:::
+
+:::{.notes}
+BWI = Landnutzung
+Basis-DLM = Landnutzung
+-> höchste Genauigkeit logisch
+
+Incora u. HRL = Landbedeckung
+-> geringe UA logisch 
+(Allee klassifiziert aber kein Wald)
+
+Hohe Genauigkeit hier heißt nicht zwangsläufig dass die Waldmaske für Anwendung gut ist
+:::
 
 ## [Basis-DLM]{.dark} {background-iframe="https://wiesehahn.github.io/maps/comparison/basis-dlm_ortho.html" background-interactive="true" visibility="uncounted"}
 
