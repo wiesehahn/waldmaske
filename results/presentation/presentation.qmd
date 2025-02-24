@@ -107,7 +107,7 @@ image by Jens Wiesehahn
 - für mehrere Zeitpunkte
 
 
-## Wald oder Nicht-Wald? {background-iframe="https://wiesehahn.github.io/maps/forest_noforest_example.html" background-interactive="true"}
+## Wald oder Nicht-Wald? {background-iframe="https://wiesehahn.github.io/webmaps/forest_noforest_example.html" background-interactive="true"}
 
 
 ## Definitionssache {transition="slide-in fade-out"}
@@ -442,11 +442,11 @@ Incora u. HRL = Landbedeckung
 Hohe Genauigkeit hier heißt nicht zwangsläufig dass die Waldmaske für Anwendung gut ist
 :::
 
-## [Basis-DLM]{.dark} {background-iframe="https://wiesehahn.github.io/maps/comparison/basis-dlm_ortho.html" background-interactive="true" visibility="uncounted"}
+## [Basis-DLM]{.dark} {background-iframe="https://wiesehahn.github.io/webmaps/comparison/basis-dlm_ortho.html" background-interactive="true" visibility="uncounted"}
 
 
-## [OpenStreetMap]{.dark} {background-iframe="https://wiesehahn.github.io/maps/comparison/osm_ortho.html" background-interactive="true" visibility="uncounted"}
+## [OpenStreetMap]{.dark} {background-iframe="https://wiesehahn.github.io/webmaps/comparison/osm_ortho.html" background-interactive="true" visibility="uncounted"}
 
 
-## [Basis-DLM - OSM]{.dark} {background-iframe="https://wiesehahn.github.io/maps/comparison/basis-dlm_osm.html" background-interactive="true" visibility="uncounted"}
+## [Basis-DLM - OSM]{.dark} {background-iframe="https://wiesehahn.github.io/webmaps/comparison/basis-dlm_osm.html" background-interactive="true" visibility="uncounted"}
 

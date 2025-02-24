@@ -179,7 +179,7 @@
     "href": "presentation.html#zwischenfazit",
     "title": "Waldmasken",
     "section": "Zwischenfazit",
-    "text": "Zwischenfazit\n\nEs gibt keine allgemeingültige Definition für Wald!\n\nEs gibt gibt nicht die eine perfekte Waldmaske!\n\n\n\nLandnutzung vs. Landbedeckung\nWaldmaske vs. Gehölzmaske\n\n\n\nUnterschiede zwischen ökologischer, waldbaulicher und rechtlicher Sicht\nkeine allgemeingültige Walddefinition -> keine perfekte Waldmaske\nLandnutzung ändert sich kaum (BWaldG) - “Wald darf nur mit Genehmigung in eine andere Nutzungsart umgewandelt werden” - “Erstaufforstung von Flächen bedarf der Genehmigung”\nZur Verschneidung mit Fernerkundungsdaten häufig Landbedeckung relevanter\n\nIst Weißdorn ein Baum?\nKann ein Bambushain als Kohlenstoffsenke angerechnet werden?"
+    "text": "Zwischenfazit\n\nEs gibt keine allgemeingültige Definition für Wald!\n\nEs gibt gibt nicht die eine perfekte Waldmaske!\n\n\n\nLandnutzung vs. Landbedeckung\nWaldmaske vs. Gehölzmaske\n\n\n\nUnterschiede zwischen ökologischer, waldbaulicher und rechtlicher Sicht\nkeine allgemeingültige Walddefinition -&gt; keine perfekte Waldmaske\nLandnutzung ändert sich kaum (BWaldG) - “Wald darf nur mit Genehmigung in eine andere Nutzungsart umgewandelt werden” - “Erstaufforstung von Flächen bedarf der Genehmigung”\nZur Verschneidung mit Fernerkundungsdaten häufig Landbedeckung relevanter\n\nIst Weißdorn ein Baum?\nKann ein Bambushain als Kohlenstoffsenke angerechnet werden?"
   },
   {
     "objectID": "presentation.html#ausgewählte-waldmasken",
@@ -214,14 +214,14 @@
     "href": "presentation.html#visueller-vergleich---landbedeckung",
     "title": "Waldmasken",
     "section": "Visueller Vergleich - ~ Landbedeckung",
-    "text": "Visueller Vergleich - ~ Landbedeckung\n\n\n\n\n\n\n\nGrafik: J.Wiesehahn (Daten: Luftbild der NW-FVA)\nGrafik: J.Wiesehahn (Daten: Luftbild, nds. ALS)\nGrafik: J.Wiesehahn (Daten: Luftbild, Copernicus HRL-DLT)\nGrafik: J.Wiesehahn (Daten: Luftbild, Mundialis Incora)\n\n\nSonnenberg - Harz, im Luftbild (Winter 2018)\nAirborne Laserscanning (nDOM > 5m)\nCopernicus Dominant Leaf Type 2018 (Wald)\nIncora 2019 (Wald)"
+    "text": "Visueller Vergleich - ~ Landbedeckung\n\n\n\n\n\n\n\nGrafik: J.Wiesehahn (Daten: Luftbild der NW-FVA)\nGrafik: J.Wiesehahn (Daten: Luftbild, nds. ALS)\nGrafik: J.Wiesehahn (Daten: Luftbild, Copernicus HRL-DLT)\nGrafik: J.Wiesehahn (Daten: Luftbild, Mundialis Incora)\n\n\nSonnenberg - Harz, im Luftbild (Winter 2018)\nAirborne Laserscanning (nDOM &gt; 5m)\nCopernicus Dominant Leaf Type 2018 (Wald)\nIncora 2019 (Wald)"
   },
   {
     "objectID": "presentation.html#vergleich-mit-bwi",
     "href": "presentation.html#vergleich-mit-bwi",
     "title": "Waldmasken",
     "section": "Vergleich mit BWI",
-    "text": "Vergleich mit BWI\n\nGenauigkeit von Waldmasken in Niedersachsen basierend auf Traktinformationen der Bundeswaldinventur (CI2017)\n\n\n\n\n\n\n\n\n\nWaldmaske\nDatenpunkte\nOA1\nUA2\nPA3\n\n\n\n\nBasis-DLM\n18334\n0.96\n0.95\n0.88\n\n\nIncora Landbedeckung\n18319\n0.87\n0.64\n0.94\n\n\nCopernicus HRL 2018\n18334\n0.94\n0.80\n0.94\n\n\n\n\nTabelle: J.Wiesehahn\n\n\nBWI = Landnutzung Basis-DLM = Landnutzung -> höchste Genauigkeit logisch\nIncora u. HRL = Landbedeckung -> geringe UA logisch (Allee klassifiziert aber kein Wald)\nHohe Genauigkeit hier heißt nicht zwangsläufig dass die Waldmaske für Anwendung gut ist\n\nGesamtgenauigkeit (richtig klassifizierter Flächenanteil der Karte)Nutzergenauigkeit (Wahrscheinlichkeit dass ein Waldgebiet in der Waldmaske auch tatsächlich Wald ist)Produzentengenauigkeit (Wahrscheinlichkeit dass tatsächlicher Wald auch als solcher klassifiziert wurde)"
+    "text": "Vergleich mit BWI\n\nGenauigkeit von Waldmasken in Niedersachsen basierend auf Traktinformationen der Bundeswaldinventur (CI2017)\n\n\n\n\n\n\n\n\n\nWaldmaske\nDatenpunkte\nOA1\nUA2\nPA3\n\n\n\n\nBasis-DLM\n18334\n0.96\n0.95\n0.88\n\n\nIncora Landbedeckung\n18319\n0.87\n0.64\n0.94\n\n\nCopernicus HRL 2018\n18334\n0.94\n0.80\n0.94\n\n\n\n\nTabelle: J.Wiesehahn\n\n\nBWI = Landnutzung Basis-DLM = Landnutzung -&gt; höchste Genauigkeit logisch\nIncora u. HRL = Landbedeckung -&gt; geringe UA logisch (Allee klassifiziert aber kein Wald)\nHohe Genauigkeit hier heißt nicht zwangsläufig dass die Waldmaske für Anwendung gut ist\n\nGesamtgenauigkeit (richtig klassifizierter Flächenanteil der Karte)Nutzergenauigkeit (Wahrscheinlichkeit dass ein Waldgebiet in der Waldmaske auch tatsächlich Wald ist)Produzentengenauigkeit (Wahrscheinlichkeit dass tatsächlicher Wald auch als solcher klassifiziert wurde)"
   },
   {
     "objectID": "presentation.html#ausblick",
